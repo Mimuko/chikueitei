@@ -1,11 +1,382 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import '../styles/common/reset.css';
+import '../styles/common/common.css';
+import '../styles/header.css';
+import '../styles/footer.css';
+import '../styles/top.css';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+
+const pageTitle = "トップページ｜毎日牧場";
+const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<Head />
+	<title>{pageTitle}</title>
+</head>
+
+<body class="wrap">
+	<Header />
+    <div class="content">
+        <div class="firstView">
+            <div class="firstViewImg">
+                <img src={siteDomein + '20240605110053450655.png'} alt="ファーストビュー背景画像" width="1440" height="680" class="img" />
+            </div>
+            <div class="firstViewHead">
+                <div class="firstViewLogo">
+                    <img src={siteDomein + '20240605110053897690.png'} alt="毎日牧場 ロゴ画像" width="392" height="148" class="img" />
+                </div>
+                <div class="firstViewDesc">
+                    <h1 class="firstViewDescTxt">
+                        毎日が特別な日<br>ステーキで満足、サラダで彩る一日
+                    </h1>
+                </div>
+            </div>
+            <div class="firstViewScroll">
+                <p class="scrollTxt">SCROLL</p>
+                <div class="firstViewScrollImg">
+                    <img src={siteDomein + '20240605110053611294.png'} alt="ナイフとフォークのアイコン" width="24" height="24">
+                </div>
+            </div>
+        </div>
+        <div class="section sectionColor featuresSection">
+            <div class="sectionInr">
+                <div class="sectionHead">
+                    <p class="sectionEn">FEATURES</p>
+                    <h2 class="sectionTtl">毎日牧場の特徴</h2>
+                    <div class="dotted">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="stepTtl">
+                        <div class="overlayHead">
+                            <div class="overlayFront">
+                                <div class="overlayFrontIcon">
+                                    <img src={siteDomein + '20240605110054454866.png'} alt="" class="" width="50" height="50">
+                                </div>
+                                <div class="overlayHeadGroup">
+                                    <h3 class="overlayHeadJa">毎日牧場名物の「サラダバー」</h3>
+                                    <p class="overlayHeadDesc">Mainichi Farm's specialty "Salad Bar"</p>
+                                </div>
+                            </div>
+                            <p class="overlayBack">Salad Bar</p>
+                        </div>
+                    </div>
+                    <div class="stepTxt">
+                        <p class="txt">
+                            毎日牧場では、季節ごとの特色を活かしたバイキングスタイルのサラダバーを提供しています。<br>
+                            新鮮な季節の野菜や果物を中心に、ライス、カレー、スープ、そして季節限定のメニューも豊富に取り揃えております。<br>
+                            お食事メニューは、すべてサラダバー付の価格となり、サラダバーのみの注文も可能ですので、軽食をお求めの方や、健康を意識して食事をされる方に最適です。<br>
+                            <br>
+                            3歳までのお子様は、サラダーバーが無料で利用できます。
+                        </p>
+                    </div>
+                    <div class="stepImg">
+                        <img class="img" src={siteDomein + '20240605110053116131.png'} alt="" width="440" height="540">
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="stepTtl">
+                        <div class="overlayHead">
+                            <div class="overlayFront">
+                                <div class="overlayFrontIcon">
+                                    <img src={siteDomein + '20240605110053627393.png'} alt="" class="" width="50" height="50">
+                                </div>
+                                <div class="overlayHeadGroup">
+                                    <h3 class="overlayHeadJa">ヘルシーかつ<br>ボリュームたっぷりなメニュー</h3>
+                                    <p class="overlayHeadDesc">Healthy and hearty menu</p>
+                                </div>
+                            </div>
+                            <p class="overlayBack">Healthy</p>
+                        </div>
+                    </div>
+                    <div class="stepTxt">
+                        <p class="txt">
+                            牛肉は、オージービーフを主に使用しております。<br>
+                            肉の保存は氷温保存（０℃～３℃）を基本とし、より美味しく召し上がって頂けるように細心の注意を払っております。<br>
+                            選び抜かれたヘルシーな赤身肉は、その味わい深さが自慢です。<br>
+                            <br>
+                            ボリューム満点で、どんなお客様にもご満足いただける多数のメニューを用意しております。
+                        </p>
+                    </div>
+                    <div class="stepImg">
+                        <img class="img" src={siteDomein + '20240605135046837736.png'} alt="" width="440" height="540">
+                    </div>
+                </div>
+            </div>
+            <div class="decoration">
+                <img src={siteDomein + '20240605110053546357.png'} alt="装飾用の画像" class="decorationImg"  width="273" height="174">
+            </div>
+        </div>
+        <div class="section commitmentSection">
+            <div class="sectionInr">
+                <div class="commitmentRow">
+                    <div class="commitmentCont">
+                        <div class="sectionHead leftSide">
+                            <p class="sectionEn">COMMITMENT</p>
+                            <h2 class="sectionTtl">毎日牧場のこだわり</h2>
+                            <div class="dotted">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <p class="txt">毎日牧場は家庭の団欒を大切にし、健康を思うお母さんの心を込めた料理を提供しています。<br>
+                            家族の健康を考えるお母さんとして、色とりどりの野菜と果物を食卓に並べ、家族の健康をサポートしていきたいと考えています。<br>
+                            <br>
+                            お客様一人一人が楽しい食事の時間を過ごせるよう、バランスの良いメニューを心掛けています。
+                        </p>
+                        <a href="./commitment" class="btn">
+                            <p class="btnTxt">こだわり</p>
+                        </a>
+                    </div>
+                    <div class="commitmentTile">
+                        <div class="decoration">
+                            <img src={siteDomein + '20240605110053515111.png'} alt="装飾用の画像" class="decorationImg"  width="190" height="174">
+                        </div>
+
+                        <div class="tile">
+                            <img class="tileItem" src={siteDomein + '20240605110053141036.png'} alt="お料理のイメージ画像" width="260" height="180">
+                            <img class="tileItem" src={siteDomein + '20240605110053865759.png'} alt="お料理のイメージ画像" width="260" height="180">
+                            <img class="tileItem" src={siteDomein + '20240605110053533115.png'} alt="お料理のイメージ画像" width="260" height="180">
+                        </div>
+                        <div class="tile tileBottom">
+                            <img class="tileItem" src={siteDomein + '20240605140521366052.png'} alt="お料理のイメージ画像" width="260" height="180">
+                            <img class="tileItem" src={siteDomein + '20240605140521529543.png'} alt="お料理のイメージ画像" width="260" height="180">
+                            <img class="tileItem" src={siteDomein + '20240605140521221785.png'} alt="お料理のイメージ画像" width="174" height="180">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section sectionBg takeoutSection">
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240605110053620334.png'} alt="背景用の画像" class="img" width="1440" height="587">
+            </div>
+            <div class="sectionInr">
+                <div class="takeoutRow">
+                    <div>
+                        <img src={siteDomein + '20240605144446509676.png'} alt="" class="img" width="485" height="359">
+                    </div>
+                    <div>
+                        <div class="sectionHead leftSide">
+                            <p class="sectionEn">TAKEOUT</p>
+                            <h2 class="sectionTtl">毎日牧場のテイクアウト</h2>
+                            <div class="dotted">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <p class="txt">
+                            毎日牧場では、営業時間中はいつでもテイクアウトのご注文を承っております。<br>
+                            また、テイクアウト限定で特別なハンバーガーも用意しています。<br>
+                            このハンバーガーは、店内での提供は行っておらず、テイクアウトでのみお楽しみいただけます。<br>
+                            ぜひこの機会に、当店自慢の味をお持ち帰りください。<br>
+                            <br>
+                            デリバリーはご注文の内容に応じて対応しておりますので、詳細はお問い合わせください。
+                        </p>
+                        <a href="./takeout" class="btn">
+                            <p class="btnTxt">テイクアウト</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="decoration">
+                <img src={siteDomein + '20240607083306210713.png'} alt="装飾用の画像" class="decorationImg"  width="364" height="379">
+            </div>
+        </div>
+
+        <div class="linkSection section">
+            <div class="sectionInr linkSectionRow">
+                <div class="linkBox">
+                    <a href="./menu" class="imgLink"><img src={siteDomein + '20240605141556697717.png'} alt="メニュー 背景用の画像" width="1060" height="400" class="backImg" />
+                        <div class="front">
+                            <p class="frontTxtDesc">MENU</p>
+                            <p class="frontTxt">メニュー</p>
+                            <div class="dotted">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="linkBox">
+                    <a href="./drink" class="imgLink"><img src={siteDomein + '20240605141556550970.png'} alt="ドリンク 背景用の画像" width="1060" height="400" class="backImg" />
+                        <div class="front">
+                            <p class="frontTxtDesc">DRINK</p>
+                            <p class="frontTxt">ドリンク</p>
+                            <div class="dotted">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="decoration decorationLeft">
+                <img src={siteDomein + '20240605110053618463.png'} alt="装飾用の画像" class="decorationImg"  width="364" height="379">
+            </div>
+            <div class="decoration decorationRight">
+                <img src={siteDomein + '20240605110053268976.png'} alt="装飾用の画像" class="decorationImg"  width="364" height="379">
+            </div>
+        </div>
+
+        <div class="section sectionColor taxSection">
+            <div class="sectionInr">
+                <div class="taxRow">
+                    <div class="taxRowCont">
+                        <div class="sectionHead leftSide">
+                            <p class="sectionEn">HOMETOWN TAX</p>
+                            <h2 class="sectionTtl">毎日牧場のふるさと納税</h2>
+                            <div class="dotted">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <p class="txt">毎日牧場は静岡県清水市のふるさと納税の返礼品としても選べます。<br>地域を支援しながら、paypayポイントや毎日牧場のWEB商品券を用意しております。</p>
+                        <div class="btnArea">
+                            <a href="https://www.satofull.jp/products/list.php?cat=6017&s4=%E9%9D%99%E5%B2%A1%E7%9C%8C&s3=%E6%B8%85%E6%B0%B4%E7%94%BA&cnt=60&p=1" class="btn btnBraun" target="_blank" rel="noopener">
+                                <p class="btnTxt">さとふる</p>
+                            </a>
+                            <a href="https://furusatos.com/shimizu/shops/12" class="btn btnPink" target="_blank" rel="noopener">
+                                <p class="btnTxt">ふるさとズ</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="overlayImg">
+                        <img src={siteDomein + '20240605143956954694.png'} alt="" class="smallImg" width="239" height="169">
+                        <img src={siteDomein + '20240605143956996796.png'} alt="" class="largeImg" width="448" height="269">
+                    </div>
+                </div>
+            </div>
+            <p class="sectionBack">HOMETOWN TAX</p>
+        </div>
+
+        <div class="section newsSection">
+            <div class="sectionInr">
+                <div class="sectionHead">
+                    <p class="sectionEn">NEWS</p>
+                    <h2 class="sectionTtl">新着情報</h2>
+                    <div class="dotted">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="newsArea">
+                    <a href="./news" class="btn">
+                        <p class="btnTxt">新着情報一覧</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section sectionColor shopSection">
+            <div class="sectionInr">
+                <div class="shopRow">
+                    <div class="googleMap">
+                        <div class="map">
+                        </div>
+                        <div class="shopImgs">
+                            <img src={siteDomein + '20240605212727728038.png'} alt="背景用の画像" width="235" height="161" class="img">
+                            <img src={siteDomein + '20240605212727848783.png'} alt="背景用の画像" width="235" height="161" class="img">
+                        </div>
+                    </div>
+                    <div class="shopInfo">
+                        <div class="sectionHead leftSide">
+                            <p class="sectionEn">SHOP</p>
+                            <h2 class="sectionTtl">店舗情報</h2>
+                            <div class="dotted">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">住所
+                            </p>
+                            <p class="txt">
+                                静岡県駿東郡清水町湯川10-55
+                            </p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">TEL
+                            </p>
+                            <a href="tel:0559727720" class="link">
+                                <p class="txt">055-972-7720
+                                </p>
+                            </a>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">営業時間
+                            </p>
+                            <div class="shopInfoHour">
+                                <p class="txt">平日<br>ランチ　11:00～15:00（L.O.14:30）<br>中休み<br>ディナー　16:30~21:30（L.O.20:30）
+                                </p>
+                                <p class="txt">土・日・祝<br>通し営業　11:00~21:30（L.O.20:30）<br>中休みはありません
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">駐車場
+                            </p>
+                            <p class="txt">40台（大型バス可）
+                            </p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">交通手段
+                            </p>
+                            <p class="txt">東名沼津ICより車で20分<br>柿田川公園より車で5分<br>箱根新道料金所より車で50分
+                            </p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">定休日
+                            </p>
+                            <p class="txt adj">毎週火曜日(祝日の場合は営業)・12月31日・1月1月
+                            </p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">支払い
+                            </p>
+                            <p class="txt">現金・クレジットカード・PayPay
+                            </p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">関連情報
+                            </p>
+                            <p class="txt">全フロア禁煙・子供可・乳児可・小学生可・ベビーカー入店可・車椅子入店可・お子様メニューあり・ソファー席あり
+                            </p>
+                        </div>
+                        <a href="./shop" class="btn">
+                            <p class="btnTxt">店舗情報
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="decoration">
+                <img src={siteDomein + '20240605110053563650.png'} alt="装飾用の画像" class="decorationImg"  width="364" height="379">
+            </div>
+        </div>
+    </div>
+	<Footer />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

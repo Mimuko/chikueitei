@@ -1,0 +1,224 @@
+/*--------------------------------
+	COMMON
+--------------------------------*/
+
+.content {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    ;
+}
+
+.sectionColorRed {
+    background: var(--accent-color);
+    & .overlayBack {
+        color: #FFFFFF1A;
+    }
+    & .overlayHeadDesc,
+    & .overlayHeadJa {
+        color: var(--white-color);
+    }
+    & .dotted>div {
+        background: var(--white-color);
+    }
+}
+
+.img {
+    display: block;
+    width: 100%;
+}
+
+.sectionInr {
+    padding: 80px 0;
+}
+
+.overlayHeadColor {
+    & .overlayBack {
+        @media (min-width: 1024px) {
+            top: -4rem;
+        }
+    }
+}
+
+
+/*--------------------------------
+	SHOP STYLES
+--------------------------------*/
+
+.shopInfo {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 40px;
+    @media (min-width: 1024px) {
+        column-gap: 105px;
+        flex-direction: row;
+    }
+    &>.flex {
+        flex-direction: column;
+    }
+}
+
+.shopInfoDetail {
+    @media (min-width: 1024px) {
+        max-width: 495px;
+    }
+}
+
+.shopLogo {
+    width: 267px;
+    margin: 0 auto 30px;
+    @media (min-width: 1024px) {
+        margin: 0 auto 30px 0;
+    }
+}
+
+.shopImg {
+    @media (min-width: 1024px) {
+        max-width: 500px;
+    }
+}
+
+.shopInfoItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+    padding: 10px 0;
+    border-bottom: .5px solid #7700004D;
+    @media (min-width: 768px) {
+        flex-direction: row;
+        column-gap: 75px;
+    }
+    & .txt {
+        letter-spacing: normal;
+        line-height: 1.3;
+        font-weight: 500;
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        @media (min-width: 768px) {
+            letter-spacing: 0.08em;
+            &.adj {
+                letter-spacing: -0.02rem;
+            }
+        }
+    }
+    +.btn {
+        margin-top: 38px;
+    }
+}
+
+.shopInfoHour {
+    &>.txt:not(:last-of-type) {
+        margin-bottom: 5px;
+    }
+}
+
+.shopInfoItemHead {
+    width: 100%;
+    text-align: center;
+    @media (min-width: 768px) {
+        text-align: left;
+        max-width: 70px;
+    }
+}
+
+.asideContent {
+    margin-top: 60px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--accent-color)
+}
+
+.asideContentHead {
+    background: var(--accent-color);
+    color: var(--white-color);
+    padding: 5px 40px 6px;
+    font-size: 2.2rem;
+    line-height: 1.8;
+}
+
+.asideContentBody {
+    padding: 20px;
+    background: var(--white-color);
+    row-gap: 40px;
+    @media (min-width: 1024px) {
+        padding: 20px 40px;
+        column-gap: 40px;
+    }
+}
+
+.asideContentTxt {
+    line-height: 1.4;
+    letter-spacing: normal;
+}
+
+.asideContentImg {
+    width: 100%;
+    @media (min-width: 1024px) {
+        max-width: 310px;
+    }
+}
+
+.data {
+    width: 95%;
+    max-width: 713px;
+    margin: 0 auto;
+    color: var(--white-color);
+}
+
+.dataItem {
+    border-bottom: 1px solid #FFFFFF4D;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 15px;
+    column-gap: 40px;
+    &:not(:last-of-type) {
+        margin-bottom: 15px;
+    }
+    @media (min-width: 768px) {
+        column-gap: 155px;
+    }
+}
+
+.dataItemHead {
+    max-width: 40px;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.decoration {
+    display: none;
+    @media (min-width: 1024px) {
+        display: block;
+        position: absolute;
+        z-index: 1;
+    }
+    .shopSection & {
+        display: none;
+        @media (min-width: 1440px) {
+            display: block;
+            width: 190px;
+            bottom: 42rem;
+            right: 2rem;
+        }
+    }
+    .companySection & {
+        width: 221px;
+        right: 5rem;
+        bottom: 0;
+    }
+}
+
+.map {
+    width: 100%;
+    height: 250px;
+    @media (min-width: 1024px) {
+        height: 500px;
+    }
+    & div {
+        width: 100%;
+        height: 100%;
+        & iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

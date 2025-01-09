@@ -1,0 +1,684 @@
+@charset "UTF-8";
+.main .carText {
+    margin-bottom: 40px;
+    color: rgb(0, 50, 83);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.08em;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .main .carText {
+        font-size: 16px;
+    }
+}
+
+.main .contact__wrap {
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+@media (min-width: 769px) {
+    .main .contact__wrap {
+        padding: 110px 0 140px 0;
+    }
+}
+
+.main .contact__wrap .contact__inner {
+    max-width: 816px;
+    width: 86%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main .contact__wrap .contact__inner .lead__box {
+    margin: 0 auto 60px;
+}
+
+.main .contact__wrap .contact__inner .lead__box-text {
+    letter-spacing: 0.08em;
+    text-align: left;
+    font: normal 500 14px/29px "Zen Kaku Gothic New", sans-serif;
+    color: rgb(51, 51, 51);
+}
+
+@media (min-width: 1000px) {
+    .main .contact__wrap .contact__inner .lead__box-text {
+        font-size: 16px;
+    }
+}
+
+.main .contact__wrap .contact__inner .lead__box-link {
+    font-weight: 500;
+    color: var(--accent-color);
+    transition: all 0.4s ease-in-out;
+}
+
+.main .contact__wrap .contact__inner .lead__box-link:hover {
+    color: rgba(65, 119, 61, 0.6);
+}
+
+.main .contact__wrap .contact__inner .page-contact {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main .contact__wrap .contact__inner .page-contact .item {
+    display: flex;
+    padding: 25px 0;
+    flex-direction: column;
+}
+
+@media (min-width: 769px) {
+    .main .contact__wrap .contact__inner .page-contact .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 0 0 37px 0;
+        column-gap: 70px;
+    }
+}
+
+.main .contact__wrap .contact__inner .page-contact .item .l-tit {
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+@media (min-width: 769px) {
+    .main .contact__wrap .contact__inner .page-contact .item .l-tit {
+        width: 100%;
+        margin: 0;
+        text-align: right;
+        max-width: 140px;
+    }
+}
+
+.main .contact__wrap .contact__inner .page-contact .item .l-tit .tit {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0.08em;
+    text-align: left;
+    color: rgb(51, 51, 51);
+}
+
+@media (min-width: 1000px) {
+    .main .contact__wrap .contact__inner .page-contact .item .l-tit .tit {
+        font-size: 16px;
+    }
+}
+
+.main .contact__wrap .contact__inner .page-contact .item .l-desc {
+    max-width: 600px;
+    width: 100%;
+    margin: 0;
+}
+
+.main .contact__wrap .contact__inner .page-contact .item .l-desc input {
+    max-width: initial;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+@media (min-width: 769px) {
+    .main .contact__wrap .contact__inner .page-contact .item .l-desc input {
+        max-width: 600px;
+    }
+}
+
+.main .contact__wrap .contact__inner .page-contact .item .l-desc textarea {
+    max-width: initial;
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+@media (min-width: 769px) {
+    .main .contact__wrap .contact__inner .page-contact .item .l-desc textarea {
+        max-width: 600px;
+        height: 240px;
+    }
+}
+
+.main .contact__wrap .contact__inner .page-contact .item.flex-start {
+    align-items: flex-start;
+}
+
+.main .contact__wrap .contact__inner .page-contact .item.tell {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+@media (min-width: 769px) {
+    .main .contact__wrap .contact__inner .page-contact .item.tell {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+.main .contact__wrap .contact__inner .page-contact .item.content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 25px 0 0;
+}
+
+@media (min-width: 769px) {
+    .main .contact__wrap .contact__inner .page-contact .item.content {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        padding: 8px 0 0 0;
+    }
+}
+
+.main .contact__wrap .contact__inner .l-privacy-checked {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 0 0;
+}
+
+@media (min-width: 1000px) {
+    .main .contact__wrap .contact__inner .l-privacy-checked {
+        margin: 80px auto 0;
+    }
+}
+
+.main .contact__wrap .contact__inner .l-privacy-checked .desc {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0.08em;
+    text-align: center;
+    margin: 0;
+    color: rgb(51, 51, 51);
+}
+
+@media (min-width: 1000px) {
+    .main .contact__wrap .contact__inner .l-privacy-checked .desc {
+        font-size: 16px;
+    }
+}
+
+.main .contact__wrap .contact__inner .l-privacy-checked .desc .sp {
+    display: block;
+}
+
+@media (min-width: 600px) {
+    .main .contact__wrap .contact__inner .l-privacy-checked .desc .sp {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) {
+    .main .contact__wrap .contact__inner .l-privacy-checked .desc {
+        text-align: left;
+    }
+}
+
+.main .contact__wrap .contact__inner .l-privacy-checked .desc a {
+    color: var(--accent-color);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    transition: 0.4s;
+}
+
+.main .contact__wrap .contact__inner .l-privacy-checked .desc a:hover {
+    color: rgba(65, 119, 61, 0.6);
+}
+
+.main .contact__wrap .btn__box.con {
+    margin: 60px auto 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main .contact__wrap .btn__box-link.bg__black-link {
+    position: relative;
+    width: 240px;
+    height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    letter-spacing: 0.08em;
+    font-style: normal;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+    border-radius: 50px;
+}
+
+.main .contact__wrap .btn__box-link.bg__black-link:hover {
+    background: rgb(255, 255, 255);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+.main .contact__wrap #submit[disabled] {
+    background-color: #ccc;
+    border: solid 1px #ccc;
+    cursor: not-allowed;
+    color: #fff;
+}
+
+.main .formError {
+    z-index: 990;
+}
+
+.main .formError .formErrorContent {
+    z-index: 991;
+}
+
+.main .formError .formErrorArrow {
+    z-index: 996;
+}
+
+.main .ui-dialog .formError {
+    z-index: 5000;
+}
+
+.main .ui-dialog .formError .formErrorContent {
+    z-index: 5001;
+}
+
+.main .ui-dialog .formError .formErrorArrow {
+    z-index: 5006;
+}
+
+.main .inputContainer {
+    position: relative;
+    float: left;
+}
+
+.main .formError {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    display: block;
+    cursor: pointer;
+    text-align: left;
+}
+
+.main .formError.inline {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+}
+
+.main .ajaxSubmit {
+    padding: 20px;
+    background: #55ea55;
+    border: 1px solid #999;
+    display: none;
+}
+
+.main .formError .formErrorContent {
+    width: 100%;
+    background: #ee0101;
+    position: relative;
+    color: #fff;
+    min-width: 120px;
+    font-size: 11px;
+    border: 2px solid #ddd;
+    box-shadow: 0 0 6px #000;
+    -moz-box-shadow: 0 0 6px #000;
+    -webkit-box-shadow: 0 0 6px #000;
+    -o-box-shadow: 0 0 6px #000;
+    padding: 4px 10px 4px 10px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.main .formError.inline .formErrorContent {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    border: none;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.main .greenPopup .formErrorContent {
+    background: #33be40;
+}
+
+.main .blackPopup .formErrorContent {
+    background: #393939;
+    color: #FFF;
+}
+
+.main .formError .formErrorArrow {
+    width: 15px;
+    margin: -2px 0 0 13px;
+    position: relative;
+}
+
+.main body[dir=rtl] .formError .formErrorArrow,
+.main body.rtl .formError .formErrorArrow {
+    margin: -2px 13px 0 0;
+}
+
+.main .formError .formErrorArrowBottom {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    margin: 0px 0 0 12px;
+    top: 2px;
+}
+
+.main .formError .formErrorArrow div {
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+    box-shadow: 0 2px 3px #444;
+    -moz-box-shadow: 0 2px 3px #444;
+    -webkit-box-shadow: 0 2px 3px #444;
+    -o-box-shadow: 0 2px 3px #444;
+    font-size: 0px;
+    height: 1px;
+    background: #ee0101;
+    margin: 0 auto;
+    line-height: 0;
+    font-size: 0;
+    display: block;
+}
+
+.main .formError .formErrorArrowBottom div {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+}
+
+.main .greenPopup .formErrorArrow div {
+    background: #33be40;
+}
+
+.main .blackPopup .formErrorArrow div {
+    background: #393939;
+    color: #FFF;
+}
+
+.main .formError .formErrorArrow .line10 {
+    width: 13px;
+    border: none;
+}
+
+.main .formError .formErrorArrow .line9 {
+    width: 11px;
+    border: none;
+}
+
+.main .formError .formErrorArrow .line8 {
+    width: 11px;
+}
+
+.main .formError .formErrorArrow .line7 {
+    width: 9px;
+}
+
+.main .formError .formErrorArrow .line6 {
+    width: 7px;
+}
+
+.main .formError .formErrorArrow .line5 {
+    width: 5px;
+}
+
+.main .formError .formErrorArrow .line4 {
+    width: 3px;
+}
+
+.main .formError .formErrorArrow .line3 {
+    width: 1px;
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+    border-bottom: 0 solid #ddd;
+}
+
+.main .formError .formErrorArrow .line2 {
+    width: 3px;
+    border: none;
+    background: #ddd;
+}
+
+.main .formError .formErrorArrow .line1 {
+    width: 1px;
+    border: none;
+    background: #ddd;
+}
+
+.main .item.tenpu {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 25px 0;
+}
+
+@media (min-width: 769px) {
+    .main .item.tenpu {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        padding: 8px 0 37px 0;
+    }
+}
+
+.main .item.tenpu .fileCaution {
+    color: #333;
+    font-family: Noto Sans JP;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.28px;
+}
+
+@media (min-width: 750px) {
+    .main .item.tenpu .fileCaution {
+        font-size: 16px;
+        line-height: normal;
+    }
+}
+
+.main .item.tenpu .fileArea {
+    margin-top: 15px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.main .item.tenpu .fileArea input {
+    display: block;
+}
+
+.contact__inner .h2Ttl {
+    font-family: "Potta One", system-ui;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 91.97px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section_inner .h2Ttl {
+    font-family: "Potta One", system-ui;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 91.97px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.main {
+    overflow-x: initial;
+}
+
+.header .headerInner {
+    filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.4));
+}
+
+.headerLogo {
+    display: block;
+}
+
+.header .headerInner {
+    padding: 10px 0;
+}
+
+.section .section_inner {
+    margin: 0 auto;
+    margin-bottom: 60px;
+    width: 90%;
+    max-width: 1100px;
+}
+
+@media (min-width: 769px) {
+    .section .section_inner {
+        margin-bottom: 100px;
+    }
+}
+
+.section .section_inner .english-text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    /* ボックスの高さと同一 */
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: rgb(37, 120, 192);
+}
+
+.section .section_inner h2.main-title {
+    margin-bottom: 65px;
+}
+
+.section .section_inner p {
+    font-family: "Potta One", system-ui !important;
+}
+
+.section .section_inner .privacy {
+    border: 1px solid #C4C4C4;
+    padding: 50px 0;
+    width: 100%;
+}
+
+.section .section_inner .privacy .inner {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+    transition: 0.3s;
+}
+
+.section .section_inner .privacy .inner .h2 {
+    color: rgb(215, 153, 30);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0.08em;
+    text-align: left;
+}
+
+@media (min-width: 769px) {
+    .section .section_inner .privacy .inner .h2 {
+        font-size: 16px;
+        line-height: 29px;
+        letter-spacing: 0.08em;
+    }
+}
+
+.section .section_inner .privacy .inner a.matomo_link {
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.section .section_inner .privacy .inner a.tel {
+    font-size: initial;
+}
+
+.section .section_inner .privacy .inner .privacy_text {
+    transition: 0.3s;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.08em;
+    color: #333;
+}
+
+@media (min-width: 769px) {
+    .section .section_inner .privacy .inner .privacy_text {
+        font-size: 16px;
+        line-height: 29px;
+    }
+}
+
+.section .section_inner .privacy .inner .matomo_link:hover .privacy_text {
+    color: #9a9a9a;
+}
+
+.section .section_inner .privacy .inner .tel {
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.underTopWrapWrap {
+    position: relative;
+    margin: 0 auto;
+    margin-top: -1px;
+}
+
+.underTopWrapWrap img {
+    filter: brightness(80%);
+}
+
+.underTopWrapWrap .h1Back {
+    position: absolute;
+    max-width: 282px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+    .underTopWrapWrap .h1Back {
+        max-width: 365px;
+    }
+}
+
+
+/*# sourceMappingURL=contact.css.map */

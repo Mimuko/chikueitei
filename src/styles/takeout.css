@@ -1,0 +1,221 @@
+/*--------------------------------
+	COMMON
+--------------------------------*/
+
+.content {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    ;
+}
+
+.sectionColorGray {
+    background: #F4F2EC;
+}
+
+.img {
+    width: 100%;
+}
+
+.sectionInr {
+    padding: 80px 0;
+}
+
+.txt {
+    letter-spacing: normal;
+    line-height: 1.4;
+}
+
+.noticeTxt {
+    letter-spacing: normal;
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+.taxTxt {
+    color: #C96262;
+    font-size: 2.6rem;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    line-height: 1.5;
+    &::after {
+        content: "\FF08\7A0E\8FBC\FF09";
+        display: block;
+        font-size: 1.2rem;
+        line-height: 1.4;
+        font-weight: 700;
+        letter-spacing: normal;
+        margin-left: -8px;
+    }
+    @media (min-width: 1440px) {
+        font-size: 2.4rem;
+    }
+}
+
+.smallTxt {
+    font-size: 1.2rem;
+    @media (min-width: 768px) {
+        font-size: 1.4rem;
+    }
+}
+
+.txtWrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.overlayHeadColor {
+    & .overlayBack {
+        @media (min-width: 1024px) {
+            top: -4rem;
+        }
+    }
+}
+
+
+/*--------------------------------
+	TAKEOUT STYLES
+--------------------------------*/
+
+.sectionColor &:has(.overlayHeadColor) {
+    top: -1rem;
+    @media (min-width: 1024px) {
+        top: -5rem;
+    }
+}
+
+.h3Head {
+    background: var(--accent-color);
+    color: var(--white-color);
+    font-size: 2.6rem;
+    width: 100%;
+    border-radius: 50px;
+    line-height: 1.5;
+    padding: 5px 24px 5px;
+    text-align: center;
+    @media (min-width: 768px) {
+        text-align: left;
+    }
+    @media (min-width: 1024px) {
+        padding: 5px 50px 5px;
+    }
+    &+.txt {
+        margin-top: 10px;
+    }
+}
+
+.h4Head {
+    font-size: 2rem;
+    padding-bottom: 5px;
+    @media (min-width: 1024px) {
+        font-size: 2.4rem;
+    }
+}
+
+.menuWrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+}
+
+.menuHead {
+    margin-bottom: 40px;
+}
+
+.menuGrid {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 40px;
+    @media (min-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 60px;
+        row-gap: 80px;
+    }
+}
+
+.menuBox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+    @media (min-width: 1024px) {
+        max-width: 520px;
+    }
+}
+
+.menuBoxDetail {
+    line-height: normal;
+    & .flex {
+        row-gap: unset;
+        align-items: flex-end;
+        justify-content: space-between;
+        flex-direction: row;
+        column-gap: 16px;
+    }
+    & .img {
+        display: block;
+    }
+}
+
+.menuBoxDetailName {
+    font-size: 2rem;
+    line-height: 1.8;
+    letter-spacing: normal;
+    max-width: fit-content;
+    @media (min-width: 1440px) {
+        font-size: 2.2rem;
+    }
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    column-gap: 5px;
+    &>.txt {
+        font-family: "Montserrat", sans-serif;
+    }
+}
+
+.menuList {
+    margin-top: 10px;
+}
+
+.menuListItem {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #77000033;
+    padding-bottom: 5px;
+    & .taxTxt {
+        font-size: 1.6rem;
+        text-align: right;
+        @media (min-width: 768px) {
+            font-size: 1.8rem;
+        }
+    }
+    &:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+}
+
+.asideContent {
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 26px 10px 20px;
+    text-align: left;
+    @media (min-width: 768px) {
+        text-align: center;
+    }
+    & .btnArea {
+        max-width: 658px;
+        margin: 20px auto 0;
+        row-gap: 8px;
+    }
+    & .telLinkTxt {
+        font-family: "Montserrat", sans-serif;
+        color: var(--accent-color);
+    }
+}

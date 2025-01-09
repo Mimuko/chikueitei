@@ -1,0 +1,302 @@
+---
+import '../styles/common/reset.css';
+import '../styles/common/common.css';
+import '../styles/header.css';
+import '../styles/footer.css';
+import '../styles/commitment.css';
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+
+const pageTitle = "こだわり｜毎日牧場";
+const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<Head />
+	<title>{pageTitle}</title>
+</head>
+
+<body class="wrap">
+	<Header />
+    <div class="content">
+        <div class="pageHeader">
+            <div class="pageHeaderBg">
+                <img width="1440" height="437" src={siteDomein + '20240607142916807513.png'} alt="毎日牧場のこだわり" class="pageHeaderImg" width="1440" height="450" />
+            </div>
+            <div class="pageHeaderGroup">
+                <p class="pageHeaderDesc">COMMITMENT</p>
+                <h1 class="pageHeaderFront">毎日牧場のこだわり</h1>
+            </div>
+        </div>
+
+        <div class="section sectionBg">
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240607143448475778.png'} alt="背景用の画像" class="img" width="1440" height="654">
+            </div>
+            <div class="sectionInr">
+                <div class="decoration">
+                    <div class="roundContent">
+                        <div class="sectionHead">
+                            <p class="sectionEn">SALADA BAR</p>
+                            <h2 class="sectionTtl">毎日牧場名物の<br class="tabHidden">「サラダバー」</h2>
+                            <div class="dotted">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <p class="txt">
+                            毎日牧場の原点は、お母さんが作った料理をみんなで囲む家庭の団欒。<br>
+                            家族の健康を考えて、色とりどりの野菜や果物を一緒に並べてくれるお母さん。そんなお母さんの役割に近づきたいと考えました。<br>
+                            <br>
+                            新鮮な季節の野菜や果物を中心に、ライス、カレー、スープ、そして季節限定のメニューも豊富に取り揃えております。<br>
+                            <br>
+                            お食事メニューにはすべてサラダバーが付いており、サラダバーのみのご注文も可能ですので、軽食をお求めの方や健康を意識した食事をされる方にも最適です。
+                        </p>
+                    </div>
+                    <div class="decorationLeft">
+                        <img src={siteDomein + '20240607142916330509.png'} width="62" height="51" alt="かぼちゃ 装飾用の画像" class="decorationImg">
+                        <img src={siteDomein + '20240607142916608102.png'} width="72" height="55" alt="玉ねぎ 装飾用の画像" class="decorationImg">
+                        <img src={siteDomein + '20240607142916718023.png'} width="62" height="55" alt="にんじん 装飾用の画像" class="decorationImg">
+                        <img src={siteDomein + '20240607142916359815.png'} width="71" height="79" alt="小松菜 装飾用の画像" class="decorationImg">
+                        <img src={siteDomein + '20240607142916307604.png'} width="62" height="72" alt="ナス 装飾用の画像" class="decorationImg">
+                    </div>
+                    <div class="decorationRight">
+                        <img src={siteDomein + '20240607142916612858.png'} width="60" height="60" alt="パプリカ 装飾用の画像" class="decorationImg">
+                        <img src={siteDomein + '20240607142916553099.png'} width="84" height="71" alt="ブロッコリー 装飾用の画像" class="decorationImg">
+                        <img src={siteDomein + '20240607142916313217.png'} width="62" height="53" alt="トマト 装飾用の画像" class="decorationImg">
+                        <img src={siteDomein + '20240607142916587715.png'} width="51" height="54" alt="ピーマン 装飾用の画像" class="decorationImg">
+                        <img src={siteDomein + '20240607142916955076.png'} width="76" height="60" alt="レタス 装飾用の画像" class="decorationImg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section sectionColor">
+            <div class="sectionInr">
+                <div class="step">
+                    <div class="stepTtl">
+                        <div class="overlayHead">
+                            <div class="overlayFront">
+                                <div class="overlayFrontIcon">
+                                    <img src={siteDomein + '20240607174138575986.png'} alt="野菜のアイコン" class="img" width="50" height="50">
+                                </div>
+                                <div class="overlayHeadGroup">
+                                    <h3 class="overlayHeadJa">野菜ソムリエのいる店</h3>
+                                    <p class="overlayHeadDesc">A restaurant with a vegetable sommelier</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="stepTxt">
+                        <p class="txt">
+                            毎日牧場では、四季折々の新鮮な野菜や果物を取り揃えたサラダバーを提供しております。<br>
+                            野菜ソムリエが厳選した旬の食材を使用し、栄養バランスの取れた美味しい料理をご堪能いただけます。<br>
+                            健康志向の方にも最適なメニューが豊富で、お子様連れのご家族にも嬉しいサービスを提供しています。<br>
+                            ぜひ、野菜ソムリエの知識と技を活かした一皿をお楽しみください。
+                        </p>
+                    </div>
+                    <div class="stepImg">
+                        <img class="img" src={siteDomein + '20240607142916575398.png'} alt="" width="440" height="540">
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="stepTtl">
+                        <div class="overlayHead">
+                            <div class="overlayFront">
+                                <div class="overlayFrontIcon">
+                                    <img src={siteDomein + '20240605110053627393.png'} alt="肉のアイコン" class="img" width="50" height="50">
+                                </div>
+                                <div class="overlayHeadGroup">
+                                    <h3 class="overlayHeadJa">食材へのこだわり</h3>
+                                    <p class="overlayHeadDesc">Attention to ingredients</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stepTxt">
+                        <p class="txt">
+                            毎日では、肉の保存に氷温保存（0℃～3℃）を基本とし、より美味しく召し上がっていただけるよう細心の注意を払っております。<br>
+                            これにより、肉の鮮度と風味を最大限に保ちます。<br>
+                            また、冷水には磁気活性イオン水を使用し、フレッシュミントを加えることで、香りと爽快感をお楽しみいただけます。<br>
+                            厳選された食材とこだわりのサービスで、心地よい食事のひとときをご提供いたします。
+                        </p>
+                    </div>
+                    <div class="stepImg">
+                        <img class="img" src={siteDomein + '20240607175125134548.png'} alt="" width="440" height="540">
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="stepTtl">
+                        <div class="overlayHead">
+                            <div class="overlayFront">
+                                <div class="overlayFrontIcon">
+                                    <img src={siteDomein + '20240607174138954986.png'} alt="スマイルのアイコン" class="img" width="50" height="50">
+                                </div>
+                                <div class="overlayHeadGroup">
+                                    <h3 class="overlayHeadJa">毎年子供祭りを実施</h3>
+                                    <p class="overlayHeadDesc">Children's festival held every year</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="stepTxt">
+                        <p class="txt">
+                            毎年恒例の子供祭りを実施しております。<br>
+                            お子様向けの楽しい遊びを多数ご用意しており、家族みんなで楽しめるイベントとなっています。<br>
+                            <br>
+                            子供の笑顔が家族全体を笑顔にし、当店の美味しい料理を食べて頂き、ご家族皆様で楽しいひとときをお過ごしください。<br>
+                        </p>
+                    </div>
+                    <div class="stepImg">
+                        <img class="img" src={siteDomein + '20240611100505245412.png'} alt="" width="440" height="540">
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="stepTtl">
+                        <div class="overlayHead">
+                            <div class="overlayFront">
+                                <div class="overlayFrontIcon">
+                                    <img src={siteDomein + '20240607174138594961.png'} alt="ご飯アイコン" class="img" width="50" height="50">
+                                </div>
+                                <div class="overlayHeadGroup">
+                                    <h3 class="overlayHeadJa">いつも炊き立ての味を<br>提供する工夫</h3>
+                                    <p class="overlayHeadDesc">Providing a freshly cooked taste</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stepTxt">
+                        <p class="txt">
+                            毎日牧場では、常に炊き立てのご飯をお出しできるよう、細部にまでこだわり抜いております。<br>
+                            美味しい水を使用し、厳選したお米をかまどで炊くのが一番美味しいと考えています。<br>
+                            そのため、かまどで炊いたご飯を目指すメーカーのお釜を使い、ガスの力で一気に炊き上げています。<br>
+                            これにより、ふっくらとした炊き立てのご飯をいつでもお楽しみいただけます。
+                        </p>
+                    </div>
+                    <div class="stepImg">
+                        <img class="img" src={siteDomein + '20240607142916917797.png'} alt="" width="440" height="540">
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="stepTtl">
+                        <div class="overlayHead">
+                            <div class="overlayFront">
+                                <div class="overlayFrontIcon">
+                                    <img src={siteDomein + '20240605110054454866.png'} alt="サラダのアイコン" class="img" width="50" height="50">
+                                </div>
+                                <div class="overlayHeadGroup">
+                                    <h3 class="overlayHeadJa">サラダバーで健康と満腹</h3>
+                                    <p class="overlayHeadDesc">Salad bar for a healthy and satisfying meal</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="stepTxt">
+                        <p class="txt">
+                            毎日牧場の料理には、全てサラダバーがついています。<br>
+                            季節の果物や野菜にカレーやライスがおかわり自由ですので、満腹のなりたい方には、うれしいサービスだと自負しています。<br>
+                            健康に気を使われている方や軽食と考えている方のために、サラダーバーのみのメニューも用意しておりますので、ぜひご利用ください。<br>
+                            また、お子様連れのご家族にも嬉しい特典として、3歳までのお子様はサラダバーを無料でご利用いただけます。
+                        </p>
+                    </div>
+                    <div class="stepImg">
+                        <img class="img" src={siteDomein + '20240607142916831519.png'} alt="" width="440" height="540">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section sectionBg communitySection">
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240607142916708292.png'} alt="背景用の画像" class="img" width="1440" height="654">
+            </div>
+            <div class="sectionInr">
+                <div class="sectionHead sectionHeadWhite">
+                    <p class="sectionEn">COMMUNITY</p>
+                    <h2 class="sectionTtl">食を通して<br class="tabHidden">地域社会に貢献</h2>
+                    <div class="dotted">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <p class="txt">
+                    毎日牧場は「しずおか健康づくりサポーター登録店」として、お客様の健康づくりをお手伝いしています。<br>
+                    また、「食と健康を考えるネットワークFSN」に加盟し、食材の質と健康に配慮しています。<br>
+                    さらに、財団法人柿田川みどりのトラストに特別会員として参画し、柿田川湧水の保護に取り組んでいます。<br>
+                    これにより、地域の自然環境を守りながら、お客様に安心して楽しんでいただける食事を提供しています。
+                </p>
+                <div class="tile">
+                    <div class="tileItem">
+                        <img class="img" src={siteDomein + '20240607142916597767.png'} alt="" width="340" height="210">
+                    </div>
+                    <div class="tileItem">
+                        <img class="img" src={siteDomein + '20240607142916687474.png'} alt="" width="340" height="210">
+                    </div>
+                    <div class="tileItem">
+                        <img class="img" src={siteDomein + '20240607142916203499.png'} alt="" width="340" height="210">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section originalSection">
+            <div class="sectionInr">
+                <div class="overlayHead overlayHeadColor">
+                    <div class="overlayHeadGroup">
+                        <p class="overlayHeadDesc">ORIGINAL</p>
+                        <h2 class="overlayHeadJa">メニューにも使われたこの作品は<br>毎日牧場オリジナル</h2>
+                    </div>
+                    <div class="dotted">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <p class="overlayBack">ORIGINAL</p>
+                </div>
+                <div class="originalBox">
+                    <div class="originalBoxDetail">
+                        <div class="sectionHead leftSide">
+                            <h3 class="sectionTtl">長谷川ジェット 氏</h3>
+                            <div class="dotted">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <p class="txt">
+                            1975年、東京生まれ。1998年、名古屋芸術大学美術学部絵画科洋画専攻版画コース卒業。2011年現在、静岡県長泉町在住。<br>
+                            日常生活の中で感じたものを、板でキャンパスを作り、彫り、色付けするという独特のタッチで表現。数多くの古典やグループ展などを開催しています。純粋なようでいてユーモアのある作品は、毎日牧場のダイナミックなメニューと相性ぴったり！
+                        </p>
+                    </div>
+                    <div class="originalBoxImg">
+                        <img src={siteDomein + '20240607142916411581.png'} alt="毎日牧場オリジナル イラストの画像" class="img" width="221" height="333">
+                    </div>
+                </div>
+                <div class="decoration decorationLeft">
+                    <img src={siteDomein + '20240605110053618463.png'} alt="装飾用の画像" class="decorationImg" width="364" height="379">
+                </div>
+                <div class="decoration decorationRight">
+                    <img src={siteDomein + '20240605110053268976.png'} alt="装飾用の画像" class="decorationImg" width="364" height="379">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+	<Footer />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

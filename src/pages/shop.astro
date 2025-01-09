@@ -1,0 +1,191 @@
+---
+import '../styles/common/reset.css';
+import '../styles/common/common.css';
+import '../styles/header.css';
+import '../styles/footer.css';
+import '../styles/shop.css';
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+
+const pageTitle = "店舗情報｜毎日牧場";
+const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<Head />
+	<title>{pageTitle}</title>
+</head>
+
+<body class="wrap">
+	<Header />
+    <div class="content">
+        <div class="pageHeader">
+            <div class="pageHeaderBg">
+                <img width="1440" height="437" src={siteDomein + '20240609200951447193.png'} alt="店舗情報" class="pageHeaderImg" />
+            </div>
+            <div class="pageHeaderGroup">
+                <p class="pageHeaderDesc">SHOP</p>
+                <h1 class="pageHeaderFront">店舗情報</h1>
+            </div>
+        </div>
+        <div class="section sectionColor shopSection">
+            <div class="sectionInr">
+                <div class="shopInfo">
+                    <div class="flex">
+                        <div class="shopImg">
+                            <img width="500" height="340" src={siteDomein + '20240609200951340915.png'} alt="毎日牧場 店舗外観" class="img" />
+                        </div>
+                        <div class="shopImg">
+                            <img width="500" height="340" src={siteDomein + '20240609200951294877.png'} alt="毎日牧場 店舗内装" class="img" />
+                        </div>
+                    </div>
+                    <div class="shopInfoDetail">
+                        <div class="shopLogo">
+                            <img width="267" height="54" src={siteDomein + '20240605110247619956.png'} alt="毎日牧場 ロゴ画像" class="img" />
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">住所
+                            </p>
+                            <p class="txt">
+                                静岡県駿東郡清水町湯川10-55
+                            </p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">TEL
+                            </p>
+                            <a href="tel:0559727720" class="link">
+                                <p class="txt">055-972-7720
+                                </p>
+                            </a>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">営業時間
+                            </p>
+                            <div class="shopInfoHour">
+                                <p class="txt">平日<br>ランチ　11:00～15:00（L.O.14:30）<br>中休み<br>ディナー　16:30~21:30（L.O.20:30）
+                                </p>
+                                <p class="txt">土・日・祝<br>通し営業　11:00~21:30（L.O.20:30）<br>中休みはありません
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">駐車場
+                            </p>
+                            <p class="txt">40台（大型バス可）
+                            </p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">交通手段
+                            </p>
+                            <p class="txt">東名沼津ICより車で20分<br>柿田川公園より車で5分<br>箱根新道料金所より車で50分
+                            </p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">定休日
+                            </p>
+                            <p class="txt adj">毎週火曜日(祝日の場合は営業)・12月31日・1月1日
+                            </p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">支払い
+                            </p>
+                            <p class="txt">現金・クレジットカード・PayPay
+                            </p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">関連情報
+                            </p>
+                            <p class="txt">全フロア禁煙・子供可・乳児可・小学生可・ベビーカー入店可・車椅子入店可・お子様メニューあり・ソファー席あり
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="asideContent">
+                    <h2 class="asideContentHead">スタンプカードと<br class="pcHidden">割引特典</h2>
+                    <div class="asideContentBody flex">
+                        <div class="asideContentImg">
+                            <img width="310" height="156" src={siteDomein + '20240609200951389598.png'} alt="毎日牧場スタンプカードの画像" class="img" />
+                        </div>
+                        <p class="asideContentTxt txt">
+                            毎日牧場のスタンプカードは、50個貯まったら次回2000円お値引きいたします。ぜひご利用ください。<br>※ 有効期限はありません。<br><br>一人で2品以上ご注文のお客様は、2品目が500円引きになります。<br>但し、ランチタイムは2品目が300円引きです。<br>（割引は店内飲食の場合のみ）
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="decoration">
+                <img src={siteDomein + '20240605110053546357.png'} alt="装飾用の画像" class="decorationImg" width="273" height="174">
+            </div>
+
+        </div>
+        <div class="section">
+            <div class="sectionInr">
+                <div class="overlayHead overlayHeadColor">
+                    <div class="overlayHeadGroup">
+                        <p class="overlayHeadDesc">ACCESS</p>
+                        <h2 class="overlayHeadJa">アクセス</h2>
+                    </div>
+                    <div class="dotted">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <p class="overlayBack">ACCESS</p>
+                </div>
+                <div class="googleMap map"></div>
+            </div>
+        </div>
+
+        <div class="section sectionColorRed companySection">
+            <div class="sectionInr">
+                <div class="overlayHead overlayHeadColor">
+                    <div class="overlayHeadGroup">
+                        <p class="overlayHeadDesc">COMPANY</p>
+                        <h2 class="overlayHeadJa">会社概要</h2>
+                    </div>
+                    <div class="dotted">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <p class="overlayBack">COMPANY</p>
+                </div>
+
+                <div class="data">
+                    <div class="dataItem">
+                        <p class="dataItemHead">名称</p>
+                        <p class="txt">有限会社竹榮亭</p>
+                    </div>
+                    <div class="dataItem">
+                        <p class="dataItemHead">住所</p>
+                        <p class="txt">静岡県駿東郡清水町湯川10-55</p>
+                    </div>
+                    <div class="dataItem">
+                        <p class="dataItemHead">TEL</p>
+                        <a href="tel:0559727720" class="link">
+                            <p class="txt">055-972-7720</p>
+                        </a>
+                    </div>
+                    <div class="dataItem">
+                        <p class="dataItemHead">代表</p>
+                        <p class="txt">和田由貴美</p>
+                    </div>
+                </div>
+            </div>
+            <div class="decoration">
+                <img src={siteDomein + '20240609200951411886.png'} alt="装飾用の画像" class="decorationImg" width="221" height="311">
+            </div>
+
+        </div>
+    </div>
+	<Footer />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

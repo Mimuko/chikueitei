@@ -1,0 +1,1322 @@
+---
+import '../styles/common/reset.css';
+import '../styles/common/common.css';
+import '../styles/header.css';
+import '../styles/footer.css';
+import '../styles/menu.css';
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+
+const pageTitle = "メニューサーロインステーキ｜毎日牧場";
+const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<Head />
+	<title>{pageTitle}</title>
+</head>
+
+<body class="wrap">
+	<Header />
+    <div class="content">
+		<div class="pageHeader">
+			<div class="pageHeaderBg">
+				<img width="1440" height="437" src={siteDomein + '20240608123856652056.png'} alt="メニュー" class="pageHeaderImg" />
+			</div>
+			<div class="pageHeaderGroup">
+				<p class="pageHeaderDesc">MENU
+				</p>
+				<h1 class="pageHeaderFront">メニュー
+				</h1>
+			</div>
+		</div>
+		<div class="linkSection section">
+			<div class="sectionInr linkSectionRow">
+				<div class="linkBox">
+					<a href="#steak" class="imgLink"><img src={siteDomein + '20240608125047915036.png'} alt="背景用の画像" width="1060" height="400" class="backImg" />
+						<div class="front">
+							<p class="frontTxtDesc">STEAK
+							</p>
+							<p class="frontTxt">ステーキ
+							</p>
+							<div class="dotted">
+								<div>
+								</div>
+								<div>
+								</div>
+								<div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="linkBox">
+					<a href="#hamburger" class="imgLink"><img src={siteDomein + '20240608125047314700.png'} alt="背景用の画像" width="1060" height="400" class="backImg" />
+						<div class="front">
+							<p class="frontTxtDesc">HAMBURGER & A LA CARTE
+							</p>
+							<p class="frontTxt">ハンバーグ&アラカルト
+							</p>
+							<div class="dotted">
+								<div>
+								</div>
+								<div>
+								</div>
+								<div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="linkBox">
+					<a href="#kids" class="imgLink"><img src={siteDomein + '20240608125047734675.png'} alt="背景用の画像" width="1060" height="400" class="backImg" />
+						<div class="front">
+							<p class="frontTxtDesc">KIDS
+							</p>
+							<p class="frontTxt">キッズ
+							</p>
+							<div class="dotted">
+								<div>
+								</div>
+								<div>
+								</div>
+								<div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="linkBox">
+					<a href="#lunch" class="imgLink"><img src={siteDomein + '20240608125047637540.png'} alt="背景用の画像" width="1060" height="400" class="backImg" />
+						<div class="front">
+							<p class="frontTxtDesc">LUNCH
+							</p>
+							<p class="frontTxt">ランチ
+							</p>
+							<div class="dotted">
+								<div>
+								</div>
+								<div>
+								</div>
+								<div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div id="steak" class="section sectionColor">
+			<div class="sectionInr">
+				<div class="overlayHead overlayHeadColor">
+					<div class="overlayHeadGroup">
+						<p class="overlayHeadDesc">STEAK
+						</p>
+						<h2 class="overlayHeadJa">ステーキメニュー
+						</h2>
+					</div>
+					<div class="dotted">
+						<div>
+						</div>
+						<div>
+						</div>
+						<div>
+						</div>
+					</div>
+					<p class="overlayBack">STEAK
+					</p>
+				</div>
+				<div class="menuWrap">
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">
+								「肉バルフェスタ」<br class="tabHidden">企画！
+							</h3>
+						</div>
+						<div class="menuGrid">
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856482572.png'} alt="スタミナサーロインステーキ+サラダバー" width="430" height="280" class="img" />
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">スタミナサーロインステーキ
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt">120g
+										</p>
+										<p class="txt taxTxt">1,980円
+										</p>
+									</div>
+									<p class="txt">1枚肉をカットして、玉ねぎ・にら・にんにく・唐辛子を炒めた野菜の上にのせました。
+									</p>
+									<div class="priceOption">
+										<p class="txt">お肉のおかわり
+										</p>
+										<p class="txt">1枚につき
+										</p>
+										<div class="price">
+											<p class="txt taxTxt">990円
+											</p>
+										</div>
+									</div>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">サーロインステーキ
+							</h3>
+						</div>
+						<div class="menuGrid">
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240618181319331048.png'} alt="マイボクステーキ" width="430" height="280" class="img" />
+									<p class="menuImgCaption noticeTxt">※付け合わせの野菜は季節により変わります。
+									</p>
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">サーロインステーキ
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt">150g
+										</p>
+										<p class="txt taxTxt">2,300円
+										</p>
+									</div>
+									<p class="txt">リブロースからももに続く部位のお肉
+										<br>きめが細かく肉質は最高！
+										<br>長期穀物飼育（グレインフェッド）のおいしいお肉です。
+									</p>
+									<div class="priceOption">
+										<p class="txt">追加
+										</p>
+										<p class="txt">１５０g毎に
+										</p>
+										<div class="price">
+											<p class="txt taxTxt">1,300円
+											</p>
+										</div>
+									</div>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+										<div class="menuRowRecommend">
+											<p class="menuRowRecommendHead">
+												おすすめ
+												<br />トッピング
+											</p>
+											<div class="menuRowRecommendIcon">
+												<img src={siteDomein + '20240608124227860362.png'} alt="ガーリックソース + ガーリックチップ" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227534110.png'} alt="和風薬味（ネギ + 大根おろし + 生姜）" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227735303.png'} alt="BBQソース + ホースラディッシュ" width="35" height="35" class="img" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">
+								マイボクステーキ
+							</h3>
+						</div>
+						<div class="menuGrid">
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856479595.png'} alt="マイボクステーキ" width="430" height="280" class="img" />
+									<p class="menuImgCaption noticeTxt">※付け合わせの野菜は季節により変わります。
+									</p>
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">マイボクステーキ
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt">120g
+										</p>
+										<p class="txt taxTxt">1,980円
+										</p>
+									</div>
+									<p class="txt">サービスステーキ40年目の大改革！
+										<br />厚切りステーキ120g。
+										<br />ヘルシーな赤みのお肉です。
+										<br />チーズ入り・とろとろ玉子（バター風味）とオリジナのトマトソースを添えてボリュームたっぷりなメニューです。
+										<br />
+										<br />
+										サラダ―バーもついています！
+									</p>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+										<div class="menuRowRecommend">
+											<p class="menuRowRecommendHead">
+												おすすめ
+												<br />トッピング
+											</p>
+											<div class="menuRowRecommendIcon">
+												<img src={siteDomein + '20240608124227860362.png'} alt="ガーリックソース + ガーリックチップ" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227534110.png'} alt="和風薬味（ネギ + 大根おろし + 生姜）" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227735303.png'} alt="BBQソース + ホースラディッシュ" width="35" height="35" class="img" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">
+								希少部位
+							</h3>
+						</div>
+						<div class="menuGrid">
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856190180.png'} alt="イチボステーキ" width="430" height="280" class="img" />
+									<p class="menuImgCaption noticeTxt">※付け合わせの野菜は季節により変わります。
+									</p>
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">イチボステーキ
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt">200g
+										</p>
+										<p class="txt taxTxt">2,805円
+										</p>
+									</div>
+									<p class="txt">一頭の中から取り出せる量が少なく、とろけるような旨味や甘味があります。
+										<br />
+										<br />数に限りがございますので、スタッフにご確認ください。
+									</p>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+										<div class="menuRowRecommend">
+											<p class="menuRowRecommendHead">
+												おすすめ
+												<br />トッピング
+											</p>
+											<div class="menuRowRecommendIcon">
+												<img src={siteDomein + '20240608124227860362.png'} alt="ガーリックソース + ガーリックチップ" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227534110.png'} alt="和風薬味（ネギ + 大根おろし + 生姜）" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227735303.png'} alt="BBQソース + ホースラディッシュ" width="35" height="35" class="img" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">
+								厚切りステーキ
+							</h3>
+						</div>
+						<div class="menuGrid">
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856184406.png'} alt="厚切り ジャンボ！ステーキ" width="430" height="280" class="img" />
+									<p class="menuImgCaption noticeTxt">※付け合わせの野菜は季節により変わります。
+									</p>
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">厚切り ジャンボ！ステーキ
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt">300g
+										</p>
+										<p class="txt taxTxt">2,980円
+										</p>
+									</div>
+									<p class="txt">ヘルシーな赤みのお肉です。
+										<br />焼き方は、レアかミディアムレアのみです。
+										<br />トッピングは粒コショウ、メンテルバターをお付けします。
+									</p>
+									<p class="noticeTxt">※ローストした脂身を無料で提供いたしますので、ご希望のかたはお知らせください！
+									</p>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+										<div class="menuRowRecommend">
+											<p class="menuRowRecommendHead">
+												おすすめ
+												<br />トッピング
+											</p>
+											<div class="menuRowRecommendIcon">
+												<img src={siteDomein + '20240608124227860362.png'} alt="ガーリックソース + ガーリックチップ" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227534110.png'} alt="和風薬味（ネギ + 大根おろし + 生姜）" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227735303.png'} alt="BBQソース + ホースラディッシュ" width="35" height="35" class="img" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856772562.png'} alt="厚切り カウボーイステーキ" width="430" height="280" class="img" />
+									<p class="menuImgCaption noticeTxt">※付け合わせの野菜は季節により変わります。
+									</p>
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">厚切り カウボーイステーキ
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt">450g
+										</p>
+										<p class="txt taxTxt">3,795円
+										</p>
+									</div>
+									<p class="txt">ヘルシーな赤みのお肉の1ポンドステーキ！
+										<br />焼き方は、レアかミディアムレアのみです。
+										<br />トッピングは粒コショウ、メンテルバターをお付けします。
+									</p>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+										<div class="menuRowRecommend">
+											<p class="menuRowRecommendHead">
+												おすすめ
+												<br />トッピング
+											</p>
+											<div class="menuRowRecommendIcon">
+												<img src={siteDomein + '20240608124227860362.png'} alt="ガーリックソース + ガーリックチップ" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227534110.png'} alt="和風薬味（ネギ + 大根おろし + 生姜）" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227735303.png'} alt="BBQソース + ホースラディッシュ" width="35" height="35" class="img" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">カットステーキ
+							</h3>
+						</div>
+						<div class="menuGrid">
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856523876.png'} alt="厚切り ジャンボ！ステーキ" width="430" height="280" class="img" />
+									<p class="menuImgCaption noticeTxt">※付け合わせの野菜は季節により変わります。
+									</p>
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">カットステーキ
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt">150g
+										</p>
+										<p class="txt taxTxt">2,090円
+										</p>
+									</div>
+									<div class="price">
+										<p class="txt">200g
+										</p>
+										<p class="txt taxTxt">2,420円
+										</p>
+									</div>
+									<div class="price">
+										<p class="txt">300g
+										</p>
+										<p class="txt taxTxt">2,980円
+										</p>
+									</div>
+									<p class="txt">やわらかい赤身肉。
+										<br />味に深みがあり、ヘルシーで食べやすいです。
+									</p>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+										<div class="menuRowRecommend">
+											<p class="menuRowRecommendHead">
+												おすすめ
+												<br />トッピング
+											</p>
+											<div class="menuRowRecommendIcon">
+												<img src={siteDomein + '20240608124227860362.png'} alt="ガーリックソース + ガーリックチップ" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227534110.png'} alt="和風薬味（ネギ + 大根おろし + 生姜）" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227735303.png'} alt="BBQソース + ホースラディッシュ" width="35" height="35" class="img" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="asideContent">
+						<h3 class="asideContentHead">トッピングで美味しさ倍増！
+						</h3>
+						<div class="asideContentBody">
+							<h4 class="asideContentTtl">すべて110円（税込）です
+							</h4>
+							<div class="list">
+								<p class="listItem">・ガーリックソース + ガーリックチップ【各メニューおすすめアイコン：
+									<img src={siteDomein + '20240608124227860362.png'} alt="ガーリックソース + ガーリックチップ" width="35" height="35" class="toppingIcon" />】
+								</p>
+								<p class="listItem">・和風薬味（ネギ + 大根おろし + 生姜）【各メニューおすすめアイコン：
+									<img src={siteDomein + '20240608124227534110.png'} alt="和風薬味（ネギ + 大根おろし + 生姜）" width="35" height="35" class="toppingIcon" />】
+								</p>
+								<p class="listItem">・テリヤキソース（マヨネーズ or 大根おろし）【各メニューおすすめアイコン：
+									<img src={siteDomein + '20240608180412657154.png'} alt="テリヤキソース（マヨネーズ or 大根おろし）" width="35" height="35" class="toppingIcon" />】
+								</p>
+								<p class="listItem">・BBQソース + ホースラディッシュ【各メニューおすすめアイコン：
+									<img src={siteDomein + '20240608124227735303.png'} alt="BBQソース + ホースラディッシュ" width="35" height="35" class="toppingIcon" />】
+								</p>
+								<p class="listItem">・温泉たまご
+								</p>
+								<p class="listItem">・目玉焼き
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="hamburger" class="section">
+			<div class="sectionInr">
+				<div class="overlayHead overlayHeadColor">
+					<div class="overlayHeadGroup">
+						<p class="overlayHeadDesc">HAMBURGER & A LA CARTE
+						</p>
+						<h2 class="overlayHeadJa">ハンバーグ&アラカルト
+						</h2>
+					</div>
+					<div class="dotted">
+						<div>
+						</div>
+						<div>
+						</div>
+						<div>
+						</div>
+					</div>
+					<p class="overlayBack">HAMBURGER
+					</p>
+				</div>
+				<div class="menuWrap">
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">
+								ステーキハウスの
+								<br class="tabHidden" />ローストビーフ
+							</h3>
+						</div>
+						<div class="menuGrid">
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856938627.png'} alt="ローストビーフ" width="430" height="280" class="img" />
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">ローストビーフ
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt taxTxt">1,980円
+										</p>
+									</div>
+									<p class="txt">120gの熟成された赤身肉、旨味たっぷりのグレインフェッド。
+										<br />
+										こくと旨味、特別な天孫降卵の温泉玉子。
+										<br />
+										わさびを付けてステーキソースでお召し上がりください。
+										<br />
+										<br />
+										焼き方はレアです。
+										<br />
+										お肉の下に、マリネしたスライスオニオンを敷いてあります。
+									</p>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">手作りハンバーグ<br class="tabHidden">彩いろいろ
+							</h3>
+							<p class="txt">ふっくら・やわらか・手こねでジューシー、牛肉100%のビーフハンバーグです。
+								<br />まずはそのままでお召し上がりください。
+							</p>
+						</div>
+						<div class="menuGrid">
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856480858.png'} alt="マイボクハンバーグ" width="430" height="280" class="img" />
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">マイボクハンバーグ
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt taxTxt">2,420円
+										</p>
+									</div>
+									<p class="txt">ハンバーグ150g&有機玉子の目玉焼き&カットステーキ80g。
+									</p>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+									</div>
+								</div>
+							</div>
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856331273.png'} alt="BBQハンバーグ" width="430" height="280" class="img" />
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">BBQハンバーグ
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt">150g
+										</p>
+										<p class="txt taxTxt">1,760円
+										</p>
+									</div>
+									<p class="txt">スモークの香りが効いたBBQソースとホースラディッシュの辛みが相性抜群！
+									</p>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+									</div>
+								</div>
+							</div>
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856794051.png'} alt="ダブルチーズハンバーグ" width="430" height="280" class="img" />
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">ダブルチーズハンバーグ
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt">200g
+										</p>
+										<p class="txt taxTxt">2,200円
+										</p>
+									</div>
+									<p class="txt">中にモッツァレラチーズ、外にはコクのあるオランダ産ゴーダ
+										<br />チーズのダブルチーズで美味しい！
+										<br />デミグラスソースorステーキソースが選べます。
+									</p>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+										<div class="menuRowRecommend">
+											<p class="menuRowRecommendHead">
+												おすすめ
+												<br />トッピング
+											</p>
+											<div class="menuRowRecommendIcon">
+												<img src={siteDomein + '20240608124227735303.png'} alt="BBQソース + ホースラディッシュ" width="35" height="35" class="img" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123933848089.png'} alt="定番ハンバーグ" width="430" height="280" class="img" />
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">定番ハンバーグ
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt">150g
+										</p>
+										<p class="txt taxTxt">1,760円
+										</p>
+									</div>
+									<p class="txt">デミグラスソースorステーキソースが選べます。
+									</p>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+										<div class="menuRowRecommend">
+											<p class="menuRowRecommendHead">
+												おすすめ
+												<br />トッピング
+											</p>
+											<div class="menuRowRecommendIcon">
+												<img src={siteDomein + '20240608124227860362.png'} alt="ガーリックソース + ガーリックチップ" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227534110.png'} alt="和風薬味（ネギ + 大根おろし + 生姜）" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608180412657154.png'} alt="テリヤキソース（マヨネーズ or 大根おろし）" width="35" height="35" class="img" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856228258.png'} alt="ダブルハンバーグ" width="430" height="280" class="img" />
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">ダブルハンバーグ
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt">150g×2
+										</p>
+										<p class="txt taxTxt">2,310円
+										</p>
+									</div>
+									<p class="txt">びっくりの2枚！
+										<br />デミグラスソースorステーキソースが選べます。
+									</p>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+										<div class="menuRowRecommend">
+											<p class="menuRowRecommendHead">
+												おすすめ
+												<br />トッピング
+											</p>
+											<div class="menuRowRecommendIcon">
+												<img src={siteDomein + '20240608124227860362.png'} alt="ガーリックソース + ガーリックチップ" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227534110.png'} alt="和風薬味（ネギ + 大根おろし + 生姜）" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608180412657154.png'} alt="テリヤキソース（マヨネーズ or 大根おろし）" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227735303.png'} alt="BBQソース + ホースラディッシュ" width="35" height="35" class="img" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">
+								チキン&アラカルト
+							</h3>
+						</div>
+						<div class="menuGrid">
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856760393.png'} alt="BBQチキン" width="430" height="280" class="img" />
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">BBQチキン
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt taxTxt">1,870円
+										</p>
+									</div>
+									<p class="txt">スモークの香りが効いたBBQソースとホースラディッシュの辛みが相性抜群！
+									</p>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+									</div>
+								</div>
+							</div>
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856446506.png'} alt="カット&チキン" width="430" height="280" class="img" />
+									<p class="menuImgCaption noticeTxt">※付け合わせの野菜は季節により変わります。
+									</p>
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">カット&チキン
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt taxTxt">2,530円
+										</p>
+									</div>
+									<p class="txt">80gのカットステーキとチキン
+									</p>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+										<div class="menuRowRecommend">
+											<p class="menuRowRecommendHead">
+												おすすめ
+												<br />トッピング
+											</p>
+											<div class="menuRowRecommendIcon">
+												<img src={siteDomein + '20240608124227860362.png'} alt="ガーリックソース + ガーリックチップ" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227534110.png'} alt="和風薬味（ネギ + 大根おろし + 生姜）" width="35" height="35" class="img" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856956488.png'} alt="チキンステーキ" width="430" height="280" class="img" />
+									<p class="menuImgCaption noticeTxt">※付け合わせの野菜は季節により変わります。
+									</p>
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">チキンステーキ
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt taxTxt">1,870円
+										</p>
+									</div>
+									<p class="txt">照り焼きソースまたはステーキソースをお選びください。
+									</p>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+										<div class="menuRowRecommend">
+											<p class="menuRowRecommendHead">
+												おすすめ
+												<br />トッピング
+											</p>
+											<div class="menuRowRecommendIcon">
+												<img src={siteDomein + '20240608124227860362.png'} alt="ガーリックソース + ガーリックチップ" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227534110.png'} alt="和風薬味（ネギ + 大根おろし + 生姜）" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227735303.png'} alt="BBQソース + ホースラディッシュ" width="35" height="35" class="img" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856213805.png'} alt="ダブルチキン" width="430" height="280" class="img" />
+									<p class="menuImgCaption noticeTxt">※付け合わせの野菜は季節により変わります。
+									</p>
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">ダブルチキン
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt taxTxt">2,530円
+										</p>
+									</div>
+									<p class="txt">照り焼きソースまたはステーキソースをお選びください。
+									</p>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+										<div class="menuRowRecommend">
+											<p class="menuRowRecommendHead">
+												おすすめ
+												<br />トッピング
+											</p>
+											<div class="menuRowRecommendIcon">
+												<img src={siteDomein + '20240608124227860362.png'} alt="ガーリックソース + ガーリックチップ" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227534110.png'} alt="和風薬味（ネギ + 大根おろし + 生姜）" width="35" height="35" class="img" />
+												<img src={siteDomein + '20240608124227735303.png'} alt="BBQソース + ホースラディッシュ" width="35" height="35" class="img" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="asideContent variation">
+						<h3 class="asideContentHead">トッピングで美味しさ倍増！
+						</h3>
+						<div class="asideContentBody">
+							<h4 class="asideContentTtl">すべて110円（税込）です
+							</h4>
+							<div class="list">
+								<p class="listItem">・ガーリックソース + ガーリックチップ【各メニューおすすめアイコン：
+									<img src={siteDomein + '20240608124227860362.png'} alt="ガーリックソース + ガーリックチップ" width="35" height="35" class="toppingIcon" />】
+								</p>
+								<p class="listItem">・和風薬味（ネギ + 大根おろし + 生姜）【各メニューおすすめアイコン：
+									<img src={siteDomein + '20240608124227534110.png'} alt="和風薬味（ネギ + 大根おろし + 生姜）" width="35" height="35" class="toppingIcon" />】
+								</p>
+								<p class="listItem">・テリヤキソース（マヨネーズ or 大根おろし）【各メニューおすすめアイコン：
+									<img src={siteDomein + '20240608180412657154.png'} alt="テリヤキソース（マヨネーズ or 大根おろし）" width="35" height="35" class="toppingIcon" />】
+								</p>
+								<p class="listItem">・BBQソース + ホースラディッシュ【各メニューおすすめアイコン：
+									<img src={siteDomein + '20240608124227735303.png'} alt="BBQソース + ホースラディッシュ" width="35" height="35" class="toppingIcon" />】
+								</p>
+								<p class="listItem">・温泉たまご
+								</p>
+								<p class="listItem">・目玉焼き
+								</p>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">
+								オススメ！一品料理
+							</h3>
+						</div>
+						<div class="menuGrid">
+							<div class="menuRow">
+								<div class="menuRowColumns">
+									<div class="menuRowImg">
+										<img src={siteDomein + '20240608123933163681.png'} alt="牛タン" width="340" height="225" class="img" />
+									</div>
+									<div class="menuRowColumnsTtl">
+										<div class="flex">
+											<p class="txt">牛タン
+											</p>
+											<div class="price">
+												<p class="smallTxt txt">80g
+												</p>
+												<p class="taxTxt">990円
+												</p>
+											</div>
+										</div>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+								</div>
+								<div class="menuRowColumns">
+									<div class="menuRowImg">
+										<img src={siteDomein + '20240608123933985116.png'} alt="カニクリームコロッケ" width="340" height="225" class="img" />
+									</div>
+									<div class="menuRowColumnsTtl">
+										<div class="flex">
+											<p class="txt lsKana">カニクリームコロッケ
+											</p>
+											<div class="price">
+												<p class="taxTxt">220円
+												</p>
+											</div>
+										</div>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+								</div>
+								<div class="menuRowColumns">
+									<div class="menuRowImg">
+										<img src={siteDomein + '20240608123933825493.png'} alt="鳥唐揚げ" width="340" height="225" class="img" />
+									</div>
+									<div class="menuRowColumnsTtl">
+										<div class="flex">
+											<p class="txt">鳥唐揚げ
+											</p>
+											<div class="price">
+												<p class="taxTxt">300円
+												</p>
+											</div>
+										</div>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">
+								当店名物サラダバー
+							</h3>
+							<p class="txt">お食事ご注文のお客様には、サラダバー・ライス・スープお替り自由です。
+							</p>
+						</div>
+						<div class="menuGrid">
+							<div class="menuRow menuRowWide">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123933850453.png'} alt="サラダバー＆ドリンクバー" width="530" height="351" class="img" />
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">サラダバー＆ドリンクバー
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt taxTxt">1,430円
+										</p>
+									</div>
+									<p class="txt">サラダバーだけのご注文もOKです。
+										<br />
+										サラダバーは、お肉を食べられない方にはうれしいメニュー。
+										<br />
+										カレー・お惣菜・サラダ・フルーツ・デザートなど、ご自由にお取りください。
+									</p>
+									<p class="noticeTxt">※メニューなど写真はイメージです。
+										<br />またお断りなくメニュー及び価格の変更をすることもありますのでご了承ください。
+										<br />カードでのお支払いもご利用ください。
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="kids" class="section sectionColor">
+			<div class="sectionInr">
+				<div class="overlayHead overlayHeadColor">
+					<div class="overlayHeadGroup">
+						<p class="overlayHeadDesc">KIDS
+						</p>
+						<h2 class="overlayHeadJa">キッズ
+						</h2>
+					</div>
+					<div class="dotted">
+						<div>
+						</div>
+						<div>
+						</div>
+						<div>
+						</div>
+					</div>
+					<p class="overlayBack">KIDS
+					</p>
+				</div>
+				<div class="menuWrap">
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">
+								キッズメニュー
+							</h3>
+							<p class="txt">キッズメニューにはすべてドリンクバーが付いています。
+							</p>
+						</div>
+						<div class="menuGrid">
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856528796.png'} alt="よくばりわんぱくセット" width="430" height="280" class="img" />
+								</div>
+								<div class="menuRowDetail">
+									<div>
+										<div class="menuRowDetailTtl">
+											<h4 class="h4Head">よくばりわんぱくセット
+											</h4>
+											<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+										</div>
+										<div class="price">
+											<p class="txt taxTxt">990円
+											</p>
+										</div>
+										<p class="txt">おもちゃ・お菓子・ドリンクバー付き
+											<br />対象／小学校低学年まで
+										</p>
+									</div>
+									<div class="menuRowDetailBottom">
+										<div class="menuRowDetailTtl">
+											<h4 class="h4Head">わんぱくサラダバー・ドリンクバー付き
+											</h4>
+											<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+										</div>
+										<div class="price">
+											<p class="txt taxTxt">660円
+											</p>
+										</div>
+										<p class="txt">※ 3歳までのお子様はサラダバーが無料です！
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="lunch" class="section">
+			<div class="sectionInr">
+				<div class="overlayHead overlayHeadColor">
+					<div class="overlayHeadGroup">
+						<p class="overlayHeadDesc">LUNCH
+						</p>
+						<h2 class="overlayHeadJa">ランチ
+						</h2>
+					</div>
+					<div class="dotted">
+						<div>
+						</div>
+						<div>
+						</div>
+						<div>
+						</div>
+					</div>
+					<p class="overlayBack">LUNCH
+					</p>
+				</div>
+				<div class="menuWrap">
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">
+								ランチタイム 11:00～15:00
+								<br class="pcHidden" />（日・祝日除く）
+							</h3>
+						</div>
+						<div class="menuGrid">
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123933109582.png'} alt="ランチタイムドリンクバー" width="374" height="247" class="img" />
+								</div>
+								<div class="menuRowDetail">
+									<div class="noticeBox">
+										<p class="txt">
+											ラストオーダー　14:30
+											<br />ランチメニューにはサラダバーがつきます。
+										</p>
+									</div>
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">ランチタイムドリンクバー
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="menuList">
+										<div class="menuListItem">
+											<p class="txt">お食事とセット
+											</p>
+											<p class="taxTxt">220円
+											</p>
+										</div>
+										<div class="menuListItem">
+											<p class="txt">単品ドリンクバー
+											</p>
+											<p class="taxTxt">385円
+											</p>
+										</div>
+									</div>
+									<p class="noticeTxt">ランチタイムは 1階・北側2階・中地下スペース での提供となります。
+									</p>
+								</div>
+							</div>
+						</div>
+						<div>
+						</div>
+					</div>
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">
+								ランチステーキ
+							</h3>
+						</div>
+						<div class="menuGrid">
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123856523876.png'} alt="ランチステーキ" width="430" height="280" class="img" />
+									<p class="menuImgCaption noticeTxt">※メンテルバターがのっております（不要の方はお申し付けください）。
+										<br />※付け合わせは季節により変わります。
+									</p>
+								</div>
+								<div class="menuRowDetail">
+									<div>
+										<div class="menuRowDetailTtl">
+											<h4 class="h4Head">ランチステーキ
+											</h4>
+											<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+										</div>
+										<div class="price">
+											<p class="txt">100g
+											</p>
+											<p class="txt taxTxt">1,705円
+											</p>
+										</div>
+										<div class="menuRowDetailMeta">
+											<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+											<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+											<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+										</div>
+									</div>
+									<div class="menuRowDetailBottom">
+										<div class="menuRowDetailTtl">
+											<h4 class="h4Head">ランチジャンボカットステーキ
+											</h4>
+											<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+										</div>
+										<div class="price">
+											<p class="txt">150g
+											</p>
+											<p class="txt taxTxt">1,980円
+											</p>
+										</div>
+										<div class="menuRowDetailMeta">
+											<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+											<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+											<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123933848089.png'} alt="ビーフハンバーグ" width="430" height="280" class="img" />
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">牛肉100%ビーフハンバーグ
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt">150g
+										</p>
+										<p class="txt taxTxt">1,595円
+										</p>
+									</div>
+									<p class="txt">デミソースとステーキソース味がございます。
+										<br />どちらかお選びください。
+									</p>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+									</div>
+								</div>
+							</div>
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123933830612.png'} alt="スタミナポーク野菜" width="430" height="280" class="img" />
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">スタミナポーク野菜
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt taxTxt">1,595円
+										</p>
+									</div>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+									</div>
+								</div>
+							</div>
+							<div class="menuRow">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123933382256.png'} alt="スタミナチキン（温玉のせ）" width="430" height="280" class="img" />
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">スタミナチキン（温玉のせ）
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt taxTxt">1,705円
+										</p>
+									</div>
+									<div class="menuRowDetailMeta">
+										<img src={siteDomein + '20240608124227569791.png'} alt="ライス" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227907818.png'} alt="スープ" width="44" height="44" class="img" />
+										<img src={siteDomein + '20240608124227528725.png'} alt="サラダバー" width="44" height="44" class="img" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">
+								当店名物サラダバー
+							</h3>
+							<p class="txt">お食事ご注文のお客様には、サラダバー・ライス・スープお替り自由です。
+							</p>
+						</div>
+						<div class="menuGrid">
+							<div class="menuRow menuRowWide">
+								<div class="menuRowImg">
+									<img src={siteDomein + '20240608123933850453.png'} alt="サラダバー＆ドリンクバー" width="530" height="351" class="img" />
+								</div>
+								<div class="menuRowDetail">
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">サラダバー＆ドリンクバー
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="price">
+										<p class="txt taxTxt">1,430円
+										</p>
+									</div>
+									<p class="txt">サラダバーだけのご注文もOKです。
+										<br />
+										サラダバーは、お肉を食べられない方にはうれしいメニュー。
+										<br />
+										カレー・お惣菜・サラダ・フルーツ・デザートなど、ご自由にお取りください。
+									</p>
+									<p class="noticeTxt">※メニューなど写真はイメージです。
+										<br />またお断りなくメニュー及び価格の変更をすることもありますのでご了承ください。
+										<br />カードでのお支払いもご利用ください。
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<Footer />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

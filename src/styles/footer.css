@@ -1,0 +1,196 @@
+/*--------------------------------
+    CONTACT
+--------------------------------*/
+
+.contactSection {
+    & .sectionHead {
+        margin-bottom: 30px;
+    }
+    & .sectionEn,
+    & .sectionTtl,
+    & .txt {
+        color: var(--white-color);
+    }
+    & .txt {
+        text-align: left;
+        @media (min-width: 768px) {
+            text-align: center;
+        }
+    }
+    & .dotted {
+        &>div {
+            background: var(--white-color);
+        }
+    }
+}
+
+.btnArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+    margin-top: 16px;
+    @media (min-width: 1024px) {
+        column-gap: 80px;
+        max-width: 725px;
+        margin: 32px auto 0;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    & .telLinkTxt {
+        font-size: 2.8rem;
+        @media (min-width: 768px) {
+            font-size: 3rem;
+        }
+        @media (min-width: 1024px) {
+            font-size: 3.2rem;
+        }
+    }
+}
+
+.contactBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4px;
+    padding: 16px 0;
+    background: var(--white-color);
+    border: 1px solid var(--accent-color);
+    width: 80%;
+    margin: auto;
+    border-radius: 120px;
+    transition: all .3s ease;
+    &:hover {
+        background: var(--accent-color);
+        & .contactBtnTxt {
+            color: var(--white-color);
+        }
+        & .contactBtn {
+            display: none;
+        }
+        & .hoverIcon {
+            display: block;
+            position: absolute;
+        }
+    }
+    @media (min-width: 1024px) {
+        max-width: 274px;
+        width: 100%;
+    }
+}
+
+.contactBtnWrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 8px;
+    width: 100%;
+}
+
+.contactBtnTxt {
+    color: var(--accent-color);
+    font-size: 2rem;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.hoverIcon {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/*--------------------------------
+	FOOTER
+--------------------------------*/
+
+.footer {
+    background: var(--accent-color);
+    color: var(--white-color);
+    padding-top: 80px;
+}
+
+.footerRow {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: var(--large-width);
+    margin: 0 auto 56px;
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 120px;
+    }
+}
+
+:is(.footerInfo, .footerAddress) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 1024px) {
+        align-items: flex-start;
+    }
+}
+
+.footerLogo {
+    max-width: 287px;
+}
+
+.footerLink {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 25px;
+    justify-content: center;
+    margin-top: 32px;
+    @media (min-width: 768px) {
+        width: 55%;
+        margin: 32px auto 0;
+    }
+    @media (min-width: 1024px) {
+        justify-content: flex-start;
+        margin: 20px 0 0;
+    }
+}
+
+.footerTelLink {
+    justify-content: center;
+    @media (min-width: 1024px) {
+        justify-content: flex-start;
+    }
+}
+
+.footerCopy {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+    position: relative;
+    margin-top: 32px;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    @media (min-width: 768px) {
+        margin-top: 0;
+        max-width: var(--large-width);
+        margin: 0 auto;
+    }
+}
+
+.footerInfoItem {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 16px;
+    column-gap: 16px;
+}
+
+.footerAddress {
+    margin-top: 32px;
+    font-size: 1.4rem;
+}

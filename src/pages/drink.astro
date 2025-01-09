@@ -1,0 +1,664 @@
+---
+import '../styles/common/reset.css';
+import '../styles/common/common.css';
+import '../styles/header.css';
+import '../styles/footer.css';
+import '../styles/drink.css';
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+
+const pageTitle = "ドリンク｜毎日牧場";
+const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<Head />
+	<title>{pageTitle}</title>
+</head>
+
+<body class="wrap">
+	<Header />
+    <div class="content">
+		<div class="pageHeader">
+			<div class="pageHeaderBg">
+				<img width="1440" height="437" src={siteDomein + '20240608124534461150.png'} alt="ドリンク" class="pageHeaderImg" />
+			</div>
+			<div class="pageHeaderGroup">
+				<p class="pageHeaderDesc">DRINK
+				</p>
+				<h1 class="pageHeaderFront">ドリンク
+				</h1>
+			</div>
+		</div>
+		<div class="section">
+			<div class="sectionInr">
+				<div class="overlayHead overlayHeadColor">
+					<div class="overlayHeadGroup">
+						<p class="overlayHeadDesc">DRINK
+						</p>
+						<h2 class="overlayHeadJa">ドリンク・デザート・ワイン他アルコール
+						</h2>
+					</div>
+					<div class="dotted">
+						<div>
+						</div>
+						<div>
+						</div>
+						<div>
+						</div>
+					</div>
+					<p class="overlayBack">DRINK
+					</p>
+				</div>
+				<div class="menuHead">
+					<h3 class="h3Head">
+						ドリンク・デザート・<br class="tabHidden">ワイン他アルコール
+					</h3>
+					<p class="txt">お食事のサラダバーにはドリンクがついておりません。
+						<br />お食事のお供にドリンクバーをご利用ください。またサラダバー＆ドリンクバーだけのご注文もお受けいたします！
+					</p>
+				</div>
+				<div class="menuWrap">
+					<div class="menuGrid">
+						<div class="menuRow">
+							<div class="menuRowImg">
+								<img src={siteDomein + '20240608123933109582.png'} alt="ドリンクバー" width="374" height="247" class="img" />
+							</div>
+							<div class="menuRowDetail">
+								<div class="menuRowDetailTtl">
+									<h4 class="h4Head">ドリンクバー
+									</h4>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+								<div class="menuList">
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">お食事とセット
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">220円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">単品サラダバー＆ドリンクバー
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">1,430円
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section sectionColor">
+			<div class="sectionInr">
+				<div class="menuWrap">
+					<div class="menuGrid">
+						<div class="menuRow">
+							<div class="menuRowImg">
+								<img src={siteDomein + '20240611100802711617.png'} alt="ビール・ワイン他アルコール" width="374" height="247" class="img" />
+							</div>
+							<div class="menuRowDetail">
+								<div class="menuRowDetailTtl">
+									<h4 class="h4Head">ビール
+									</h4>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+								<div class="menuList">
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">生ビール（中）
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">660円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">グラスビール
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">550円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">瓶ビール（アサヒ）
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">660円
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="sectionInr">
+				<div class="menuWrap">
+					<div class="menuGrid">
+						<div class="menuRow">
+							<div class="menuRowImg">
+								<img src={siteDomein + '20240611100802178211.png'} alt="ハイボール" width="374" height="247" class="img" />
+							</div>
+							<div class="menuRowDetail">
+								<div class="menuRowDetailTtl">
+									<h4 class="h4Head">ハイボール
+									</h4>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+								<div class="menuList">
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">ブラックニッカハイボール
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">600円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">コーラハイボール
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">650円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">ジンジャーハイボール
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">650円
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section sectionColor">
+			<div class="sectionInr">
+				<div class="menuWrap">
+					<div class="menuGrid">
+						<div class="menuRow">
+							<div class="menuRowImg">
+								<img src={siteDomein + '20240611100802147580.png'} alt="洋酒" width="374" height="247" class="img" />
+							</div>
+							<div class="menuRowDetail">
+								<div class="menuRowDetailTtl">
+									<h4 class="h4Head">洋酒
+									</h4>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+								<div class="menuList">
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">ジン
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">600円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">翠ジンソーダ
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt eachTxt">600円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">スミノフアイス（レモン）
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">500円
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="sectionInr">
+				<div class="menuWrap">
+					<div class="menuGrid">
+						<div class="menuRow">
+							<div class="menuRowImg">
+								<img src={siteDomein + '20240611100802106172.png'} alt="サワー" width="374" height="247" class="img" />
+							</div>
+							<div class="menuRowDetail">
+								<div class="menuRowDetailTtl">
+									<h4 class="h4Head">サワー
+									</h4>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+								<div class="menuList">
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">レモンサワー
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">550円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">巨峰サワー
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">550円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">グレープフルーツサワー
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">550円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">梅サワー
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">550円
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section sectionColor">
+			<div class="sectionInr">
+				<div class="menuWrap">
+					<div class="menuGrid">
+						<div class="menuRow">
+							<div class="menuRowImg">
+								<img src={siteDomein + '20240611100802565031.png'} alt="焼酎" width="374" height="247" class="img" />
+							</div>
+							<div class="menuRowDetail">
+								<div class="menuRowDetailTtl">
+									<h4 class="h4Head">焼酎
+									</h4>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+								<div class="menuList">
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">芋・麦（水割り・お湯割り）
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">550円
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="sectionInr">
+				<div class="menuWrap">
+					<div class="menuGrid">
+						<div class="menuRow">
+							<div class="menuRowImg">
+								<img src={siteDomein + '20240611100802380425.png'} alt="ノンアルコール" width="374" height="247" class="img" />
+							</div>
+							<div class="menuRowDetail">
+								<div class="menuRowDetailTtl">
+									<h4 class="h4Head">ノンアルコール
+									</h4>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+								<div class="menuList">
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">アサヒ　ドライゼロ（アルコール分0.00%）
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">550円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">カシスオレンジ
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">400円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">シャルドネサワー
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="taxTxt">400円
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section sectionColor">
+			<div class="sectionInr">
+				<div class="menuWrap">
+					<div class="menuGrid">
+						<div class="menuRow">
+							<div class="menuRowImg">
+								<img src={siteDomein + '20240608124534182103.png'} alt="おすすめワイン" width="374" height="247" class="img" />
+							</div>
+							<div class="menuRowDetail">
+								<div class="menuRowDetailTtl">
+									<h4 class="h4Head">おすすめワイン
+									</h4>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+								<div class="menuList">
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">ドメーヌ・ポール・マスレ・サンク・ヴァレー白
+											</p>
+											<p class="desc">柑橘系のフレッシュな香りが口いっぱいに広がり、丸みのある酸味と優しい喉越しのワイン
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="size">グラス
+												</p>
+												<p class="taxTxt">800円
+												</p>
+											</div>
+											<div class="menuListPriceItem">
+												<p class="size">ボトル
+												</p>
+												<p class="taxTxt">2,600円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">ドメーヌ・ポール・マスレ・サンク・ルージュ赤
+											</p>
+											<p class="desc">柑橘系のフレッシュな香りが口いっぱいに広がり、丸みのある酸味と優しい喉越しのワイン
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="size">グラス
+												</p>
+												<p class="taxTxt">800円
+												</p>
+											</div>
+											<div class="menuListPriceItem">
+												<p class="size">ボトル
+												</p>
+												<p class="taxTxt">2,600円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">赤ワイン
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">フロンテラ・カベルネ
+											</p>
+											<p class="desc">完熟した果実のフルーティーさが特徴のミディアムボディ赤ワイン
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="size">グラス
+												</p>
+												<p class="taxTxt">800円
+												</p>
+											</div>
+											<div class="menuListPriceItem">
+												<p class="size">デキャンタ
+												</p>
+												<p class="taxTxt">1,430円
+												</p>
+											</div>
+											<div class="menuListPriceItem">
+												<p class="size">ボトル
+												</p>
+												<p class="taxTxt">1,870円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">ヒドゥン・バール・シラーズ
+											</p>
+											<p class="desc">プラムやスグリなどのフレッシュでジューシー
+												<br />長い余韻が特徴でスパイス感
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="size">グラス
+												</p>
+												<p class="taxTxt">800円
+												</p>
+											</div>
+											<div class="menuListPriceItem">
+												<p class="size">デキャンタ
+												</p>
+												<p class="taxTxt">1,595円
+												</p>
+											</div>
+											<div class="menuListPriceItem">
+												<p class="size">ボトル
+												</p>
+												<p class="taxTxt">1,980円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">白ワイン
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">フロンテラ・シャルドネ
+											</p>
+											<p class="desc">さわやかな酸味が心地良い、エレガントスタイルの辛口の白ワイン
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="size">グラス
+												</p>
+												<p class="taxTxt">660円
+												</p>
+											</div>
+											<div class="menuListPriceItem">
+												<p class="size">デキャンタ
+												</p>
+												<p class="taxTxt">1,430円
+												</p>
+											</div>
+											<div class="menuListPriceItem">
+												<p class="size">ボトル
+												</p>
+												<p class="taxTxt">1,870円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">ヒドゥン・バール・シラーズ・ソーヴィニヨン・ブラン
+											</p>
+											<p class="desc">レモンやグレープフルーツ、微かなハーブの風味が感じられます。明るく溌剌とした白ワイン
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="size">グラス
+												</p>
+												<p class="taxTxt">715円
+												</p>
+											</div>
+											<div class="menuListPriceItem">
+												<p class="size">デキャンタ
+												</p>
+												<p class="taxTxt">1,595円
+												</p>
+											</div>
+											<div class="menuListPriceItem">
+												<p class="size">ボトル
+												</p>
+												<p class="taxTxt">1,980円
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="menuRowDetailTtl">
+										<h4 class="h4Head">スパークリングワイン
+										</h4>
+										<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									</div>
+									<div class="menuListItem">
+										<div class="menuListName">
+											<p class="name">ルネ・ラフランスブリュット
+											</p>
+											<p class="desc">青リンゴ、グレープフルーツのようなアロマ
+												<br />軽快な味わいで穏やかな酸味
+											</p>
+										</div>
+										<div class="menuListPrice">
+											<div class="menuListPriceItem">
+												<p class="size">ボトル
+												</p>
+												<p class="taxTxt">2,480円
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<Footer />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

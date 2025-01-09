@@ -1,0 +1,436 @@
+---
+import '../styles/common/reset.css';
+import '../styles/common/common.css';
+import '../styles/header.css';
+import '../styles/footer.css';
+import '../styles/takeout.css';
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+
+const pageTitle = "テイクアウト｜毎日牧場";
+const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<Head />
+	<title>{pageTitle}</title>
+</head>
+
+<body class="wrap">
+	<Header />
+    <div class="content">
+		<div class="pageHeader">
+			<div class="pageHeaderBg">
+				<img width="1440" height="437" src={siteDomein + '20240608124534993872.png'} alt="テイクアウト" class="pageHeaderImg" />
+			</div>
+			<div class="pageHeaderGroup">
+				<p class="pageHeaderDesc">TAKEOUT
+				</p>
+				<h1 class="pageHeaderFront">テイクアウト
+				</h1>
+			</div>
+		</div>
+		<div class="section">
+			<div class="sectionInr">
+				<div class="overlayHead overlayHeadColor">
+					<div class="overlayHeadGroup">
+						<p class="overlayHeadDesc">TAKEOUT
+						</p>
+						<h2 class="overlayHeadJa">テイクアウト
+						</h2>
+					</div>
+					<div class="dotted">
+						<div>
+						</div>
+						<div>
+						</div>
+						<div>
+						</div>
+					</div>
+					<p class="overlayBack">TAKEOUT
+					</p>
+				</div>
+				<div class="menuWrap">
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">
+								お弁当メニュー
+							</h3>
+							<p class="txt">ボリューム満点！お弁当メニュー＆本格ハンバーガー＆おかず＆おやつ
+							</p>
+						</div>
+						<div class="menuGrid">
+							<div class="menuBox">
+								<div class="menuBoxImg">
+									<img src={siteDomein + '20240608124534865460.png'} alt="サーロインステーキ弁当" width="520" height="320" class="img" />
+								</div>
+								<div class="menuBoxDetail">
+									<div class="flex">
+										<p class="menuBoxDetailName">サーロインステーキ弁当
+										</p>
+										<div class="price">
+											<p class="txt taxTxt">1,200円
+											</p>
+										</div>
+									</div>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+							</div>
+							<div class="menuBox">
+								<div class="menuBoxImg">
+									<img src={siteDomein + '20240608124534843413.png'} alt="ハン唐チキン弁当" width="520" height="320" class="img" />
+								</div>
+								<div class="menuBoxDetail">
+									<div class="flex">
+										<p class="menuBoxDetailName">ハン唐チキン弁当
+										</p>
+										<div class="price">
+											<p class="txt taxTxt">1,000円
+											</p>
+										</div>
+									</div>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+							</div>
+							<div class="menuBox">
+								<div class="menuBoxImg">
+									<img src={siteDomein + '20240608124534671151.png'} alt="カルビ弁当" width="520" height="320" class="img" />
+								</div>
+								<div class="menuBoxDetail">
+									<div class="flex">
+										<p class="menuBoxDetailName">カルビ弁当
+										</p>
+										<div class="price">
+											<p class="txt taxTxt">1,100円
+											</p>
+										</div>
+									</div>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+							</div>
+							<div class="menuBox">
+								<div class="menuBoxImg">
+									<img src={siteDomein + '20240609144600117124.png'} alt="チキン弁当（ステーキソース）" width="520" height="320" class="img" />
+								</div>
+								<div class="menuBoxDetail">
+									<div class="flex">
+										<p class="menuBoxDetailName">チキン弁当
+											<br class="tabHidden" />（ステーキソース）
+										</p>
+										<div class="price">
+											<p class="txt taxTxt">900円
+											</p>
+										</div>
+									</div>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+							</div>
+							<div class="menuBox">
+								<div class="menuBoxImg">
+									<img src={siteDomein + '20240608124534557901.png'} alt="ハンバーグ弁当（100%ビーフ）" width="520" height="320" class="img" />
+								</div>
+								<div class="menuBoxDetail">
+									<div class="flex">
+										<p class="menuBoxDetailName">ハンバーグ弁当
+											<br class="tabHidden" />（100%ビーフ）
+										</p>
+										<div class="price">
+											<p class="txt taxTxt">900円
+											</p>
+										</div>
+									</div>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+							</div>
+							<div class="menuBox">
+								<div class="menuBoxImg">
+									<img src={siteDomein + '20240608124534509191.png'} alt="唐カレー弁当" width="520" height="320" class="img" />
+								</div>
+								<div class="menuBoxDetail">
+									<div class="flex">
+										<p class="menuBoxDetailName">唐カレー弁当
+										</p>
+										<div class="price">
+											<p class="txt taxTxt">750円
+											</p>
+										</div>
+									</div>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+							</div>
+							<div class="menuBox">
+								<div class="menuBoxImg">
+									<img src={siteDomein + '20240608124534833501.png'} alt="お子様弁当" width="520" height="320" class="img" />
+								</div>
+								<div class="menuBoxDetail">
+									<div class="flex">
+										<p class="menuBoxDetailName">お子様弁当
+										</p>
+										<div class="price">
+											<p class="txt taxTxt">600円
+											</p>
+										</div>
+									</div>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section sectionColorGray">
+			<div class="sectionInr">
+				<div class="menuWrap">
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">本格<br class="tabHidden">ハンバーガーメニュー
+							</h3>
+						</div>
+						<div class="menuGrid">
+							<div class="menuBox">
+								<div class="menuBoxImg">
+									<img src={siteDomein + '20240608124534724776.png'} alt="" width="520" height="320" class="img" />
+								</div>
+								<div class="menuBoxDetail">
+									<div class="flex">
+										<p class="menuBoxDetailName">まいぼくバーガー
+										</p>
+										<div class="price">
+											<p class="txt taxTxt">700円
+											</p>
+										</div>
+									</div>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+							</div>
+							<div class="menuBox">
+								<div class="menuBoxImg">
+									<img src={siteDomein + '20240608124534320760.png'} alt="" width="520" height="320" class="img" />
+								</div>
+								<div class="menuBoxDetail">
+									<div class="flex">
+										<p class="menuBoxDetailName">牛カルビバーガー
+										</p>
+										<div class="price">
+											<p class="txt taxTxt">700円
+											</p>
+										</div>
+									</div>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+							</div>
+							<div class="menuBox">
+								<div class="menuBoxImg">
+									<img src={siteDomein + '20240608124534630657.png'} alt="" width="520" height="320" class="img" />
+								</div>
+								<div class="menuBoxDetail">
+									<div class="flex">
+										<p class="menuBoxDetailName">オレンジ風味
+											<br class="tabHidden" />チキンバーガー
+										</p>
+										<div class="price">
+											<p class="txt taxTxt">700円
+											</p>
+										</div>
+									</div>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+							</div>
+							<div class="menuBox">
+								<div class="menuBoxImg">
+									<img src={siteDomein + '20240608124534996837.png'} alt="" width="520" height="320" class="img" />
+								</div>
+								<div class="menuBoxDetail">
+									<div class="flex">
+										<p class="menuBoxDetailName">サーロイン
+											<br class="tabHidden" />ステーキドッグ
+										</p>
+										<div class="price">
+											<p class="txt taxTxt">400円
+											</p>
+										</div>
+									</div>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+							</div>
+							<div class="menuBox">
+								<div class="menuBoxImg">
+									<img src={siteDomein + '20240608124534606762.png'} alt="" width="520" height="320" class="img" />
+								</div>
+								<div class="menuBoxDetail">
+									<div class="flex">
+										<p class="menuBoxDetailName">ガーリックポテト
+										</p>
+										<div class="price">
+											<p class="txt taxTxt">400円
+											</p>
+										</div>
+									</div>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="sectionInr">
+				<div class="menuWrap">
+					<div>
+						<div class="menuHead">
+							<h3 class="h3Head">おかず＆おやつ
+							</h3>
+							<p class="txt">ボリューム満点！お弁当メニュー＆本格ハンバーガー＆おかず＆おやつ
+							</p>
+						</div>
+						<div class="menuGrid">
+							<div class="menuBox">
+								<div class="menuBoxImg">
+									<img src={siteDomein + '20240608124534355325.png'} alt="炭火焼サーロインステーキパック" width="520" height="320" class="img" />
+								</div>
+								<div class="menuBoxDetail">
+									<div class="flex">
+										<p class="menuBoxDetailName">炭火焼サーロイン
+											<br class="tabHidden" />ステーキパック
+										</p>
+										<div class="price">
+											<p class="txt">100g
+											</p>
+											<p class="txt taxTxt">800円
+											</p>
+										</div>
+									</div>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+								</div>
+							</div>
+							<div class="menuBox">
+								<div class="menuBoxImg">
+									<img src={siteDomein + '20240608124534465001.png'} alt="おかず＆おやつ" width="520" height="320" class="img" />
+								</div>
+								<div class="menuBoxDetail">
+									<div class="flex">
+										<p class="menuBoxDetailName">おかず＆おやつ
+										</p>
+									</div>
+									<img src={siteDomein + '20240608131917272808.png'} alt="装飾用の画像" width="550" height="2" class="img" />
+									<div class="menuList">
+										<div class="menuListItem">
+											<p class="txt">鶏唐揚げ（4個）
+											</p>
+											<p class="taxTxt">300円
+											</p>
+										</div>
+										<div class="menuListItem">
+											<p class="txt">蟹クリームコロッケ（1個）
+											</p>
+											<p class="taxTxt">200円
+											</p>
+										</div>
+										<div class="menuListItem">
+											<p class="txt">玉子焼き
+											</p>
+											<p class="taxTxt">200円
+											</p>
+										</div>
+										<div class="menuListItem">
+											<p class="txt">じっくり煮込んだ熟成カレー
+											</p>
+											<p class="taxTxt">350円
+											</p>
+										</div>
+										<div class="menuListItem">
+											<p class="txt">ピクルス
+											</p>
+											<p class="taxTxt">100円
+											</p>
+										</div>
+										<div class="menuListItem">
+											<p class="txt">さっぱり！杏仁豆腐
+											</p>
+											<p class="taxTxt">200円
+											</p>
+										</div>
+										<div class="menuListItem">
+											<p class="txt">腸内環境を整えるヨーグルト
+											</p>
+											<p class="taxTxt">100円
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section sectionColor">
+			<div class="sectionInr">
+				<div class="overlayHead overlayHeadColor">
+					<div class="overlayHeadGroup">
+						<p class="overlayHeadDesc">DELIVERY
+						</p>
+						<h2 class="overlayHeadJa">デリバリー
+						</h2>
+					</div>
+					<div class="dotted">
+						<div>
+						</div>
+						<div>
+						</div>
+						<div>
+						</div>
+					</div>
+					<p class="overlayBack">DELIVERY
+					</p>
+				</div>
+				<div class="asideContent">
+					<p class="txt">デリバリーご希望のお客様は、下記お問い合わせまたは電話にてご相談ください。
+					</p>
+					<p class="noticeTxt">※数量によっては、デリバリーができない場合がございます
+					</p>
+					<div class="btnArea">
+						<a href="tel:0559727720" class="telLink"><img src={siteDomein + '20240609174303237350.png'} alt="電話のアイコン" width="32" height="32" />
+							<p class="telLinkTxt">055-972-7720
+							</p>
+						</a>
+						<div class="contactBtnWrap">
+							<a href="./contact" class="contactBtn">
+								<div class="contactBtnIcon">
+									<img src={siteDomein + '20240606100248914201.png'} alt="メールのアイコン" width="20" height="20" class="contactIcon" />
+									<img src={siteDomein + '20240605110053977188.png'} alt="メールのアイコン" width="20" height="20" class="hoverIcon" />
+								</div>
+								<p class="contactBtnTxt">お問い合わせフォーム
+								</p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="tile">
+					<div class="tileItem">
+						<img src={siteDomein + '20240608124534468930.png'} alt="提供しているメニューの画像" width="340" height="220" class="img" />
+					</div>
+					<div class="tileItem">
+						<img src={siteDomein + '20240608124534942376.png'} alt="提供しているメニューの画像" width="340" height="220" class="img" />
+					</div>
+					<div class="tileItem">
+						<img src={siteDomein + '20240608124534597430.png'} alt="提供しているメニューの画像" width="340" height="220" class="img" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<Footer />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
