@@ -24,8 +24,8 @@ const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
 
 <body class="wrap">
 	<Header />
-    <div class="content">
-        <div class="pageHeader">
+    <main class="content">
+        <section class="pageHeader">
             <div class="pageHeaderBg">
                 <img width="1440" height="437" src={siteDomein + '20240609200951447193.png'} alt="店舗情報" class="pageHeaderImg" />
             </div>
@@ -33,8 +33,8 @@ const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
                 <p class="pageHeaderDesc">SHOP</p>
                 <h1 class="pageHeaderFront">店舗情報</h1>
             </div>
-        </div>
-        <div class="section sectionColor shopSection">
+        </section>
+        <section class="section sectionColor shopSection">
             <div class="sectionInr">
                 <div class="shopInfo">
                     <div class="flex">
@@ -122,8 +122,8 @@ const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
                 <img src={siteDomein + '20240605110053546357.png'} alt="装飾用の画像" class="decorationImg" width="273" height="174">
             </div>
 
-        </div>
-        <div class="section">
+        </section>
+        <section class="section">
             <div class="sectionInr">
                 <div class="overlayHead overlayHeadColor">
                     <div class="overlayHeadGroup">
@@ -137,11 +137,13 @@ const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
                     </div>
                     <p class="overlayBack">ACCESS</p>
                 </div>
-                <div class="googleMap map"></div>
+                <div class="googleMap map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.4611813187616!2d138.90135311177434!3d35.09519336182973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019904174abe701%3A0x1efe474e20ae6c15!2z5q-O5pel54mn5aC0!5e0!3m2!1sja!2sjp!4v1736474165453!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section sectionColorRed companySection">
+        <section class="section sectionColorRed companySection">
             <div class="sectionInr">
                 <div class="overlayHead overlayHeadColor">
                     <div class="overlayHeadGroup">
@@ -181,8 +183,8 @@ const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
                 <img src={siteDomein + '20240609200951411886.png'} alt="装飾用の画像" class="decorationImg" width="221" height="311">
             </div>
 
-        </div>
-    </div>
+        </section>
+    </main>
 	<Footer />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../assets/js/script.js"></script>

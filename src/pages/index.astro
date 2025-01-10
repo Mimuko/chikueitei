@@ -24,8 +24,8 @@ const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
 
 <body class="wrap">
 	<Header />
-    <div class="content">
-        <div class="firstView">
+    <main class="content">
+        <section class="firstView">
             <div class="firstViewImg">
                 <img src={siteDomein + '20240605110053450655.png'} alt="ファーストビュー背景画像" width="1440" height="680" class="img" />
             </div>
@@ -45,8 +45,8 @@ const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
                     <img src={siteDomein + '20240605110053611294.png'} alt="ナイフとフォークのアイコン" width="24" height="24">
                 </div>
             </div>
-        </div>
-        <div class="section sectionColor featuresSection">
+        </section>
+        <section class="section sectionColor featuresSection">
             <div class="sectionInr">
                 <div class="sectionHead">
                     <p class="sectionEn">FEATURES</p>
@@ -117,8 +117,8 @@ const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
             <div class="decoration">
                 <img src={siteDomein + '20240605110053546357.png'} alt="装飾用の画像" class="decorationImg"  width="273" height="174">
             </div>
-        </div>
-        <div class="section commitmentSection">
+        </section>
+        <section class="section commitmentSection">
             <div class="sectionInr">
                 <div class="commitmentRow">
                     <div class="commitmentCont">
@@ -158,9 +158,9 @@ const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section sectionBg takeoutSection">
+        <section class="section sectionBg takeoutSection">
             <div class="sectionBgImg">
                 <img src={siteDomein + '20240605110053620334.png'} alt="背景用の画像" class="img" width="1440" height="587">
             </div>
@@ -196,9 +196,9 @@ const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
             <div class="decoration">
                 <img src={siteDomein + '20240607083306210713.png'} alt="装飾用の画像" class="decorationImg"  width="364" height="379">
             </div>
-        </div>
+        </section>
 
-        <div class="linkSection section">
+        <aside class="linkSection section">
             <div class="sectionInr linkSectionRow">
                 <div class="linkBox">
                     <a href="./menu" class="imgLink"><img src={siteDomein + '20240605141556697717.png'} alt="メニュー 背景用の画像" width="1060" height="400" class="backImg" />
@@ -233,9 +233,9 @@ const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
             <div class="decoration decorationRight">
                 <img src={siteDomein + '20240605110053268976.png'} alt="装飾用の画像" class="decorationImg"  width="364" height="379">
             </div>
-        </div>
+        </aside>
 
-        <div class="section sectionColor taxSection">
+        <section class="section sectionColor taxSection">
             <div class="sectionInr">
                 <div class="taxRow">
                     <div class="taxRowCont">
@@ -250,10 +250,10 @@ const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
                         </div>
                         <p class="txt">毎日牧場は静岡県清水市のふるさと納税の返礼品としても選べます。<br>地域を支援しながら、paypayポイントや毎日牧場のWEB商品券を用意しております。</p>
                         <div class="btnArea">
-                            <a href="https://www.satofull.jp/products/list.php?cat=6017&s4=%E9%9D%99%E5%B2%A1%E7%9C%8C&s3=%E6%B8%85%E6%B0%B4%E7%94%BA&cnt=60&p=1" class="btn btnBraun" target="_blank" rel="noopener">
+                            <a href="#" class="btn btnBraun" target="_blank" rel="noopener">
                                 <p class="btnTxt">さとふる</p>
                             </a>
-                            <a href="https://furusatos.com/shimizu/shops/12" class="btn btnPink" target="_blank" rel="noopener">
+                            <a href="#" class="btn btnPink" target="_blank" rel="noopener">
                                 <p class="btnTxt">ふるさとズ</p>
                             </a>
                         </div>
@@ -265,9 +265,9 @@ const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
                 </div>
             </div>
             <p class="sectionBack">HOMETOWN TAX</p>
-        </div>
+        </section>
 
-        <div class="section newsSection">
+        <section class="section newsSection">
             <div class="sectionInr">
                 <div class="sectionHead">
                     <p class="sectionEn">NEWS</p>
@@ -278,19 +278,21 @@ const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
                         <div></div>
                     </div>
                 </div>
+                <p>CMSコンテンツエリア</p>
                 <div class="newsArea">
                     <a href="./news" class="btn">
                         <p class="btnTxt">新着情報一覧</p>
                     </a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section sectionColor shopSection">
+        <section class="section sectionColor shopSection">
             <div class="sectionInr">
                 <div class="shopRow">
                     <div class="googleMap">
                         <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.4611813187616!2d138.90135311177434!3d35.09519336182973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019904174abe701%3A0x1efe474e20ae6c15!2z5q-O5pel54mn5aC0!5e0!3m2!1sja!2sjp!4v1736474165453!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div class="shopImgs">
                             <img src={siteDomein + '20240605212727728038.png'} alt="背景用の画像" width="235" height="161" class="img">
@@ -372,8 +374,8 @@ const siteDomein = "https://mai-boku.jp/system_panel/uploads/images/";
             <div class="decoration">
                 <img src={siteDomein + '20240605110053563650.png'} alt="装飾用の画像" class="decorationImg"  width="364" height="379">
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 	<Footer />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../assets/js/script.js"></script>
