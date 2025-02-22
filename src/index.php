@@ -112,7 +112,7 @@
                 <div class="inner-block">
                     <div class="troubles_flame">
                         <li class="main-box">
-                            <p class="desc">Wantedlyの<span class="em">自社引用に限界</span>を感じている</p>
+                            <p class="desc">Wantedlyの<span class="em">自社運用に限界</span>を感じている</p>
                             <img class="troubles_img" src="<?php echo ($selectedPath); ?>/trouble_img01-min.webp" loading="lazy" width="350" height="201" alt="">
                         </li>
 
@@ -207,7 +207,7 @@
                         <h3 class="reason-item__title">Wantedlyを活用した<br><span class="colormaker2">採用実績<span class="em">1000名</span>以上</span>
                         </h3>
                         <div class="reason-item__body">
-                            <p class="desc">現在までにクライアントの採用ご支援と自社の採用の両面で、Wantedlyから<br class="pc">累計1000名以上の採用に成功！<br>採用活動を成功に導く仕組みづくりはお任せください！
+                            <p class="desc">現在までにクライアントの採用ご支援と自社の採用の両面で、Wantedlyから<br class="pc">累計1000名以上の採用に成功！採用活動を成功に導く仕組みづくりはお任せください！
                             </p>
                         </div>
                     </li>
@@ -237,7 +237,7 @@
                             <p class="speech__text">このような<br>サポートができます！</p>
                         </div>
                         <p class="catch_maintxt">details</p>
-                        <h2 class="title"><span class="title_dott_mark">具体的にご支援できること</span></h2>
+                        <h2 class="title"><span class="title_dott_mark">具体的に<br class="sp">ご支援できること</span></h2>
                         <p><span class="voice_line">ご支援範囲は以下の内容から<br class="sp">柔軟にカスタマイズ可能です！</span></p>
                     </div>
                     <ul class="detail-item__wrap">

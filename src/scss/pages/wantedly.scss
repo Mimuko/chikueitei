@@ -41,7 +41,7 @@
         margin: 0;
     }
     .inner-block {
-        padding: 0 1rem;
+        padding: 0 .5rem;
         z-index: 5;
         @include c.mq(min-tab) {
             padding: 0;
@@ -163,20 +163,14 @@
         display: inline-flex;
         align-items: center;
         column-gap: 8px;
+        letter-spacing: 0.07em;
         &::before,
         &::after {
             content: '';
             display: inline-block;
-            width: 0.5rem;
-            height: 0.5rem;
+            @include c.size(8px, 8px);
             background-color: c.$color-black;
             border-radius: 50%;
-        }
-        &::before {
-            left: 0;
-        }
-        &::after {
-            right: 0;
         }
     }
     .title_em-circle {
@@ -196,9 +190,10 @@
     }
     /*~~逆八の字のライン~~~*/
     .voice_line {
-        @include c.voice-line();
+        @include c.voice-line($gap: 8px, $margin: 0);
         font-weight: bold;
         letter-spacing: 0.1em;
+        font-weight: 900;
         @include c.mq(min-tab) {
             font-size: 1.125rem;
         }
@@ -218,17 +213,19 @@
 }
 
 .speech {
-    display: none;
+    display: block;
+    @include c.size(100%, 130px);
+    position: absolute;
+    background: url(../img/speech-bubble.webp) no-repeat center / contain;
     @include c.mq(min-tab) {
-        display: block;
-        position: absolute;
         @include c.size(100%, 130px);
-        background: url(../img/speech-bubble.webp) no-repeat center / contain;
     }
     &__text {
+        width: 100%;
         text-align: center;
-        font-size: 1rem;
-        font-weight: bold;
+        font-size: 1.125rem;
+        line-height: 1.3;
+        font-weight: 900;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -297,8 +294,8 @@ heading
                 @include c.size(21px, 21px);
                 background: url(../img/drops-min.webp) no-repeat center / contain;
                 position: absolute;
-                right: 6rem;
-                top: 2rem;
+                right: 3rem;
+                top: 1rem;
                 @include c.mq(min-tab) {
                     @include c.size(43px, 42px);
                     right: -5rem;
@@ -417,6 +414,7 @@ heading
             font-size: 1.25rem;
         }
         .speech {
+            top: -10rem;
             @include c.mq(min-tab) {
                 top: -7rem;
                 right: -15rem;
@@ -457,7 +455,10 @@ heading
         }
         .bg-circle {
             &::after {
-                top: 0;
+                top: 5rem;
+                @include c.mq(min-tab) {
+                    top: 0;
+                }
             }
         }
         .title {
@@ -468,10 +469,12 @@ heading
             margin-block-end: 1rem;
         }
         .speech {
-            @include c.size(300px, 100px);
-            top: 3rem;
-            right: -44rem;
-            transform: rotate(15deg);
+            @include c.mq(min-tab) {
+                @include c.size(300px, 100px);
+                top: 3rem;
+                right: -44rem;
+                transform: rotate(15deg);
+            }
         }
         .speech,
         .content-head__inr {
@@ -493,14 +496,13 @@ heading
             margin-block-end: 1rem;
         }
         .speech {
+            left: 0;
+            top: -9rem;
             @include c.mq(min-tab) {
                 top: -8rem;
                 left: -11rem;
                 transform: rotate(-5deg);
                 height: 110px;
-            }
-            &__text {
-                font-size: 1.125rem;
             }
         }
     }
@@ -522,15 +524,21 @@ heading
         }
         .speech {
             @include c.size(350px, 100px);
-            right: 14rem;
-            bottom: 5rem;
-            transform: rotate(15deg);
+            top: -7rem;
+            @include c.mq(min-tab) {
+                right: 14rem;
+                bottom: 5rem;
+                transform: rotate(15deg);
+            }
         }
         .title {
             margin: 0;
         }
         .catch_maintxt {
-            margin-block-end: 1rem;
+            margin-block-end: .5rem;
+            @include c.mq(min-tab) {
+                margin-block-end: 1rem;
+            }
         }
     }
 }
@@ -831,13 +839,14 @@ main visual
         }
     }
     .desc {
+        font-size: 0.875rem;
         font-weight: bold;
         text-align: center;
         line-height: 1.6;
     }
     .em {
         display: block;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
     &.arrow_icon {
         &::after {
@@ -914,9 +923,9 @@ main visual
         transform: translateX(-50%);
         max-width: 90%;
         width: 100%;
-        font-size: .875rem;
+        font-size: 0.75rem;
         @include c.mq(min-tab) {
-            font-size: 1.1rem;
+            font-size: 1.125rem;
             width: fit-content;
         }
     }
@@ -967,7 +976,7 @@ main visual
         margin-block-start: 8rem;
     }
     &.content {
-        margin-block-start: 4rem;
+        margin-block-start: 15rem;
         @include c.mq(min-tab) {
             margin-block-start: 10rem;
         }
@@ -994,9 +1003,10 @@ main visual
 }
 
 .reason-item {
-    padding: 2rem 1rem;
+    padding: 1rem .5rem 2rem;
     position: relative;
     @include c.mq(min-tab) {
+        padding: 2rem 1rem;
         width: calc(100% / 3);
     }
     &__head {
@@ -1023,13 +1033,13 @@ main visual
         margin-block: 1rem 1.5rem;
     }
     &__title {
-        font-size: 1rem;
+        font-size: 1.125rem;
         font-weight: bold;
         text-align: center;
         margin-block-end: 1rem;
         @include c.mq(min-tab) {}
         .colormaker2 {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             @include c.mq(min-tab) {}
         }
         .em {
@@ -1039,8 +1049,10 @@ main visual
     }
     &__body {
         .desc {
+            font-size: .8125rem;
             letter-spacing: 0.09em;
             text-align: center;
+            font-weight: bold;
         }
     }
     &:nth-child(2) {
@@ -1068,7 +1080,6 @@ main visual
         }
     }
     .inner-block {
-        width: 95%;
         max-width: 1200px;
         @include c.mq(min-tab) {
             width: 100%;
@@ -1097,7 +1108,9 @@ main visual
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
         gap: 1rem 8px;
+        margin-block-start: .5rem;
         @include c.mq(min-tab) {
+            margin-block-start: 1rem;
             gap: 3rem 4rem;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         }
@@ -1159,16 +1172,15 @@ main visual
         }
     }
     &__list {
-        margin-block: .5rem 1rem;
+        margin-block: .5rem;
         padding-inline-start: .5rem;
         &-item {
-            font-size: .75rem;
+            font-size: 0.625rem;
             position: relative;
             padding-inline-start: .75rem;
             font-weight: bold;
             @include c.flex(flex, flex-start, flex-start);
             @include c.mq(min-tab) {
-                font-size: 1rem;
                 margin: 0;
                 margin-inline-start: 0;
             }
@@ -1212,7 +1224,7 @@ main visual
         line-height: 0.85rem;
         margin: 0;
         text-indent: -0.625rem;
-        margin-inline-start: 0.625rem;
+        margin-inline-start: 1rem;
         text-align: left;
     }
 }
@@ -1280,7 +1292,7 @@ main visual
                 content: "Case" counter(number);
                 margin: auto;
                 font-size: 1.25rem;
-                font-weight: bold;
+                font-weight: 900;
                 @include c.mq(min-tab) {
                     font-size: 1.5rem;
                 }
@@ -1306,6 +1318,7 @@ main visual
         }
     }
     .desc {
+        font-weight: bold;
         letter-spacing: 0.08em;
     }
     &_body {
@@ -1350,15 +1363,14 @@ main visual
             &::after {
                 content: "";
                 display: block;
-                width: 80px;
-                height: 70px;
+                @include c.size(55px, 76px);
                 background: url(../img/case-before-min.webp) no-repeat center / contain;
                 position: absolute;
-                right: -2rem;
+                right: -1rem;
                 bottom: -1rem;
                 @include c.mq(min-tab) {
-                    width: calc(135px / 2);
-                    height: calc(154px / 2);
+                    right: -2rem;
+                    bottom: -1rem;
                 }
             }
         }
@@ -1373,26 +1385,20 @@ main visual
             &::before {
                 right: 0;
                 top: -2rem;
-                width: 40px;
-                height: 50px;
+                @include c.size(40px, 50px);
                 background: url(../img/light-bulb-min.webp) no-repeat center / contain;
                 transform: scale(-1, 1);
                 @include c.mq(min-tab) {
-                    top: -1rem;
                     right: -5px;
-                    width: calc(69px / 2);
-                    height: calc(85px / 2);
                 }
             }
             &::after {
-                width: 80px;
-                height: 70px;
                 background: url(../img/case-after-min.webp) no-repeat center / contain;
-                right: -2rem;
-                bottom: -1rem;
+                right: -1rem;
+                bottom: -1.5rem;
+                @include c.size(65px, 74px);
                 @include c.mq(min-tab) {
-                    width: calc(135px / 2);
-                    height: calc(154px / 2);
+                    right: -2rem;
                 }
             }
         }
@@ -1426,6 +1432,7 @@ main visual
         display: flex;
         flex-direction: column;
         row-gap: 3rem;
+        margin-block-start: 3rem;
         @include c.mq(min-tab) {
             margin-block-start: 4rem;
         }
@@ -1438,33 +1445,38 @@ main visual
 ~~~~~~~~~~~~~~~~~~*/
 
 .wantedly-content--flow {
-    background: c.$color-white;
-    @include c.mq(min-tab) {
-        background: unset;
-    }
-    &::before {
-        content: "";
-        display: block;
-        width: 100%;
-        background: url(../img/bg-bottom-min.webp) no-repeat top / cover;
-        @include c.mq(min-tab) {
-            height: 404px;
-            background-size: cover;
-        }
-    }
+    position: relative;
     &.content {
         padding-block-start: 2rem;
+        &::before {
+            content: "";
+            display: block;
+            @include c.size(100%, 100px);
+            background: url(../img/bg-bottom-min.webp) no-repeat top / cover;
+            @include c.mq(min-tab) {
+                height: 404px;
+            }
+        }
     }
     .inner-block {
-        background: url(../img/bg-arrow-min.webp) no-repeat top / cover, c.$color-white;
-        @include c.mq(min-tab) {
-            width: 100%;
-            background-size: contain;
-        }
         &.arrow_icon {
             &::after {
                 visibility: visible;
             }
+        }
+    }
+    &::after {
+        @include c.mq(min-tab) {
+            content: "";
+            position: absolute;
+            top: 22rem;
+            left: 0;
+            right: 0;
+            display: block;
+            background: url(../img/bg-arrow-min.webp) no-repeat top / contain;
+            max-width: 1366px;
+            @include c.size(100%, 100%);
+            margin: auto;
         }
     }
 }
@@ -1488,6 +1500,7 @@ main visual
         @include c.flex;
         flex-direction: column;
         row-gap: 1rem;
+        margin: 0;
         @include c.mq(min-tab) {
             max-width: 850px;
             margin: auto;
@@ -1526,6 +1539,7 @@ main visual
     &_body {
         flex: 2;
         .desc {
+            font-weight: bold;
             letter-spacing: 0.07em;
         }
     }
