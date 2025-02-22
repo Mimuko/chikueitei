@@ -1,0 +1,679 @@
+@use "../config" as config;
+
+.mv.mv_about{
+  background:url(../img/about/mv.jpg) center top;
+  background-size:cover;
+}
+
+.mv.mv_about .tx01.tx01_1{
+  margin:0 0 10px;
+}
+
+.btn_txt01{
+  font-weight: bold;
+  margin:20px 0 10px;
+}
+
+.btn_wrap.btn_wrap_mv .box{
+  margin:0 0 10px;
+}
+
+.btn_wrap.btn_wrap_mv .box:last-child{
+  margin-bottom:0;
+}
+
+.btn_wrap.btn_wrap_mv .btn{
+  width:415px;
+}
+
+.content_arrow{
+  overflow: unset;
+  &::after{
+    position:absolute;
+    content:"";
+    width:100%;
+    height:120px;
+    background:url(../img/about/bg_arrow01.png);
+    background-size:100% 100%;
+    right:0;
+    left:0;
+    bottom:-120px;
+    z-index:10;
+    @include config.mq(sp) {
+      height:60px;
+      bottom:-60px;
+    }
+  }
+}
+
+.content_arrow + .content{
+  padding-top:180px;
+  @include config.mq(sp) {
+    padding-top:80px;
+  }
+}
+
+.about_block01{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include config.mq(sp) {
+    display: block;
+  }
+}
+
+.about_block01 .box{
+  flex-basis:48%;
+  margin:0 0 20px;
+  border:4px solid config.$color-black;
+  box-sizing:border-box;
+  border-radius:20px;
+  overflow:hidden;
+  background:config.$color-white;
+  @include config.mq(sp) {
+    margin:0 0 20px;
+  }
+}
+
+.about_block01 .box .t{
+  padding:10px;
+  color:config.$color-white;
+  background:config.$color-black;
+  text-align:center;
+  font-weight: bold;
+  font-size:22px;
+}
+
+.about_block01 .box .in{
+  padding:20px;
+}
+
+@include config.mq(sp) {
+  .about_block01 .box:last-child{
+    margin:0;
+  }
+  .about_block01 .box .t{
+    font-size:18px;
+  }
+}
+
+.about_list01 li{
+  margin:0 0 5px;
+  position:relative;
+  font-weight: bold;
+  padding-left:15px;
+}
+
+.about_list01 li:last-child{
+  margin:0;
+}
+
+.about_list01 li:after{
+  position:absolute;
+  content:"";
+  width:10px;
+  height:10px;
+  background:config.$color-yellow;
+  border-radius:10px;
+  left:0;
+  top:8px;
+  @include config.mq(sp) {
+    top: 6px;
+  }
+}
+
+.arrow_txbox01{
+  margin:50px 0 -70px;
+  font-size:29px;
+  text-align:center;
+  font-weight: bold;
+  z-index:10;
+  position:relative;
+  @include config.mq(sp) {
+    margin:30px 0 -30px;
+    font-size:20px;
+  }
+}
+
+.content05{
+  background:config.$color-white;
+}
+
+
+.about_block02{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include config.mq(sp) {
+    display: block;
+  }
+}
+
+.about_block02 .cell01{
+  flex-basis:48%;
+  @include config.mq(sp) {
+    margin:0 0 20px;
+  }
+}
+
+.about_block02 .cell02{
+  flex-basis:40%;
+}
+
+.about_block02 .cell01 .tx{
+  font-size:20px;
+  font-weight: bold;
+  position:relative;
+  padding:40px;
+  @include config.mq(sp) {
+    font-size:18px;
+    padding:20px;
+  }
+}
+
+.about_block02 .cell01 .tx:before,
+.about_block02 .cell01 .tx:after{
+  position:absolute;
+  content:"";
+  width:38px;
+  height:34px;
+  background:url(../img/about/icon01.svg);
+  background-size:100%;
+  @include config.mq(sp) {
+    width:19px;
+    height:17px;
+  }
+}
+
+.about_block02 .cell01 .tx:before{
+  top:0;
+  left:0;
+}
+.about_block02 .cell01 .tx:after{
+  right:0;
+  bottom:0;
+  transform:rotate(180deg)
+}
+
+.tl06{
+  text-align:center;
+  font-weight: bold;
+  font-size:26px;
+  margin:0 0 30px;
+  @include config.mq(sp) {
+    font-size:20px;
+  }
+}
+
+.about_block03{
+  margin:0 0 70px;
+  @include config.mq(sp) {
+    margin:0 0 50px;
+  }
+}
+
+.about_block03 .box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background:config.$color-white;
+  padding:30px 50px;
+  border-radius:20px;
+  margin:0 0 20px;
+  @include config.mq(sp) {
+    display: block;
+    padding:30px 20px 20px;
+  }
+}
+
+.about_block03 .box:last-child{
+  margin:0;
+}
+
+.about_block03 .box.box01 .cell01{order:2;}
+.about_block03 .box.box01 .cell02{order:1;}
+
+.about_block03 .cell01{
+  flex-basis:30%;
+  text-align:center;
+  @include config.mq(sp) {
+    margin:0 0 20px;
+  }
+}
+
+.about_block03 .cell01 img{
+  max-height:170px;
+  width:auto;
+  @include config.mq(sp) {
+    max-height:120px;
+    width:auto;
+  }
+}
+
+.about_block03 .cell02{
+  flex-basis:66%;
+}
+
+.about_block03 .cell02 .t{
+  font-size:24px;
+  font-weight: bold;
+  margin:0 0 10px;
+  line-height:1.4;
+  @include config.mq(sp) {
+    font-size:18px;
+  }
+}
+
+.tl_btm_tx01.tl_btm_tx01_1{
+  margin-bottom:30px;
+}
+
+.about_table01{
+  border:4px solid #000000;
+  background:config.$color-white;
+  text-align:center;
+  width:100%;
+  @include config.mq(sp) {
+    width:450px;
+  }
+}
+
+.about_table01 td,
+.about_table01 th{
+  padding:10px;
+  border:4px solid #000000;
+  font-weight: bold;
+}
+
+.about_table01 th{
+  color:config.$color-white;
+  background:#000;
+  width:33%;
+}
+
+@include config.mq(sp) {
+  .about_table01 td img{
+    width:22px;
+  }
+}
+
+.about_table01 .no{
+  background:none;
+}
+
+.about_table01 .th01{
+  border-right:4px solid config.$color-white;
+}
+.about_table01 .th02{
+  color:config.$color-yellow;
+}
+  
+.about_table01 td:first-child{
+  text-align:left;
+}
+
+.about_block01.about_block01_1 .box{
+  border:none;
+  background:config.$color-highlight_yellow;
+  flex-basis:32%;
+}
+
+.about_block01.about_block01_1 .box .t{
+  background:config.$color-yellow;
+  color:#000;
+}
+
+.about_list01.about_list01_1 li:after{
+  background:#000;
+}
+
+.about_sub_tx01{
+  max-width:700px;
+  font-size:14px;
+  margin:20px auto 40px;
+}
+
+.about_block04{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include config.mq(sp) {
+    font-size:0;
+  }
+}
+
+.about_block04 .box{
+  flex-basis:25%;
+  background:config.$color-white;
+  position:relative;
+  padding:20px 20px;
+  text-align:center;
+  box-sizing:border-box;
+  @include config.mq(sp) {
+    width:250px;
+    height:240px;
+    vertical-align:top;
+    display:inline-block;
+  }
+}
+
+.about_block04 .box:nth-child(2){background:#F4F4F4;}
+.about_block04 .box:nth-child(3){background:#DEDEDE;}
+.about_block04 .box:nth-child(4){background:#D0CECE;}
+
+.about_block04 .box .t01{
+  font-size:28px;
+  line-height:1.4;
+  font-weight: bold;
+}
+
+.about_block04 .box .t02{
+  font-size:18px;
+  line-height:1.4;
+  margin:5px 0 10px;
+  font-weight: bold;
+}
+
+.about_block04 .box p{
+  font-size:14px;
+  text-align:left;
+  padding:0 10px;
+  @include config.mq(sp) {
+    white-space:normal;
+  }
+}
+
+.about_block04 .box:after{
+  content:"";
+  position:absolute;
+  right:-20px;
+  top:0;
+  bottom:0;
+  margin:auto;
+  z-index:1;
+  
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 15px 20px;
+  border-color: transparent transparent transparent config.$color-white;
+}
+
+.about_block04 .box:nth-child(2):after{
+  border-color: transparent transparent transparent #F4F4F4;
+}
+.about_block04 .box:nth-child(3):after{
+  border-color: transparent transparent transparent #DEDEDE;
+}
+.about_block04 .box:nth-child(4):after{
+  display:none;
+}
+
+.about_table02 {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  @include config.mq(sp) {
+    width:550px;
+    margin:0 0 5px;
+  }
+}
+
+.about_table02 td,.about_table02 th {
+  width: 33.3%;
+  margin: 0;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: bold;
+}
+
+.about_table02 th {
+  padding-bottom: 0
+}
+
+.about_table02 .th01 {
+  font-size: 14px;
+  padding: 0 0 25px;
+  background: url(../img/about/line01.png) center bottom no-repeat;
+  background-size: 100% 19px
+}
+
+.about_table02 .tx01 {
+  width: auto;
+  padding: 10px 0;
+  font-size: 18px;
+  color: config.$color-white;
+  background: config.$color-yellow;
+  border-radius: 50px;
+  @include config.mq(sp) {
+    font-size:16px;
+  }
+}
+
+.about_table02 .tx02 {
+  font-size: 26px;
+  @include config.mq(sp) {
+    font-size:18px;
+  }
+}
+
+.about_table02 .tx02 .f01 {
+  font-size: 40px;
+  @include config.mq(sp) {
+    font-size:22px;
+  }
+}
+
+.about_table02 .f02 {
+  font-size: 24px;
+  @include config.mq(sp) {
+    font-size:18px;
+  }
+}
+
+.about_table02 .tr td {
+  border-left: 1px solid #CBCBCB;
+  border-bottom: 1px solid #CBCBCB
+}
+
+.about_table02 .tr td:last-child {
+  border-right: 1px solid #CBCBCB;
+}
+
+.about_table02 .tr td{
+  border-right:1px solid #CBCBCB;
+  border-bottom:1px solid #CBCBCB;
+}
+
+.about_sub_tx01.about_sub_tx01_1{
+  margin-bottom:70px;
+  @include config.mq(sp) {
+    margin-bottom: 50px;
+  }
+}
+
+.about_pt01{
+  text-align:center;
+  margin:0 0 10px;
+}
+
+.about_pt01 span{
+  display:inline-block;
+  background:config.$color-yellow;
+  width:366px;
+  border-radius:100px;
+  padding:10px;
+  box-sizing:border-box;
+  font-size:18px;
+  font-weight: bold;
+  @include config.mq(sp) {
+    display:block;
+    width:100%;
+  }
+}
+
+.about_sub_tx01:last-child{
+  margin-bottom:0;
+}
+
+.about_block05{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-weight: bold;
+  margin:0 0 40px;
+  @include config.mq(sp) {
+    display: block;
+    margin:0 0 40px;
+  }
+}
+
+.about_block05 .box{
+  flex-basis:44%;
+  background:config.$color-white;
+  position:relative;
+  padding:20px 50px;
+  text-align:center;
+  box-sizing:border-box;
+  border:4px solid config.$color-black;
+  border-radius:20px;
+  @include config.mq(sp) {
+    margin:0 0 80px;
+  }
+}
+
+.about_block05 .box:after{
+  content:"";
+  width:240px;
+  height:4px;
+  background:config.$color-white;
+  position:absolute;
+  top:-4px;
+  left:0;
+  right:0;
+  margin:auto;
+}
+
+.about_block05 .box:before{
+  content:"";
+  position:absolute;
+  bottom:20px;
+  right:-90px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 60px 0 60px 48px;
+  border-color: transparent transparent transparent #302d24;
+  @include config.mq(sp) {
+    bottom:-60px;
+    right:0;
+    left:0;
+    margin:auto;
+    border-width: 40px 30px 0 30px;
+    border-color: #302d24 transparent transparent transparent;
+  }
+}
+
+@include config.mq(sp) {
+  .about_block05 .box:last-child{
+    margin:0;
+  }
+}
+
+.about_block05 .box:last-child:before{
+  display:none;
+}
+
+.about_block05 .box .about_list01{
+  text-align:left;
+}
+
+.about_block05 .box .t01{
+  font-size:24px;
+  position:absolute;
+  top:-22px;
+  text-align:center;
+  display:block;
+  left:0;
+  right:0;
+  margin:auto;
+  z-index:1;
+  @include config.mq(sp) {
+    font-size: 22px;
+  }
+}
+
+.about_block05 .box .t02{
+  font-size:22px;
+  line-height:1.4;
+  color:config.$color-yellow;
+}
+
+.about_block05 .box .t02 span{
+  font-size:35px;
+}
+
+.about_block05 .box .tx01{
+  margin:0 0 20px;
+}
+
+
+.about_block06{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin:0 0 50px;
+  text-align:center;
+  @include config.mq(sp) {
+    display: block;
+  }
+}
+
+.about_block06 .box{
+  flex-basis:46%;
+  @include config.mq(sp) {
+    margin:0 0 40px;
+  }
+}
+
+@include config.mq(sp) {
+  .about_block06 .box:last-child{
+    margin:0;
+  }
+}
+
+.about_block06 .img{
+  margin:0 0 20px;
+}
+
+.about_block06 .img img{
+  width:70%;
+  @include config.mq(sp) {
+    width: 50%;
+  }
+}
+
+.about_block06 .name{
+  font-size:30px;
+  margin:0 0 10px;
+  font-weight: bold;
+  @include config.mq(sp) {
+    font-size: 22px;
+  }
+}
+
+.about_block06 .tx01{
+  font-size:18px;
+  margin:0 0 10px;
+  font-weight: bold;
+  @include config.mq(sp) {
+    font-size: 16px;
+  }
+}
+
+.about_block06 p{
+  font-size:14px;
+  text-align:left;
+}

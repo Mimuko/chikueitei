@@ -1,0 +1,72 @@
+@use "../config" as config;
+
+.top_text_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 45px;
+  @include config.mq(sp) {
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+.top_text_area figure {
+  width: 20%;
+  margin: 0;
+  @include config.mq(sp) {
+    width: 38%;
+  }
+}
+.top_text_area .top_text_area-paragraph {
+  margin-left: 30px;
+  @include config.mq(sp) {
+    width: 60%;
+    font-size: 13px;
+  }
+}
+.book_form_area {
+  margin-bottom: 40px;
+  padding: 30px;
+  background-color: config.$color-white;
+  border-radius: 20px;
+}
+
+ol.dl_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 20px;
+  padding: 0;
+  li {
+    list-style: none;
+    margin: 0 20px 20px 0;
+    font-weight: bold;
+    &::before {
+      display: inline-block;
+      padding: 4px 10px;
+      margin-right: 10px;
+      border-radius: 100px;
+      color: config.$color-white;
+      font-size: 14px;
+      background-color: config.$color-orange;
+    }
+    &:nth-child(1)::before {
+      content: '資料01';
+    }
+    &:nth-child(2)::before {
+      content: '資料02';
+    }
+    &:nth-child(3)::before {
+      content: '資料03';
+    }
+    &:nth-child(4)::before {
+      content: '資料04';
+    }
+    &:nth-child(5)::before {
+      content: '資料05';
+    }
+  }
+  &+.btn {
+    display: block;
+    margin: 0 auto;
+  }
+}

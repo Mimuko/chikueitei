@@ -1,0 +1,107 @@
+@use "../config" as config;
+
+.content.consultation_form {
+  padding: 45px 0;
+  .inner-block {
+    max-width: 1080px;
+  }
+}
+.download_block01 {
+  .example_problem_box {
+    font-weight:bold;
+    dt {
+      background: config.$color-yellow;
+      padding: 10px;
+      border-radius: 20px 20px 0 0;
+      color: config.$color-white;
+      font-size: 22px;
+      margin: 0;
+      text-align: center;
+      span {
+        font-size: 80%;
+      }
+      @include config.mq(sp) {
+        font-size: 18px;
+      }
+    }
+    dd {
+      background:config.$color-white;
+      margin: 0;
+      padding: 20px;
+      border-radius: 0 0 20px 20px;
+      border: 2px solid config.$color-yellow;
+      @include config.mq(sp) {
+        padding: 22px;
+      }
+    }
+    ul.example_problem_list {
+      li {
+        margin-bottom: 15px;
+        padding-left: 40px;
+        font-weight: bold;
+        font-size: 18px;
+        position: relative;
+        @include config.mq(sp) {
+          font-size: 16px;
+        }
+        &::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          z-index: 1;
+          top: 8px;
+          left: 8px;
+          width: 12px;
+          height: 8px;
+          border-left: 3px solid config.$color-yellow;
+          border-bottom: 3px solid config.$color-yellow;
+          transform: rotate(-45deg);
+        }
+        &::after {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          left: 0;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background-color: config.$color-light_yellow;
+        }
+        &:last-child {
+          margin-bottom:0;
+        }
+      }
+    }
+    ul.example_media_list {
+      display:flex;
+      flex-wrap:wrap;
+      li {
+        width: calc(20% - 8px);
+        padding: 4px;
+        @include config.mq(sp) {
+          width: calc(33% - 10px);
+        }
+        img {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  ul.contact_induction_list {
+    li {
+      &::before {
+        content: '・';
+        color: config.$color-yellow;
+      }
+      a {
+        text-decoration: underline;
+        font-weight: bold;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

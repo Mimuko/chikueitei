@@ -1,0 +1,1178 @@
+@use "../config" as config;
+
+/* Animation */
+@keyframes background_move {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 0 -1334px;
+  }
+}
+
+@keyframes mv_illust_fadein {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.newgraduate_wrapper {
+
+  p,
+  ol,
+  li,
+  dl,
+  dt,
+  dd {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* FV */
+  .newgraduate_mv_wrapper {
+    background: transparent url(../img/newgraduate/mv_bg_dot.webp) repeat;
+    animation: 40s background_move linear infinite;
+    background-position: 0 0;
+    background-size: 75% auto;
+
+    @include config.mq(sp) {
+      background-size: 250% auto;
+    }
+
+    .newgraduate_mv_inner {
+      background: transparent url(../img/newgraduate/mv_bg_grad.webp) no-repeat center left;
+      background-size: 85% 100%;
+      overflow: hidden;
+
+      @include config.mq(sp) {
+        background: none;
+      }
+
+      .newgraduate_mv_container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem 1rem 3rem;
+        position: relative;
+
+        @include config.mq(sp) {
+          overflow: hidden;
+          background: linear-gradient(60deg, #ffd214 10%, config.$color-yellow 90%);
+        }
+
+        .newgraduate_mv_container_contents {
+          width: 75%;
+          position: relative;
+          z-index: 0;
+
+          @include config.mq(sp) {
+            width: auto;
+          }
+
+          .leading_catch {
+            display: flex;
+            margin: 0;
+            align-items: center;
+            font-weight: bold;
+
+            em {
+              display: block;
+              line-height: 1;
+              padding: .6rem 1.2rem;
+              background-color: config.$color-highlight_yellow;
+              border-radius: 100px;
+              color: config.$color-orange;
+              @include config.applyClamp(font-size, 10, 18);
+              position: relative;
+
+              @include config.mq(sp) {
+                padding: .4rem .8rem;
+              }
+
+              &::after {
+                @include config.balloon_tale_right(config.$color-highlight_yellow, .4rem);
+              }
+            }
+
+            span {
+              margin-left: 1rem;
+              line-height: 1.2;
+              @include config.applyClamp(font-size, 11, 22);
+            }
+          }
+
+          h1 {
+            margin: 2rem 0 3rem;
+
+            @include config.mq(sp) {
+              margin: 1rem 0 2rem;
+            }
+          }
+
+          .mv_point_list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.6rem 1.2rem;
+
+            @include config.mq(sp) {
+              width: 78%;
+            }
+
+            li {
+              line-height: 1;
+              border-radius: 10px;
+              border: 3px solid config.$color-navy;
+              box-shadow: 6px 6px 0 config.$color-navy;
+              background-color: config.$color-white;
+
+              @include config.mq(sp) {
+                border-radius: 8px;
+                border: 2px solid config.$color-navy;
+                box-shadow: 4px 4px 0 config.$color-navy;
+
+                &:nth-child(2) {
+                  order: 3;
+                }
+              }
+
+              dl {
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                padding: 0 1.2rem 1rem;
+                font-weight: bold;
+                position: relative;
+                text-align: center;
+
+                @include config.mq(sp) {
+                  padding: 0 .6rem .6rem;
+                }
+
+                dt {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin: 0 auto;
+                  padding: .6rem 1.2rem;
+                  border-radius: 100px;
+                  color: config.$color-white;
+                  @include config.applyClamp(font-size, 10, 18);
+                  transform: translateY(-1.1rem);
+                  background-color: config.$color-navy;
+                  vertical-align: bottom;
+
+                  @include config.mq(sp) {
+                    padding: .3rem .8rem;
+                    transform: translateY(-.6rem);
+                  }
+
+                  .v_writing {
+                    margin-left: 0.1rem;
+                    writing-mode: vertical-rl;
+                    font-size: 50%;
+                  }
+                }
+
+                dd {
+                  margin: 0;
+                  color: config.$color-navy;
+                  @include config.applyClamp(font-size, 12, 24);
+                  transform: translateY(-.2rem);
+
+                  .v_writing {
+                    writing-mode: vertical-rl;
+                  }
+
+                  em {
+                    margin: 0 .3rem;
+                    color: config.$color-yellow;
+                    @include config.applyClamp(font-size, 18, 34);
+                    @include config.text-edging(config.$color-navy);
+
+                    @include config.mq(sp) {
+                      @include config.text-edging-thin(config.$color-navy);
+                    }
+
+                    span {
+                      font-family: config.$font-oswald;
+                      @include config.applyClamp(font-size, 30, 58);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .newgraduate_mv_container_illust {
+          width: 50%;
+          margin: 0;
+          animation: .5s mv_illust_fadein;
+          animation-fill-mode: forwards;
+          animation-delay: .25s;
+          opacity: 0;
+          position: absolute;
+          bottom: calc((104px + 3rem) * -1);
+          right: -5rem;
+          z-index: 0;
+
+          @include config.mq(sp) {
+            width: 66%;
+            right: -1rem;
+            bottom: -1.2rem;
+          }
+        }
+
+        &+.btn_wrap {
+          padding: 0 20px 3rem;
+          position: relative;
+          z-index: 1;
+
+          @include config.mq(min-tab) {
+            .cta_btn_inner.yellow_btn {
+              a {
+                border: 4px solid config.$color-yellow;
+                background-color: config.$color-white;
+
+                &::after {
+                  border-color: config.$color-yellow;
+                }
+              }
+
+              p {
+                background-color: config.$color-orange;
+
+                &::after {
+                  border-color: config.$color-orange transparent transparent transparent;
+                }
+              }
+
+              &:hover {
+                a {
+                  border: 4px solid config.$color-white;
+                  background-color: config.$color-orange;
+
+                  &::after {
+                    border-color: config.$color-white;
+                  }
+                }
+
+                p {
+                  color: config.$color-orange;
+                  background-color: config.$color-white;
+
+                  &::after {
+                    border-color: config.$color-white transparent transparent transparent;
+                  }
+                }
+              }
+            }
+
+            .cta_btn_inner.black_btn {
+
+              p {
+                background-color: config.$color-white;
+
+                &::after {
+                  border-color: config.$color-white transparent transparent transparent;
+                }
+              }
+
+              &:hover {
+
+                p {
+                  color: config.$color-white;
+                  background-color: config.$color-black;
+
+                  &::after {
+                    border-color: config.$color-black transparent transparent transparent;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* お悩み */
+  .newgraduate_problem_box {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: calc(30px - 1rem) 30px;
+    border-radius: 20px;
+    border: 3px solid config.$color-gray;
+    background-color: config.$color-white;
+    position: relative;
+
+    @include config.mq(sp) {
+      padding: 15px;
+    }
+
+    .newgraduate_problem_list {
+      li {
+        padding: 1rem 0 1rem 2.8rem;
+        text-indent: -2.8rem;
+        @include config.applyClamp(font-size, 16, 20);
+        font-weight: bold;
+        background-image: repeating-linear-gradient(90deg, config.$color-dark_gray, config.$color-dark_gray, 4px, transparent 4px, transparent 7px);
+        background-position: left bottom;
+        background-repeat: repeat-x;
+        background-size: 100% 1px;
+
+        &:last-child {
+          background: none;
+        }
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 2.2rem;
+          height: 2.2rem;
+          margin: 0 .6rem -.7rem 0;
+          background: transparent url(../img/common/checkmark/check_gray.svg) no-repeat top left;
+          background-size: 100%
+        }
+
+        em {
+          @include config.marker(config.$color-light_blue, 30%);
+        }
+      }
+    }
+
+    .newgraduate_problem_img {
+      width: 33%;
+      margin: 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      right: 1rem;
+
+      @include config.mq(sp) {
+        width: 70%;
+        margin: 0 auto calc((30px - 1rem) * -1);
+        position: relative;
+      }
+    }
+  }
+
+  .content_arrow {
+    &::after {
+      background: url(../img/common/bg_arrow_light-gray.webp);
+      background-size: 100% 100%;
+    }
+  }
+
+  /* 課題解決 */
+  .newgraduate_solution_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+
+    @include config.mq(sp) {
+      flex-direction: column-reverse;
+    }
+
+    .newgraduate_solution_img {
+      width: 40%;
+      margin: 0;
+
+      @include config.mq(sp) {
+        margin-top: 3rem;
+      }
+    }
+
+    .newgraduate_solution_text {
+      h2.tl01 {
+        @include config.mq(min-tab) {
+          text-align: left;
+
+          span {
+            padding: 0;
+          }
+        }
+      }
+
+      p {
+        margin: 0;
+        padding: 1.5rem;
+        border-radius: 20px;
+        font-weight: bold;
+        background-color: config.$color-white;
+        position: relative;
+
+        &::before {
+          @include config.balloon_tale_left(config.$color-white, 1rem);
+
+          @include config.mq(sp) {
+            @include config.balloon_tale_bottom(config.$color-white, 1rem);
+          }
+        }
+
+        em {
+          color: config.$color-orange;
+        }
+      }
+    }
+  }
+
+  /* 支援内容 */
+  .support_h3 {
+    text-align: center;
+    @include config.applyClamp(font-size, 24, 30);
+    font-weight: 900;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 3rem;
+      height: 3px;
+      margin: 1rem auto 0;
+      border-radius: 100px;
+      background-color: config.$color-yellow;
+    }
+  }
+
+  .support_h3_bottom {
+    font-weight: bold;
+    margin: 2rem 0 5rem;
+
+    em {
+      color: config.$color-orange;
+    }
+  }
+
+  .support_detail {
+    display: flex;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 4rem auto;
+
+    @include config.mq(sp) {
+      flex-direction: column;
+    }
+
+    dl {
+      flex: 1;
+      padding: 2rem;
+      font-weight: bold;
+      border-radius: 24px;
+      background-color: config.$color-yellow;
+      position: relative;
+
+      @include config.mq(sp) {
+        padding: 1.25rem;
+      }
+
+      dt {
+        width: 12rem;
+        padding: 0.4rem 0;
+        text-align: center;
+        @include config.applyClamp(font-size, 18, 22);
+        border-radius: 0 0 6px 6px;
+        color: config.$color-white;
+        background-color: config.$color-navy;
+        position: absolute;
+        top: -1.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &::before,
+        &::after {
+          content: '';
+          display: block;
+          width: 1.8rem;
+          height: 1.8rem;
+          background: #000910;
+          position: absolute;
+          top: 0;
+        }
+
+        &::before {
+          clip-path: polygon(50% 0%, 0% 100%, 50% 100%);
+          left: -.9rem;
+        }
+
+        &::after {
+          clip-path: polygon(50% 0%, 100% 100%, 50% 100%);
+          right: -.9rem;
+        }
+      }
+
+      dd {
+        padding: 1.5rem;
+        margin: 0;
+        border-radius: 20px;
+        font-size: 14px;
+        /* 古いsafari対策 */
+        font-size: clamp(0.875rem, 0.807rem + 0.34vw, 1.125rem);
+        background-color: config.$color-white;
+
+        @include config.mq(sp) {
+          padding: 1rem;
+        }
+
+        ul {
+          li {
+            margin-bottom: .8rem;
+
+            &::before {
+              content: "";
+              display: inline-block;
+              width: 1.6rem;
+              height: 1.6rem;
+              margin: 0 .6rem -.4rem 0;
+              background: transparent url(../img/common/checkmark/check_yellow01.svg) no-repeat top left;
+              background-size: 100%
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            span {
+              font-size: 70%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* 支援体制 */
+  .support_system_box {
+    @include config.mq(sp) {
+      margin: 0 23px;
+    }
+
+    .support_system_list {
+      display: flex;
+      justify-content: space-between;
+      margin: calc(46px + 6.5rem) 0 4.5rem;
+      position: relative;
+
+      @include config.mq(sp) {
+        display: block;
+        margin: 0;
+      }
+
+      &.manager {
+        justify-content: center;
+
+        figure {
+          margin-top: -7.5rem;
+
+          @include config.mq(sp) {
+            margin-top: 0;
+          }
+        }
+
+        /* 線の装飾 */
+        >li::after {
+          display: block;
+          content: '';
+          width: 3px;
+          height: calc(6.5rem / 2);
+          background-color: config.$color-yellow;
+          position: absolute;
+          bottom: calc((6.5rem / 2) * -1 - 23px);
+          left: calc(50% - 1.5px);
+
+          @include config.mq(sp) {
+            display: none;
+          }
+        }
+      }
+
+      &.another_position {
+
+        /* 線の装飾 */
+        &::after {
+          display: block;
+          content: '';
+          width: calc((33.333% - 20px + 3rem)*2);
+          height: 3px;
+          background-color: config.$color-yellow;
+          position: absolute;
+          top: calc((6.5rem / 2) * -1 - 23px);
+          left: 50%;
+          transform: translateX(-50%);
+
+          @include config.mq(sp) {
+            display: none;
+          }
+        }
+
+        /* 線の装飾 */
+        >li::after {
+          display: block;
+          content: '';
+          width: 3px;
+          height: calc(6.5rem / 2);
+          background-color: config.$color-yellow;
+          position: absolute;
+          top: calc((6.5rem / 2) * -1 - 23px);
+          left: calc(50% - 1.5px);
+
+          @include config.mq(sp) {
+            display: none;
+          }
+        }
+      }
+
+      >li {
+        width: calc(33.333% - 30px - 4.5rem);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 0 0 20px config.$color-light_yellow, 0 0 0 23px config.$color-yellow;
+        background-color: config.$color-white;
+        position: relative;
+
+        @include config.mq(sp) {
+          width: auto;
+          margin: calc(1.5rem + 1rem + 23px) 0 calc(1.5rem + 2rem + 23px);
+        }
+
+        figure {
+          margin: 0 0 .5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          figcaption {
+            margin-bottom: 1.5rem;
+            padding: .4rem 1rem;
+            font-weight: bold;
+            font-size: 12px;
+            border-radius: 100px;
+            background-color: config.$color-highlight_blue;
+            position: relative;
+
+            &::after {
+              @include config.balloon_tale_bottom(config.$color-highlight_blue, 10px);
+            }
+          }
+
+          img {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+          }
+        }
+
+        dl {
+          dt {
+            text-align: center;
+            font-weight: bold;
+            @include config.applyClamp(font-size, 18, 22);
+          }
+
+          dd {
+            margin-top: .75rem;
+            @include config.applyClamp(font-size, 12, 14);
+
+            &.manager_text {
+              margin-top: .5rem;
+              font-weight: bold;
+              color: config.$color-orange;
+              @include config.applyClamp(font-size, 14, 18);
+              text-align: center;
+            }
+
+            em {
+              font-weight: bold;
+              color: config.$color-navy;
+            }
+          }
+        }
+
+        .manpower {
+          li {
+            margin-top: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            .fas {
+              &::before {
+                font-size: 24px;
+              }
+
+              &.leader {
+                color: config.$color-orange;
+              }
+
+              &.member {
+                color: config.$color-yellow;
+              }
+            }
+
+            .position {
+              font-size: 16px;
+              font-weight: bold;
+            }
+
+            .role {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* 実績 */
+  .case_bg {
+    background-color: config.$color-highlight_yellow;
+  }
+
+  .newgraduate_case_box {
+    padding: 0;
+
+    >li {
+      margin-top: 4rem;
+      border: 3px solid config.$color-middle_gray;
+      border-radius: 20px;
+      background-color: config.$color-white;
+      position: relative;
+      list-style: none;
+
+      @include config.mq(sp) {
+        margin-top: 20px;
+      }
+
+      figure[class^="case_illust"] {
+        position: absolute;
+        z-index: 10;
+
+        @include config.mq(sp) {
+          display: none;
+        }
+
+        &.case_illust01 {
+          width: 96px;
+          top: -7%;
+          right: 1%;
+        }
+
+        &.case_illust02 {
+          width: 110px;
+          top: 1%;
+          right: -6%;
+        }
+
+        &.case_illust03 {
+          width: 80px;
+          top: 2%;
+          right: -6%;
+        }
+      }
+
+      .newgraduate_case_title {
+        padding: 1.5rem 2rem;
+        display: flex;
+        align-items: baseline;
+
+        @include config.mq(sp) {
+          flex-direction: column;
+          padding: 1.5rem;
+        }
+
+        .number {
+          margin: 0;
+          line-height: 1;
+          font-family: config.$font-poppins;
+          @include config.applyClamp(font-size, 18, 24);
+          color: config.$color-orange;
+
+          em {
+            @include config.applyClamp(font-size, 28, 40);
+          }
+        }
+
+        h3 {
+          margin-left: 1rem;
+          @include config.applyClamp(font-size, 20, 24);
+
+          @include config.mq(sp) {
+            margin: .5rem 0 0;
+          }
+        }
+      }
+
+      .newgraduate_case_profile {
+        padding: 0 2rem;
+        margin-bottom: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        @include config.mq(sp) {
+          padding: 0 1.5rem;
+        }
+
+        dl {
+          display: flex;
+          align-items: center;
+          gap: .75rem;
+
+          dt {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            figure {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 2.5rem;
+              height: 2.5rem;
+              margin: 0;
+              text-align: center;
+              border-radius: 50%;
+              background-color: config.$color-yellow;
+              position: absolute;
+              z-index: 1;
+              left: 0;
+
+              @include config.mq(sp) {
+                img {
+                  width: auto;
+                  height: 1.25rem;
+                }
+              }
+            }
+
+            p {
+              padding: .2rem 1rem .2rem 3rem;
+              border-radius: 100px;
+              @include config.applyClamp(font-size, 12, 14);
+              font-weight: bold;
+              background-color: config.$color-highlight_blue;
+              position: relative;
+              z-index: 0;
+            }
+          }
+
+          dd {
+            flex: 1;
+            @include config.applyClamp(font-size, 12, 14);
+          }
+        }
+      }
+
+      .newgraduate_case_bfaf {
+        display: flex;
+
+        @include config.mq(sp) {
+          display: block;
+        }
+
+        .bfaf_before {
+          flex: .85;
+          display: flex;
+          align-items: center;
+          height: 16rem;
+          padding: 0 0 0 2rem;
+          border-radius: 0 0 0 17px;
+          background-color: config.$color-middle_gray;
+          position: relative;
+          z-index: 2;
+
+          @include config.mq(sp) {
+            display: block;
+            height: auto;
+            padding: 1.5rem 1.5rem 1rem;
+            border-radius: 0;
+          }
+
+          &::after {
+            @include config.balloon_tale_right(config.$color-middle_gray, 2rem);
+            height: 16rem;
+
+            @include config.mq(sp) {
+              @include config.balloon_tale_bottom(config.$color-middle_gray, 100%);
+              width: 100%;
+              height: 16%;
+              bottom: -16%;
+            }
+          }
+
+          .bfaf_before_title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            font-weight: bold;
+            font-family: config.$font-poppins;
+            line-height: 1;
+            @include config.applyClamp(font-size, 26, 32);
+            color: config.$color-dark_gray;
+            position: absolute;
+            top: -1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+
+            &::before {
+              content: '';
+              display: block;
+              width: 3rem;
+              height: 3rem;
+              background: url(../img/newgraduate/case_before_bg.svg);
+              background-size: contain;
+            }
+
+            @include config.mq(sp) {
+              margin-bottom: 1rem;
+              position: relative;
+              top: auto;
+              left: auto;
+              transform: none;
+            }
+          }
+
+          .bfaf_before_text {
+            @include config.applyClamp(font-size, 14, 16);
+
+            em {
+              color: config.$color-navy;
+              font-weight: bold;
+            }
+          }
+        }
+
+        .bfaf_support {
+          flex: .9;
+          display: flex;
+          align-items: center;
+          height: 16rem;
+          padding: 0 0 0 4rem;
+          background-color: config.$color-light_yellow;
+          position: relative;
+          z-index: 1;
+
+          @include config.mq(sp) {
+            display: block;
+            height: auto;
+            padding: 4rem 1.5rem 1rem;
+          }
+
+          &::after {
+            @include config.balloon_tale_right(config.$color-light_yellow, 2rem);
+            height: 16rem;
+
+            @include config.mq(sp) {
+              @include config.balloon_tale_bottom(config.$color-light_yellow, 100%);
+              width: 100%;
+              height: 16%;
+              bottom: -16%;
+            }
+          }
+
+          .bfaf_support_title {
+            width: 12rem;
+            padding: .4rem 0;
+            line-height: 1.2;
+            color: config.$color-yellow;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 100px;
+            border: 3px solid config.$color-light_yellow;
+            background-color: config.$color-white;
+            position: absolute;
+            top: -1.5rem;
+            left: 55%;
+            transform: translateX(-50%);
+
+            &::after {
+              @include config.balloon_tale_bottom(config.$color-white, 20px);
+              bottom: -10px;
+            }
+
+            @include config.mq(sp) {
+              width: 16rem;
+              margin: 0 auto 1rem;
+              padding: .6rem 0;
+              position: relative;
+              top: auto;
+              left: auto;
+              transform: none;
+            }
+          }
+
+          .bfaf_support_text {
+            @include config.applyClamp(font-size, 14, 16);
+
+            em {
+              color: config.$color-orange;
+              font-weight: bold;
+            }
+          }
+        }
+
+        .bfaf_after {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          height: 16rem;
+          padding: 0 2rem 0 4.25rem;
+          border-radius: 0 0 17px 0;
+          background: url(../img/newgraduate/case_after_bg.svg) no-repeat center center, linear-gradient(to right, config.$color-yellow 0%, config.$color-orange 100%);
+          background-size: 85% auto, 100%;
+          position: relative;
+          z-index: 0;
+
+          @include config.mq(sp) {
+            display: block;
+            height: auto;
+            padding: 5rem 1.5rem 2rem;
+            border-radius: 0 0 17px 17px;
+            background: linear-gradient(to bottom, config.$color-yellow 0%, config.$color-orange 100%);
+
+            &::before {
+              display: block;
+              content: '';
+              width: 42px;
+              height: 60px;
+              background: url(../img/newgraduate/case_after_bg.svg) no-repeat top right;
+              background-size: auto 150px;
+              position: absolute;
+              top: 24%;
+              right: 8%;
+            }
+
+            &::after {
+              display: block;
+              content: '';
+              width: 42px;
+              height: 60px;
+              background: url(../img/newgraduate/case_after_bg.svg) no-repeat bottom left;
+              background-size: auto 150px;
+              position: absolute;
+              bottom: 8%;
+              left: 6%;
+            }
+          }
+
+          .bfaf_after_title {
+            text-align: center;
+            font-weight: bold;
+            font-family: config.$font-poppins;
+            line-height: 1;
+            @include config.applyClamp(font-size, 26, 32);
+            color: config.$color-orange;
+            @include config.text-edging(config.$color-white);
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include config.mq(sp) {
+              margin-bottom: 1rem;
+              position: relative;
+              top: auto;
+              left: auto;
+              transform: none;
+            }
+          }
+
+          .bfaf_after_text {
+            font-weight: bold;
+            color: config.$color-white;
+            @include config.applyClamp(font-size, 20, 24);
+
+            @include config.mq(sp) {
+              text-align: center;
+            }
+
+            em {
+              padding: 0 .25em;
+              margin: 0 .25rem;
+              color: config.$color-orange;
+              font-weight: bold;
+              background-color: config.$color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  p.btn_top_price-catch {
+    margin: 50px 0 25px;
+  }
+
+  /* 問い合わせ後の流れ */
+  .newgraduate_flow_wrapper {
+    .newgraduate_flow_inner {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      padding: 30px 0 60px;
+
+      @include config.mq(sp) {
+        display: block;
+      }
+
+      &>li {
+        width: 18%;
+        padding: 30px 20px;
+        text-align: center;
+        border-radius: 20px;
+        list-style-type: none;
+        background-color: config.$color-highlight_yellow;
+
+        @include config.mq(sp) {
+          width: auto;
+          margin-top: 20px;
+        }
+
+        &.arrow {
+          width: 15px;
+          height: 30px;
+          margin: auto 15px;
+          padding: 0;
+          border-radius: 0;
+          clip-path: polygon(0 0, 0% 100%, 100% 50%);
+          background-color: config.$color-yellow;
+
+          @include config.mq(sp) {
+            margin: 20px auto 40px;
+            transform: rotate(90deg);
+          }
+        }
+
+        .newgraduate_flow_number {
+          width: 2em;
+          height: 2em;
+          line-height: 2em;
+          margin: calc(-1em - 30px) auto 20px;
+          @include config.applyClamp(font-size, 24, 28);
+          font-weight: bold;
+          color: config.$color-white;
+          background-color: config.$color-yellow;
+          border-radius: 50%;
+        }
+
+        .newgraduate_flow_title {
+          @include config.applyClamp(font-size, 20, 24);
+        }
+
+        .newgraduate_flow_detail {
+          margin-top: 20px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}

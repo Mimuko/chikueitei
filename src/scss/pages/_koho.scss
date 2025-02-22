@@ -1,0 +1,300 @@
+@use "../config" as config;
+
+
+.content01.content_arrow:after{
+  background-image:url(../img/koho/bg_arrow01.png);
+}
+
+.koho_top_tx01{
+  font-weight: bold;
+  text-align:center;
+  font-size:28px;
+  color:config.$color-white;
+  line-height:1.4;
+  margin:0 0 -40px;
+  @include config.mq(sp) {
+    font-size:20px;
+  }
+}
+
+.koho_top_tx01 span{
+  font-size:24px;
+  display:block;
+  @include config.mq(sp) {
+    font-size:18px;
+  }
+}
+
+@include config.mq(sp) {
+  .swiper .about_block01.about_block01_2{
+    flex-wrap: unset;
+    justify-content: unset;
+  }
+}
+
+.about_block01.about_block01_2 .box{
+  flex-basis:31%;
+  margin:0;
+  @include config.mq(sp) {
+    flex-basis: auto;
+    margin:0 10px;
+  }
+}
+
+.about_block01.about_block01_2 .box .t{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:3em;
+  border-radius:10px 10px 0 0;
+  @include config.mq(sp) {
+    display:block;
+    height:auto;
+  }
+}
+
+.about_block01.about_block01_2 .box .img{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:150px;
+  margin:0 0 15px;
+  @include config.mq(sp) {
+    height: 120px;
+  }
+}
+
+.about_block01.about_block01_2 .box .img img{
+  height:100%;
+  width:auto;
+}
+
+.about_block01.about_block01_2 .box p{
+  font-weight: bold;
+}
+
+.about_block03.about_block03_1 .box{
+  border:5px solid config.$color-black;
+}
+
+.about_block03.about_block03_1 .box .t span{
+  color:config.$color-yellow;
+  font-size:28px;
+  padding-right:4px;
+  @include config.mq(sp) {
+    font-size:20px;
+  }
+}
+
+.btn.btn_size01{
+  width:415px;
+  @include config.mq(sp) {
+    width:auto;
+  }
+}
+
+.koho_block01{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin:0 0 50px;
+  text-align:center;
+  @include config.mq(sp) {
+    display: block;
+  }
+}
+
+.koho_block01 .box{
+  flex-basis:48%;
+  font-weight: bold;
+  @include config.mq(sp) {
+    margin-right:20px;
+    display:inline-block;
+    white-space: normal;
+    width:290px;
+    vertical-align:top;
+    &:last-child {
+      margin:0;
+    }
+  }
+}
+
+.koho_block01.column03 .box{
+  flex-basis:32%;
+}
+
+.koho_block01 .box .tt{
+  margin:0 0 15px;
+  padding:0 0 30px;
+  font-size:14px;
+  line-height:1.4;
+  
+  background: url(../img/about/line01.png) center bottom no-repeat;
+  background-size: auto 24px;
+}
+
+.koho_block01 .box .in{
+  border:5px solid config.$color-black;
+  padding:20px;
+  background:config.$color-white;
+  border-radius:20px;
+  position:relative;
+  text-align:center;
+}
+
+.koho_block01 .box .in:before {
+  content: "";
+  width: 250px;
+  height: 5px;
+  top: -5px;
+  left: 0;
+  right: 0;
+  background: config.$color-white;
+  position: absolute;
+  margin: auto;
+}
+
+.koho_block01 .box .t{
+  font-size:24px;
+  position:absolute;
+  top:-25px;
+  left:0;
+  right:0;
+  margin:auto;
+  width:100%;
+}
+
+.koho_block01 .box .price_set{
+  margin:0 0 10px;
+}
+
+.koho_block01 .box .price_set .page_tx01{
+  display:inline-block;
+  margin-right:10px;
+}
+
+.koho_block01 .box .price_set .price_tx01{
+  display:inline-block;
+  font-size:14px;
+}
+
+.koho_block01 .box .price_set .price_tx01 span{
+  font-size:33px;
+  color:config.$color-yellow;;
+  @include config.mq(sp) {
+    font-size:30px;
+  }
+}
+
+.koho_block01 .box p{
+  font-size:14px;
+  text-align: left;
+}
+
+.koho_block02{
+  margin-top:50px;
+}
+
+.koho_block02 .box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background:config.$color-white;
+  padding:20px;
+  border-radius:20px;
+  border-right:15px solid config.$color-yellow;
+  border-bottom:15px solid config.$color-yellow;
+  margin:0 0 30px;
+  @include config.mq(sp) {
+    display: block;
+    border-width:5px;
+    display:inline-block;
+    white-space: normal;
+    vertical-align:top;
+  }
+}
+
+.koho_block02 .box:last-child{
+  margin:0;
+}
+
+.koho_block02 .box .cell02{
+  flex-basis:66%;
+  order:2;
+  @include config.mq(sp) {
+    margin:0 0 20px;
+  }
+}
+
+.koho_block02 .box .cell01{
+  flex-basis:30%;
+  order:1;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.koho_block02 .box .cell01 img{
+  width:80%;
+  @include config.mq(sp) {
+    width: 60%;
+  }
+}
+
+.koho_block02 .box .cell02 .t{
+  font-size:24px;
+  margin:0 0 10px;
+  font-weight: bold;
+  @include config.mq(sp) {
+    font-size:18px;
+  }
+}
+
+.koho_block03{
+  margin:0 0 50px;
+}
+.koho_block03 .box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include config.mq(sp) {
+    display: block;
+  }
+}
+
+.koho_block03 .box .cell01{
+  flex-basis:40%;
+  text-align:center;
+  @include config.mq(sp) {
+    margin:0 0 20px;
+  }
+}
+
+.koho_block03 .box .cell02{
+  flex-basis:56%;
+}
+
+.koho_block03 .box .cell01 .img{
+  margin:0 0 10px;
+}
+
+.koho_block03 .box .cell01 .img img{
+  border-radius:20px;
+}
+
+.koho_block03 .box .cell01 .tx01{
+  font-size:20px;
+  font-weight: bold;
+  @include config.mq(sp) {
+    font-size:18px;
+  }
+}
+
+.koho_block03 .box .cell02 .t{
+  font-weight: bold;
+  font-size:24px;
+  margin:0 0 10px;
+  @include config.mq(sp) {
+    font-size:18px;
+  }
+}

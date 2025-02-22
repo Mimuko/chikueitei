@@ -1,0 +1,10 @@
+$font-noto: 'Noto Sans JP', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, sans-serif;
+$font-mplus: 'M PLUS 1p', sans-serif;
+$font-poppins: 'Poppins',"Noto Sans JP", sans-serif;
+$font-oswald: 'Oswald', sans-serif;
+$font-montserrat: "Montserrat", serif;
+
+/* 古いclassの崩れ対策 */
+.NotoBold {
+    font-weight: bold;
+}

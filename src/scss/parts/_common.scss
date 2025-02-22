@@ -1,0 +1,1008 @@
+@use "../config" as config;
+
+html {
+  color: config.$color-black;
+  font-family: config.$font-noto;
+  font-size: 16px;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  height: 100vh;
+  /* scroll-behaviorのために設定 */
+}
+
+body {
+  background: config.$color-white;
+  margin: 0;
+
+  @include config.mq(sp) {
+    position: relative;
+    -webkit-appearance: none;
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+img {
+  border: 0;
+  margin: 0;
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+
+  @include config.mq(sp) {
+    width: 100%;
+  }
+}
+
+p {
+  line-height: 1.8;
+  margin: 0 0 1em;
+  padding: 0;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+a {
+  color: config.$color-black;
+  text-decoration: none;
+  transition: .25s;
+}
+
+@include config.mq(tab) {
+
+  a:hover,
+  .hover:hover {
+    opacity: .7;
+    text-decoration: none;
+    transition: .5s;
+  }
+
+  .sp_navi {
+    display: none !important;
+  }
+}
+
+input,
+select,
+textarea {
+  font-family: config.$font-noto;
+
+  @include config.mq(sp) {
+    font-size: 16px;
+    vertical-align: middle;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.clearfix {
+  clear: both;
+
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+@include config.mq(sp) {
+  .outer-block {
+    min-width: 320px;
+  }
+
+  .aco-body {
+    display: none;
+  }
+
+  .f_cell02:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 1px;
+    font-size: 0;
+    visibility: hidden;
+  }
+}
+
+.inner-block {
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  max-width: 1000px;
+
+  @include config.mq(sp) {
+    width: auto;
+    padding: 0 20px;
+  }
+
+  &.blog {
+    max-width: 1200px;
+
+    &.webinar {
+      max-width: 1024px;
+    }
+  }
+}
+
+.inner-block:after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+  font-size: 0;
+  visibility: hidden;
+}
+
+.inner-block p a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+#wrapper {
+  position: relative;
+  padding-top: 105px;
+
+  @include config.mq(sp) {
+    min-width: 320px;
+    overflow: hidden;
+    padding-top: 60px;
+  }
+}
+
+.pc {
+  display: block !important;
+
+  @include config.mq(sp) {
+    display: none !important;
+  }
+}
+
+.pc-ib {
+  display: inline-block !important;
+
+  @include config.mq(sp) {
+    display: none !important;
+  }
+}
+
+.sp {
+  display: none !important;
+
+  @include config.mq(sp) {
+    display: block !important;
+  }
+}
+
+.sp-ib {
+  display: none !important;
+
+  @include config.mq(sp) {
+    display: inline-block !important;
+  }
+}
+
+*:focus,
+*:active {
+  outline: none;
+}
+
+em {
+  font-style: normal;
+}
+
+form.post-password-form {
+  max-width: 1000px;
+  padding: 100px 20px;
+  margin: 0 auto;
+}
+
+.font_poppins {
+  font-family: config.$font-poppins;
+}
+
+.font_mplus {
+  font-family: config.$font-mplus;
+}
+
+.font_montserrat {
+  font-family: config.$font-montserrat;
+}
+
+/* .swiper-wrapper */
+.swiper-wrapper img {
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.flickity-prev-next-button.previous,
+.flickity-prev-next-button.next,
+.slick-arrow {
+  display: none;
+}
+
+.slick-prev.slick-arrow {}
+
+.slick-next.slick-arrow {}
+
+#p404 {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.bnr_whitepaper_area {
+  margin: 0 auto 0 auto;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  @include config.mq(sp) {
+    display: block;
+  }
+
+  .abox {
+    width: calc(100% - 600px - 12px);
+
+    @include config.mq(sp) {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  .bbox {
+    margin-left: 12px;
+    width: 600px;
+
+    @include config.mq(sp) {
+      margin: 12px auto 0;
+      width: 100%;
+    }
+  }
+}
+
+.tl01 small {
+  font-size: 20px;
+}
+
+.none {
+  display: none !important;
+}
+
+.event_wrapper_title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.event_wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  .event_box {
+    width: 48%;
+  }
+}
+
+/* ファーストビューのレイアウト用 */
+.mv_type01 .set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 0 30px;
+  text-align: center;
+
+  @include config.mq(sp) {
+    display: block;
+  }
+
+  .cell01 {
+    flex-basis: 60%;
+
+    @include config.mq(sp) {
+      margin: 0 0 10px;
+    }
+
+    .tx02 {
+      font-size: 24px;
+      line-height: 1.4;
+      margin: 20px 0 20px;
+      color: config.$color-black;
+      font-weight: bold;
+
+      @include config.mq(sp) {
+        font-size: 20px;
+        margin: 0 0 20px;
+      }
+    }
+  }
+
+  .cell02 {
+    flex-basis: 36%;
+  }
+}
+
+@include config.mq(sp) {
+  .mv_type01 .set .cell02 .img img {
+    width: 60%;
+  }
+}
+
+/* youtube埋め込み用 */
+.youtube iframe {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto 20px;
+  aspect-ratio: 16 / 9;
+}
+
+/* ページ内ナビ */
+@keyframes slideInFromRight {
+  from {
+    right: -200px;
+    opacity: 0;
+  }
+
+  to {
+    right: .8rem;
+    opacity: 1;
+  }
+}
+
+nav.fixed_navi_wrapp {
+  position: fixed;
+  z-index: 9999;
+  bottom: .8rem;
+  right: .8rem;
+  opacity: 0;
+  padding: 20px 20px 20px 45px;
+  border-radius: 20px;
+  background-color: rgba(config.$color-white, .85);
+  transition: .5s;
+  animation: slideInFromRight 0.5s ease forwards;
+  animation-delay: 1.25s;
+
+  @include config.mq(sp) {
+    padding: 15px 15px 15px 40px;
+  }
+
+  &.js-hidden {
+    pointer-events: none;
+    background-color: transparent;
+
+    >* {
+      transition: .5s;
+      opacity: 0;
+    }
+  }
+
+  .fixed_navi_arrow {
+    width: 25px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 0 0 20px;
+    background-color: config.$color-dark_gray;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      margin-right: 4px;
+      border-top: 2px solid config.$color-white;
+      border-right: 2px solid config.$color-white;
+      transform: rotate(45deg);
+      transition: .5s;
+    }
+  }
+
+  &.js-close .fixed_navi_arrow::before {
+    margin-right: -4px;
+    transform: rotate(-135deg);
+  }
+
+  ul.fixed_navi_inner {
+    font-size: 12px;
+    font-weight: bold;
+
+    li {
+      margin-bottom: 6px;
+
+      @include config.mq(sp) {
+        margin-bottom: 8px;
+        cursor: pointer;
+
+      }
+
+
+      a {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          color: config.$color-yellow;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          margin-right: 10px;
+          background-color: config.$color-yellow;
+        }
+
+        &.js-active {
+          color: config.$color-yellow;
+
+          &::before {
+            width: 9px;
+            height: 9px;
+            margin-right: 8px;
+            margin-left: -2px;
+          }
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/* ボタン */
+.btn {
+  display: inline-block;
+  width: 315px;
+  position: relative;
+
+  @include config.mq(sp) {
+    display: block;
+    width: auto;
+    max-width: 310px;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    height: 62px;
+    line-height: 62px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    background: config.$color-black;
+    color: config.$color-white;
+    font-size: 19px;
+
+    @include config.mq(sp) {
+      display: block;
+      width: 100%;
+    }
+
+    &:hover {
+      background: config.$color-gray;
+      color: config.$color-black;
+      opacity: 1;
+    }
+  }
+}
+
+.btn01 a {
+  background: config.$color-yellow;
+  color: config.$color-black;
+
+  &:hover {
+    background: #FFD65B;
+    color: config.$color-white;
+  }
+}
+
+.btn_wrap.btn_wrap01 .box {
+  display: inline-block;
+  margin: 0 10px;
+
+  @include config.mq(sp) {
+    margin: 0;
+    display: block;
+  }
+}
+
+@include config.mq(sp) {
+  .btn_wrap.btn_wrap01 .box+.box {
+    margin-top: 20px;
+  }
+}
+
+.btn_wrap.btn_wrap01 .box .btn {
+  margin: 0;
+
+  @include config.mq(sp) {
+    margin: auto;
+  }
+}
+
+.btn_wrap.btn_wrap01 .bttx {
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+
+/* 202412 新デザイン 検証用ボタン */
+ul.price_bottom {
+  margin-bottom: 60px;
+}
+
+.cta_btn_inner {
+  margin-top: 20px;
+  position: relative;
+
+  @include config.mq(sp) {
+    margin-top: 0;
+  }
+
+  p {
+    display: block;
+    width: 70%;
+    padding: 4px 0;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 100px;
+    box-shadow: 0 3px 6px rgba(config.$color-black, .21);
+    transition: .25s;
+    position: absolute;
+    z-index: 1;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 5px 0 5px;
+      transition: .25s;
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    min-width: 400px;
+    padding: 20px 0;
+    border-radius: 100px;
+    border: 4px solid config.$color-white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    box-shadow: 0 4px 8px rgba(config.$color-black, .18);
+    position: relative;
+    z-index: 0;
+
+    @include config.mq(sp) {
+      width: auto;
+      min-width: auto;
+      font-size: 18px;
+      margin-top: 40px;
+    }
+
+    span {
+      font-size: 80%;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid;
+      border-right: 2px solid;
+      position: absolute;
+      top: 50%;
+      right: 26px;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+
+  // 黒色ボタン
+  &.black_btn {
+    p {
+      color: config.$color-black;
+      background-color: config.$color-yellow;
+
+      &::after {
+        border-color: config.$color-yellow transparent transparent transparent;
+      }
+    }
+
+    a {
+      color: config.$color-white;
+      background: url(../img/common/cta_btn_decoration.png) no-repeat;
+      background-position: top calc(50% + 4px) left 12px;
+      background-color: config.$color-black;
+      background-size: auto 60%;
+
+      @include config.mq(sp) {
+        background-position: top calc(50% + 4px) left 9px;
+        background-size: auto 50%;
+      }
+    }
+
+    // hover未対応（SP）は :active に指定
+    @media (hover:none) {
+      &:active {
+        p {
+          color: config.$color-yellow;
+          background-color: config.$color-black;
+
+          &::after {
+            border-color: config.$color-black transparent transparent transparent;
+          }
+        }
+
+        a {
+          color: config.$color-black;
+          background-color: config.$color-yellow;
+          transform: scale(1.02);
+        }
+      }
+    }
+
+    // hover対応（PC）は :hover に指定
+    @media (hover:hover) {
+      &:hover {
+        p {
+          color: config.$color-yellow;
+          background-color: config.$color-black;
+
+          &::after {
+            border-color: config.$color-black transparent transparent transparent;
+          }
+        }
+
+        a {
+          color: config.$color-black;
+          background-color: config.$color-yellow;
+          transform: scale(1.02);
+        }
+      }
+    }
+  }
+
+  // 黄色ボタン
+  &.yellow_btn {
+    p {
+      color: config.$color-white;
+      background-color: config.$color-black;
+
+      &::after {
+        border-color: config.$color-black transparent transparent transparent;
+      }
+    }
+
+    a {
+      color: config.$color-black;
+      background-color: config.$color-yellow;
+      background-size: auto 60%;
+    }
+
+    // hover未対応（SP）は :active に指定
+    @media (hover:none) {
+      &:hover {
+        p {
+          color: config.$color-black;
+          background-color: config.$color-yellow;
+
+          &::after {
+            border-color: config.$color-yellow transparent transparent transparent;
+          }
+        }
+
+        a {
+          color: config.$color-white;
+          background-color: config.$color-black;
+          transform: scale(1.02);
+        }
+      }
+    }
+
+    // hover対応（PC）は :hover に指定
+    @media (hover:hover) {
+      &:hover {
+        p {
+          color: config.$color-black;
+          background-color: config.$color-yellow;
+
+          &::after {
+            border-color: config.$color-yellow transparent transparent transparent;
+          }
+        }
+
+        a {
+          color: config.$color-white;
+          background-color: config.$color-black;
+          transform: scale(1.02);
+        }
+      }
+    }
+  }
+}
+
+/* 画像をクリックで拡大 */
+.img_click_zoom {
+  .overlay {
+    /* グレーの背景 */
+    position: fixed;
+    background-color: rgba(config.$color-black, .5);
+    transition: .25s;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100000;
+  }
+
+  input[id^="pop-up"] {
+    display: none;
+  }
+
+  input[id^="pop-up"]:checked+.overlay {
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+  }
+
+  .popWindow {
+    border-radius: 5px;
+    overflow-y: auto;
+    overflow-x: hidden; /* スクロールバー用 */
+    max-height: 90%; /* すき間 */
+    min-width: min-content; /* 横幅が広い時に白の部分が大きくならないため */
+    max-width: 95%; /* すき間 */
+    position: fixed;
+    top: 50%; /* 中央に */
+    left: 50%; /* 中央に */
+    transform: translate(-50%, -50%); /* 中央に */
+    z-index: 100010;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 10px auto;
+    padding: 4px;
+    background: config.$color-dark_gray; /* 枠の色 */
+    transition: .25s;
+
+    @include config.mq(sp) {
+      left: 10%;
+      transform: translate(-5%, -50%);
+    }
+
+    .close {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      transition: .25s;
+
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        width: 3px;
+        height: 20px;
+        border-radius: 100px;
+        background: config.$color-black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        cursor: pointer;
+      }
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &:hover {
+        @include config.hover1;
+      }
+    }
+  }
+
+  .popWindow::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  .popWindow::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  .popWindow::-webkit-scrollbar-thumb {
+    background: config.$color-gray;
+    border-radius: 5px;
+  }
+
+  label.img_click_area {
+    cursor: pointer;
+
+    img:hover {
+      transition: .25s;
+      @include config.hover1;
+    }
+  }
+}
+
+/* 料金表CTA */
+.price_list_wrap {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @include config.mq(sp) {
+    display: block;
+  }
+
+  .price_list_left {
+    flex: 1.25;
+
+    h2 {
+      margin: 0 0 10px;
+      @include config.applyClamp(font-size, 22, 28);
+
+      em {
+        color: config.$color-orange;
+      }
+    }
+
+    p {
+      margin: 0 0 20px;
+      line-height: 1.5;
+      @include config.applyClamp(font-size, 14, 16);
+    }
+
+    figure {
+      max-width: 85%;
+      margin: 0;
+
+      @include config.mq(sp) {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .price_list_right {
+    flex: 1;
+
+    @include config.mq(sp) {
+      margin-top: 20px;
+    }
+
+    ul {
+      font-weight: bold;
+
+      li {
+        padding: 30px;
+        margin: 0 0 20px;
+        text-align: center;
+        border-radius: 20px;
+        background-color: config.$color_white;
+
+        &:last-child {
+          margin: 0;
+        }
+
+        p {
+          margin: 0;
+          @include config.applyClamp(font-size, 14, 18);
+          color: config.$color_yellow;
+        }
+
+        h3 {
+          @include config.applyClamp(font-size, 24, 32);
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}
+
+p.btn_top_price-catch {
+  margin: 50px 0 25px;
+  font-weight: bold;
+  @include config.applyClamp(font-size, 16, 20);
+  text-align: center;
+}
+
+/* 記事系下部のカテゴリーやタグ。玉利さんの作業が終わり次第、_blog.cssに移す */
+.cate_tag_box {
+  padding: 30px;
+  border-radius: 25px;
+  background-color: config.$color-white;
+  h3.tl03 {
+    text-align: left;
+
+    @include config.mq(sp) {
+      text-align: center;
+    }
+
+    &:not(:first-of-type) {
+      margin-top: 30px;
+    }
+  }
+}
+.recommended-articles {
+  padding: 20px;
+  border-radius: 25px;
+  background-color: config.$color-white;
+  ul li {
+    &:not(:first-of-type) {
+      margin-top: 20px;
+    }
+    p {
+      margin-top: 10px;
+      font-weight: bold;
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+  }
+}
+#banner-container {
+  margin-top: 30px;
+  position: sticky;
+  top: 140px;
+}

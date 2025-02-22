@@ -1,0 +1,670 @@
+@use "../config" as config;
+
+.mv.mv_type01.mv_pitch {
+  background-image:url(../img/pitch/mv_bg01.webp);
+  .set {
+    align-items: center;
+    margin-bottom: 60px;
+    @include config.mq(sp) {
+      margin-bottom: 30px;
+    }
+  }
+  .cell01 {
+    flex-basis:46%;
+    .tx02 {
+      margin-top: 0;
+      font-size:26px;
+      @include config.mq(sp) {
+        font-size: 18px;
+      }
+      span {
+        font-size: 80%;
+      }
+      em {
+        color: config.$color-orange;
+      }
+    }
+    h2.mv_logo {
+      margin: 30px 0;
+    }
+    .emblem_point {
+      display: flex;
+      justify-content: space-between;
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        font-weight: bold;
+        line-height: 1.5;
+        font-size: 16px;
+        @include config.shadow(0,6px,0,0,rgba(0,0,0,10%));
+        @include config.mq(sp) {
+          width: 28vw;
+          height: 28vw;
+          font-size: 14px;
+        }
+        &:nth-of-type(1) {
+          background:
+            url(../img/pitch/sparkling01.svg) no-repeat right 10% top 40%,
+            linear-gradient(config.$color-yellow 60%, rgb(255,144,14) 100%);
+          background-size: 22px auto, 100%;
+        }
+        &:nth-of-type(2) {
+          background:
+            url(../img/pitch/sparkling02.svg) no-repeat right 16% top 30%,
+            linear-gradient(config.$color-yellow 60%, rgb(255,144,14) 100%);
+          background-size: 24px auto, 100%;
+        }
+        &:nth-of-type(3) {
+          background:
+            url(../img/pitch/sparkling03.svg) no-repeat right 24% top 25%,
+            linear-gradient(config.$color-yellow 60%, rgb(255,144,14) 100%);
+          background-size: 24px auto, 100%;
+        }
+        em {
+          margin-right: 5px;
+          font-family: config.$font-oswald;
+          color: config.$color_white;
+          line-height: 1;
+          @include config.text-edging;
+          font-size: 50px;
+          @include config.mq(sp) {
+            margin-right: 2px;
+            font-size: 36px;
+          }
+        }
+        .flex_box {
+          display: flex;
+          align-items: flex-end;
+        }
+        span.vertical_writing {
+          display: block;
+          margin-bottom: .25rem;
+          font-size: 50%;
+          writing-mode: vertical-rl;
+          white-space: nowrap; /* テキストが折り返されないようにする */
+          overflow: hidden;   /* はみ出し防止 */
+        }
+      }
+    }
+  }
+  .cell02{
+    flex-basis:50%;
+  }
+}
+
+.pitch_block01{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom:-50px;
+  @include config.mq(sp) {
+    display: block;
+    margin-bottom:-20px;
+  }
+  .cell01{
+    flex-basis:55%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    @include config.mq(sp) {
+      display:block;
+      margin:0 0 20px;
+    }
+    .pitch_list01{
+      flex-basis: 100%;
+      li{
+        font-weight: bold;
+        margin:0 0 20px;
+        border-radius:100px;
+        background:config.$color-highlight_yellow;
+        text-align:center;
+        font-size:20px;
+        padding:10px;
+        width:100%;
+        box-sizing:border-box;
+        @include config.mq(sp) {
+          font-size:18px;
+        }
+        &:last-child{
+          margin:0;
+        }
+      }
+    }
+  }
+  .cell02{
+    flex-basis:40%;
+    .img{
+      text-align:center;
+      img{
+        width:80%;
+        @include config.mq(sp) {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+.pitch_tx_style01{
+  font-weight: bold;
+  text-align:center;
+  font-size:28px;
+  margin:0 0 30px;
+  @include config.mq(sp) {
+    font-size:18px;
+    margin:0 0 30px;
+  }
+  span{
+    font-size:19px;
+    @include config.mq(sp) {
+      font-size:16px;
+    }
+  }
+}
+
+.pitch_tx_style02{
+  font-weight: bold;
+  text-align:center;
+  font-size:22px;
+  margin:0 0 50px;
+  color:config.$color-yellow;
+  @include config.mq(sp) {
+    font-size:17px;
+  }
+}
+
+.pitch_block02 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top:25px;
+  @include config.mq(sp) {
+    display: block;
+  }
+  .box{
+    flex-basis:32%;
+    border:5px solid config.$color-black;
+    background:config.$color-white;
+    border-radius:20px;
+    box-sizing:border-box;
+    position:relative;
+    padding:70px 20px 20px;
+    @include config.mq(sp) {
+      margin:0 0 40px;
+      padding:50px 20px 20px;
+      &:last-chlid {
+        margin: 0;
+      }
+    }
+    &::before{
+      content: "";
+      width: 250px;
+      height: 5px;
+      top: -5px;
+      left: 0;
+      right: 0;
+      background: config.$color-white;
+      position: absolute;
+      margin: auto;
+      @include config.mq(sp) {
+        width: 200px;
+      }
+    }
+    .t{
+      width:100%;
+      position:absolute;
+      top:-25px;
+      left:0;
+      right:0;
+      font-weight: bold;
+      text-align:center;
+      font-size:22px;
+      line-height:1.4;
+      @include config.mq(sp) {
+        font-size:18px;
+      }
+    }
+  }
+  .img{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:120px;
+    margin:0 0 20px;
+    img{
+      width:auto;
+      height:100%;
+    }
+  }
+  .lg_img{
+    text-align:right;
+    margin-top:5px;
+    img{
+      width:auto;
+      height:55px;
+      @include config.mq(sp) {
+        height:35px;
+      }
+    }
+  }
+} 
+
+.pitch_block03 .box{
+  position:relative;
+  padding-left:75px;
+  padding-top:10px;
+  padding-bottom:50px;
+  border-left:1px solid config.$color-black;
+  margin-left:48px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include config.mq(sp) {
+    padding-left:65px;
+    padding-bottom:40px;
+    display: block;
+  }
+  &:last-child{
+    margin-bottom:0;
+    border:none;
+  }
+  .cell01{
+    flex-basis:50%;
+    @include config.mq(sp) {
+      margin:0 0 20px;
+    }
+  }
+  .cell02{
+    flex-basis:45%;
+    text-align:center;
+    .img img{
+      width:60%;
+      @include config.mq(sp) {
+        width: 50%;
+      }
+    }
+  }
+  .nm{
+    position:absolute;
+    left:-48px;
+    top:0;
+    width:96px;
+    height:96px;
+    border-radius:95px;
+    line-height:1.4;
+    font-weight: bold;
+    text-align:center;
+    font-size:24px;
+    box-sizing:border-box;
+    padding:10px 0 0;
+    background:#FFF2C9;
+    @include config.mq(sp) {
+      left:-40px;
+      width:80px;
+      height:80px;
+      font-size:18px;
+    }
+  }
+}
+
+.pitch_block03 .box .nm.nm02{background:#F8DE8C;}
+.pitch_block03 .box .nm.nm03{background:#F8CC41;}
+.pitch_block03 .box .nm.nm04{background:config.$color-yellow;}
+
+.pitch_block04 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include config.mq(sp) {
+    display: block;
+  }
+}
+
+.pitch_block04 .box{
+  flex-basis:48%;
+  background:config.$color-white;
+  box-sizing:border-box;
+  padding:20px;
+  border-radius:20px;
+  text-align:center;
+  font-weight: bold;
+  @include config.mq(sp) {
+    margin:0 0 20px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.pitch_block04 .img{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:190px;
+  margin:0 0 20px;
+  @include config.mq(sp) {
+    height:150px;
+  }
+  img{
+    width:auto;
+    height:100%;
+  }
+}
+
+.pitch_block04 .box .t{
+  color:config.$color-yellow;
+  font-size:24px;
+  margin:0 0 15px;
+  @include config.mq(sp) {
+    font-size:18px;
+  }
+}
+
+.pitch_block04 .box p{
+  font-size:14px;
+}
+
+
+/* 採用ピッチ制作実績 */
+.form_type01.pitch_case .download_block01 {
+  gap: 20px;
+  h3 {
+    color: config.$color-yellow;
+  }
+  .cell01 {
+    flex-basis: 45%;
+  }
+  .cell02 {
+    flex-basis: 45%;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: config.$color-white;
+  }
+}
+
+/* 202408追加パーツ */
+
+@include config.mq(sp) {
+  .slick-track {
+    display: flex;
+  }
+}
+
+.height_auto {
+  height: auto;
+}
+.pitch_feature_text em {
+  background-color: config.$color-light_yellow;
+}
+.problem_list li {
+  margin: 20px 0 0 2em;
+  text-indent: -2.6em;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    margin: 0 0.6em -0.6em 0;
+    background: transparent url(../img/common/checkmark/check_yellow01.svg) no-repeat top left;
+    background-size: 100%;
+    em {
+      color: config.$color-orange;
+      font-weight: bold;
+    }
+  }
+}
+
+.flow_notice {
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+.flow {
+  margin: 0;
+  padding: 0;
+  max-width: 900px;
+}
+.flow__list {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none
+}
+.flow__step {
+  width: 220px;
+  padding: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgb(255,130,0);
+  background: linear-gradient(90deg,rgba(255,130,0,0) 0%,rgba(255,130,0,0) 48%,rgba(255,130,0,1) 48%,rgba(255,130,0,1) 52%,rgba(255,130,0,0) 52%);
+  @include config.mq(sp) {
+    width: 100px;
+  }
+}
+.flow__list:last-child .flow__step {
+  background: none;
+}
+.flow__step.height_add {
+  min-height: 170px;
+  @include config.mq(sp) {
+    min-height: 130px;
+  }
+}
+.flow__step--number {
+  margin: 0;
+  padding: 3px 0;
+  font-weight: bold;
+  color: config.$color-white;
+  font-size: 24px;
+  background-color: config.$color-orange;
+  border-radius: 100px;
+  text-align: center;
+  @include config.mq(sp) {
+    font-size: 16px;
+  }
+}
+.flow__step--working_day {
+  margin: 0;
+  padding: 3px 0;
+  font-weight: bold;
+  color: config.$color-orange;
+  font-size: 14px;
+  background-color: config.$color-white;
+  border-radius: 100px;
+  text-align: center;
+  border: 3px solid config.$color-orange;
+  @include config.mq(sp) {
+    font-size: 9px;
+    line-height: 1.35;
+    border-radius: 20px;
+  }
+}
+.flow__step--working_day em {
+  font-size: 120%
+}
+.flow__detail {
+  width: 640px;
+  margin: 0;
+  padding: 0 0 40px;
+  @include config.mq(sp) {
+    width: calc(100% - 120px);
+    padding: 0 0 20px;
+  }
+}
+.flow__detail--title {
+  margin: 0;
+  color: config.$color-orange;
+  font-size: 28px;
+  font-weight: bold;
+  @include config.mq(sp) {
+    font-size: 20px;
+  }
+}
+.flow__detail--text {
+  margin: 0;
+  margin-top: 5px;
+}
+.flow__detail--text p {
+  line-height: 1.5;
+  font-size: 18px;
+  @include config.mq(sp) {
+    font-size: 14px;
+  }
+}
+.flow__detail--text p span {
+  font-size: 14px;
+}
+.flow__detail--text figure {
+  margin-top: 10px;
+}
+.flow__detail--text figure figcaption {
+  margin-top: 5px;
+  font-size: 14px;
+}
+.flow__detail--text figure figcaption em {
+  font-size: 20px;
+  font-weight: bold;
+  color: config.$color-navy;
+  @include config.mq(sp) {
+    font-size: 16px;
+  }
+}
+
+.infographics {
+  margin-top: 80px;
+  @include config.mq(sp) {
+    margin-top: 40px;
+  }
+}
+h3.infographics__title {
+  margin-bottom: 40px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 1.5;
+  @include config.mq(sp) {
+    font-size: 20px;
+  }
+}
+h3.infographics__title em {
+  color: config.$color-orange;
+}
+.infographics__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include config.mq(sp) {
+    display: block;
+  }
+}
+.infographics__img {
+  width: 510px;
+  @include config.mq(sp) {
+    width: auto;
+  }
+}
+.infographics__img figcaption {
+  margin-top: -30px;
+  font-weight: bold;
+  color: config.$color-navy;
+  font-size: 20px;
+  text-align: center;
+  @include config.mq(sp) {
+    margin-top: -15px;
+    font-size: 14px;
+  }
+}
+.infographics__point {
+  width: calc(100% - 550px);
+  @include config.mq(sp) {
+    width: auto;
+  }
+}
+.infographics__point--list {
+  margin: 20px 0 0 2em;
+  text-indent: -2.6em;
+  font-size: 18px;
+  @include config.mq(sp) {
+    margin: 20px 0 0 2em;
+    text-indent: -2.2em;
+    font-size: 16px;
+  }
+}
+.infographics__point--list::before {
+  content: "";
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  margin: 0 0.6em -0.6em 0;
+  background: transparent url(../img/common/checkmark/check_yellow02.svg) no-repeat top left;
+  background-size: 100%;
+  @include config.mq(sp) {
+    width: 1.6em;
+    height: 1.6em;
+    margin: 0 0.6em -0.6em 0
+  }
+}
+.infographics__point--list em {
+  font-weight: bold;
+}
+
+.voice {
+  display: flex;
+  justify-content: space-between;
+  @include config.mq(sp) {
+    display: block;
+  }
+}
+.voice__box {
+  width: calc(50% - 20px);
+  @include config.mq(sp) {
+    width: auto;
+  }
+}
+.voice__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.voice__list--icon {
+  width: 70px;
+}
+.voice__list--balloon {
+  position: relative;
+  width: calc(100% - 80px - 40px - 30px);
+  padding: 20px;
+  line-height: 1.75;
+  border-radius: 20px;
+  border: 2px solid config.$color-black;
+  background-color: config.$color-white;
+}
+.voice__list--balloon em {
+  color: config.$color-orange;
+}
+.voice__list--balloon::before, 
+.voice__list--balloon::after
+ {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 16px 10px 0;
+  position: absolute;
+  top: 24px;
+  left: -16px;
+  @include config.mq(sp) {
+    left: -12px;
+  }
+}
+.voice__list--balloon::before {
+  border-color: transparent config.$color-white transparent transparent;
+}
+.voice__list--balloon::after {
+  border-color: transparent config.$color-black transparent transparent;
+  transform: scale(1.5);
+  z-index: -1;
+}

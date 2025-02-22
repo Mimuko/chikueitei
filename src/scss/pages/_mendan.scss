@@ -1,0 +1,420 @@
+@use "../config" as config;
+
+.mv.mv_mendan{
+  background: transparent url(../img/mendan/mv_bg01.jpg) no-repeat top -100px center;
+  background-size: 100% auto;
+  text-align: left;
+  @include config.mq(sp) {
+    background: transparent url(../img/mendan/mv_bg01.jpg) no-repeat center center;
+    background-size: auto 100%;
+  }
+  .set {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include config.mq(sp) {
+      display: block;
+      padding: 0 20px;
+    }
+    .cell01 {
+      max-width: 700px;
+      .tx02 {
+        font-size: 38px;
+        @include config.mq(sp) {
+          text-align: center;
+          font-size: 20px;
+        }
+        & em {
+          padding-top: .3em;
+          background-position: top left -2px;
+          background-repeat: repeat-x;
+          background-size: 1em .3em;
+          background: top left / 1em .5em repeat-x radial-gradient(circle, config.$color-yellow .12em, rgba(0,0,0,0) .12em);
+        }
+        & span {
+          font-size: 30px;
+          @include config.mq(sp) {
+            font-size: 16px;
+          }
+        }
+      }
+      & h2 {
+        font-size: 76px;
+        color: config.$color-yellow;
+        @include config.mq(sp) {
+          margin: 10px 0;
+          text-align: center;
+          font-size: 40px;
+        }
+      }
+      & p {
+        margin-bottom: 40px;
+        @include config.mq(sp) {
+          text-align: justify;
+        }
+      }
+      .btn_wrap_mv div:nth-of-type(2) {
+          margin: 0 0 0 20px;
+          @include config.mq(sp) {
+            margin: 10px auto 0;
+          }
+      }
+    }
+    .cell02 {
+      margin-left: 60px;
+      @include config.mq(sp) {
+        margin-left: 0;
+        padding: 40px 20px 0;
+      }
+    }
+  }
+}
+.mendan_problem_wrapper {
+  background-color: config.$color-white;
+  .mendan_problem_title {
+    text-align: center;
+    font-size: 30px;
+    @include config.mq(sp) {
+      font-size: 20px;
+    }
+    & em {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 15px 25px;
+      background: transparent url(../img/mendan/problem_bg.svg) no-repeat center center;
+      background-size: 100% auto;
+    }
+  }
+  .mendan_problem_inner {
+    .mendan_problem_list {
+      display: flex;
+      justify-content: space-between;
+      max-width: 800px;
+      margin: 60px auto 0;
+      @include config.mq(sp) {
+        display: block;
+      }
+      & >li {
+        position: relative;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: #EAEAEA;
+        @include config.mq(sp) {
+          width: 60%;
+          margin: 0 auto 40px;
+        }
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -15px;
+          right: 25px;
+          width:0;
+          height:0;
+          border-style:solid;
+          border-width: 15px 12px 0 12px;
+          border-color: #EAEAEA transparent transparent transparent;
+        }
+        &:nth-child(1) {
+          animation: float_balloon_y 5s ease-in-out infinite alternate-reverse, float_balloon_x 2s ease-in-out infinite alternate-reverse;
+          &::before {
+            position: absolute;
+            bottom: 20px;
+            right: -35px;
+            content: '';
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: transparent url(../img/mendan/problem_list_bg01.svg) no-repeat center center;
+            background-size: 100% auto;
+            @include config.mq(sp) {
+              top: 20px;
+              right: -20px;
+            }
+          }
+        }
+        &:nth-child(2) {
+          animation: float_balloon_y 4s ease-in-out infinite alternate-reverse, float_balloon_x 3s ease-in-out infinite alternate-reverse;
+          &::before {
+            position: absolute;
+            top: -15px;
+            right: -30px;
+            content: '';
+            display: block;
+            width: 65px;
+            height: 65px;
+            background: transparent url(../img/mendan/problem_list_bg02.svg) no-repeat center center;
+            background-size: 100% auto;
+            @include config.mq(sp) {
+              top: -5px;
+              right: -15px;
+            }
+          }
+        }
+        &:nth-child(3) {
+          animation: float_balloon_y 5s ease-in-out infinite alternate-reverse, float_balloon_x 4s ease-in-out infinite alternate-reverse;
+          &::before {
+            position: absolute;
+            top: -35px;
+            right: -20px;
+            content: '';
+            display: block;
+            width: 82px;
+            height: 82px;
+            background: transparent url(../img/mendan/problem_list_bg03.svg) no-repeat center center;
+            background-size: 100% auto;
+            @include config.mq(sp) {
+              top: -25px;
+              right: -20px;
+            }
+          }
+        }
+        & em {
+          font-size: 20px;
+        }
+      }
+    }
+    .mendan_problem_arrow {
+      margin: 60px 0 20px;
+      text-align: center;
+      @include config.mq(sp) {
+        width: 40px;
+        margin: 10px auto;
+      }
+    }
+    .mendan_problem_answer {
+      text-align: center;
+      font-size: 34px;
+      @include config.mq(sp) {
+        font-size: 20px;
+      }
+      & em {
+        font-size: 42px;
+        color: config.$color-yellow;
+        @include config.mq(sp) {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+@keyframes float_balloon_y {
+  0% {
+    top: -5px;
+  }
+  100% {
+    top: 5px;
+  }
+}
+@keyframes float_balloon_x {
+  0% {
+    transform: translateX(-1%);
+  }
+  100% {
+    transform: translateX(1%);
+  }
+}
+.mendan_3reason_wrapper {
+  .mendan_3reason_inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    @include config.mq(sp) {
+      display: block;
+    }
+    & li {
+      width: calc(31% - 50px);
+      padding: 25px;
+      border: 2px solid config.$color-yellow;
+      border-radius: 30px;
+      background-color: config.$color-white;
+      @include config.mq(sp) {
+        width: auto;
+        margin-top: 20px;
+      }
+      & figure {
+        text-align: center;
+        & img {
+          max-width: none;
+          height: 150px;
+          @include config.mq(sp) {
+            width: 80%;
+            max-width: inherit;
+            height: auto;
+          }
+        }
+      }
+      & h3 {
+        margin: 20px 0 10px;
+        text-align: center;
+        font-size: 18px;
+        color: config.$color-yellow;
+      }
+      & p {
+        font-size: 14px;
+        line-height: 1.35;
+      }
+    }
+  }
+}
+.mendan_price_wrapper {
+  .mendan_price_inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    @include config.mq(sp) {
+      display: block;
+    }
+    & >li {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 46%;
+      padding: 0 0 40px;
+      background-color: config.$color-white;
+      @include config.mq(sp) {
+        width: auto;
+        margin-top: 20px;
+      }
+      & h3 {
+        width: 100%;
+        padding: 20px 40px;
+        line-height: 1;
+        color: config.$color-white;
+        font-size: 18px;
+        text-align: center;
+        background-color: #B8B8B8;
+        &.recommend {
+          background-color: config.$color-yellow;
+          & span {
+            display: inline-block;
+            margin-left: 10px;
+            padding: 4px 15px;
+            font-size: 12px;
+            color: #FF8200;
+            background-color: config.$color-white;
+            border-radius: 100px;
+          }
+        }
+        & em {
+          font-style: normal;
+          font-size: 24px;
+        }
+      }
+      .mendan_price_main {
+        width: 100%;
+        line-height: 1;
+        text-align: center;
+        padding: 40px 0 0;
+        & em {
+          font-size: 38px;
+          font-weight: bold;
+        }
+      }
+      .mendan_price_detail {
+        margin-bottom: 20px;
+      }
+      .mendan_price_notice {
+        width: 100%;
+        padding: 0 40px;
+        & >li {
+          position: relative;
+          padding-left: 2em;
+        }
+        & >li::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: '';
+          display: block;
+          width: 1.5em;
+          height: 1.5em;
+          border-radius: 50%;
+          background-color: config.$color-yellow;
+        }
+        & >li::after {
+          position: absolute;
+          top: .4em;
+          left: .4em;
+          content: '';
+          display: block;
+          width: .6em;
+          height: .3em;
+          border-bottom: 3px solid config.$color-white;
+          border-left: 3px solid config.$color-white;
+          transform: rotate(-45deg);
+        }
+        & >li:not(:first-child) {
+          margin-top: 10px;
+          & em {
+            color: #FF8200;
+          }
+        }
+      }
+    }
+  }
+  .mendan_price_attention {
+    font-size: 12px;
+  }
+}
+.mendan_flow_wrapper {
+  .mendan_flow_inner {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 30px 0 0;
+    @include config.mq(sp) {
+      display: block;
+    }
+    & >li {
+      width: 18%;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 20px;
+      border: 2px solid config.$color-black;
+      list-style-type: none;
+      @include config.mq(sp) {
+        width: auto;
+        margin-top: 20px;
+      }
+      &.arrow {
+        width: 0;
+        height: 0;
+        margin: auto 0;
+        padding: 0;
+        border-style:solid;
+        border-radius: 0;
+        border-width: 15px 0 15px 15px;
+        border-color: transparent transparent transparent config.$color-yellow;
+        @include config.mq(sp) {
+          margin: 20px auto 40px;
+          transform: rotate(90deg);
+        }
+      }
+      .mendan_flow_number {
+        width: 2em;
+        height: 2em;
+        line-height: 2em;
+        margin: calc(-1em - 30px) auto 20px;
+        font-size: 28px;
+        font-weight: bold;
+        color: config.$color-white;
+        background-color: config.$color-yellow;
+        border-radius: 50%;
+        @include config.mq(sp) {
+          font-size: 24px;
+        }
+      }
+      .mendan_flow_title {
+        font-size: 24px;
+        @include config.mq(sp) {
+          font-size: 20px;
+        }
+      }
+      .mendan_flow_detail {
+        margin-top: 20px;
+        line-height: 1.5;
+      }
+    }
+  }
+}

@@ -1,0 +1,301 @@
+@use "sass:math";
+// ----------------------------------------------
+// くの字形の矢印　デフォルトは白 色変更は()内に色コード
+// ----------------------------------------------
+// 使い方
+// position: relative; ←親要素に追加
+// &::after{
+// 	@include config.arrow;
+// }
+// ----------------------------------------------
+@mixin arrow($c: #ffff) {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 27px;
+    width: 9px;
+    height: 9px;
+    margin: auto;
+    border-top: 1px solid $c;
+    border-right: 1px solid $c;
+    transform: rotate(45deg);
+    box-sizing: border-box;
+}
+
+// ----------------------------------------------
+// ボックスシャドウ
+// ----------------------------------------------
+// 使い方　@include config.shadow(高さpx, 幅px, 濃さpx, 距離px,色);
+// ----------------------------------------------
+@mixin shadow($h: 10px, $w: 10px, $b: 0px, $s: 0px, $c: #eaeaea) {
+    -webkit-box-shadow: $h $w $b $s $c;
+    -moz-box-shadow: $h $w $b $s $c;
+    box-shadow: $h $w $b $s $c;
+}
+
+// ----------------------------------------------
+// hoverで薄くする
+// ----------------------------------------------
+// 使い方 @include config.hover1;
+// ----------------------------------------------
+@mixin hover1() {
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+// ----------------------------------------------
+// hoverで黒く、文字は白に 　縁取りラインあり
+// ----------------------------------------------
+// 使い方 @include config.hover2;
+// ----------------------------------------------
+@mixin hover2($col: #ffff, $back: #3E3A39, $bor:1px solid #3E3A39) {
+    &:hover {
+        color: $col;
+        background: $back;
+        border: $bor;
+    }
+}
+
+// ----------------------------------------------
+// hoverで黒く、文字は白に　縁取りラインなし
+// ----------------------------------------------
+// 使い方 @include config.hover3;
+// ----------------------------------------------
+@mixin hover3($col: #ffff, $back: #3E3A39) {
+    &:hover {
+        color: $col;
+        background: $back;
+    }
+}
+
+// ----------------------------------------------
+// 文字縁取り(2px)
+// ----------------------------------------------
+// 使い方　@include config.text-edging(色);
+// ----------------------------------------------
+@mixin text-edging($c:#FF8200) {
+    text-shadow: $c 2px 0px, $c -2px 0px, $c 0px -2px, $c 0px 2px, $c 2px 2px, $c -2px 2px, $c 2px -2px, $c -2px -2px, $c 1px 2px, $c -1px 2px, $c 1px -2px, $c -1px -2px, $c 2px 1px, $c -2px 1px, $c 2px -1px, $c -2px -1px;
+}
+
+// ----------------------------------------------
+// 文字縁取り(1px)
+// ----------------------------------------------
+// 使い方　@include config.text-edging-thin(色);
+// ----------------------------------------------
+@mixin text-edging-thin($c:#FF8200) {
+    text-shadow: $c 1px 0px, $c -1px 0px, $c 0px -1px, $c 0px 1px, $c 1px 1px, $c -1px 1px, $c 1px -1px, $c -1px -1px, $c .5px 1px, $c -.5px 1px, $c .5px -1px, $c -.5px -1px, $c 1px .5px, $c -1px .5px, $c 1px -.5px, $c -1px -.5px;
+}
+
+// ----------------------------------------------
+// マーカー風の装飾
+// ----------------------------------------------
+// 使い方
+// 	@include config.marker(色, 太さ);
+//  太さは%で指定。値を大きくするとマーカーが太くなる
+// ----------------------------------------------
+@mixin marker($c: #f9bb00, $weight: 25%) {
+    background: linear-gradient(transparent 100% - $weight, $c 20%);
+}
+
+// ----------------------------------------------
+// 吹き出しの三角（しっぽ）　位置が右
+// ----------------------------------------------
+// 使い方
+// position: relative; ←親要素に追加
+// &::before {
+// 	@include config.balloon_tale_right(色, 基準サイズ);
+// }
+// ----------------------------------------------
+@mixin balloon_tale_right($c: #f9bb00, $size: 40px) {
+    content: '';
+    display: block;
+    width: $size;
+    height: $size * 1.5;
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    background-color: $c;
+    position: absolute;
+    top: 50%;
+    right: calc($size * -1 + 1px);
+    bottom: auto;
+    left: auto;
+    transform: translateY(-50%);
+}
+
+// ----------------------------------------------
+// 吹き出しの三角（しっぽ）　位置が左
+// ----------------------------------------------
+// 使い方
+// position: relative; ←親要素に追加
+// &::before {
+// 	@include config.balloon_tale_left(色, 基準サイズ);
+// }
+// ----------------------------------------------
+@mixin balloon_tale_left($c: #f9bb00, $size: 40px) {
+    content: '';
+    display: block;
+    width: $size;
+    height: $size * 1.5;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    background-color: $c;
+    position: absolute;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: calc($size * -1 + 1px);
+    transform: translateY(-50%);
+}
+
+// ----------------------------------------------
+// 吹き出しの三角（しっぽ）　位置が上
+// ----------------------------------------------
+// 使い方
+// position: relative; ←親要素に追加
+// &::before {
+// 	@include config.balloon_tale_bottom(色, 基準サイズ);
+// }
+// ----------------------------------------------
+@mixin balloon_tale_top($c: #f9bb00, $size: 20px) {
+    content: '';
+    display: block;
+    width: $size * 1.5;
+    height: $size;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: $c;
+    position: absolute;
+    top: calc($size * -1 + 1px);
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+// ----------------------------------------------
+// 吹き出しの三角（しっぽ）　位置が下
+// ----------------------------------------------
+// 使い方
+// position: relative; ←親要素に追加
+// &::before {
+// 	@include config.balloon_tale_bottom(色, 基準サイズ);
+// }
+// ----------------------------------------------
+@mixin balloon_tale_bottom($c: #f9bb00, $size: 20px) {
+    content: '';
+    display: block;
+    width: $size * 1.5;
+    height: $size;
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+    background-color: $c;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: calc($size * -1 + 1px);
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+// ----------------------------------------------
+// サイズをレスポンシブで自動調整（clamp()の関数）
+// ----------------------------------------------
+// 使い方
+// @include config.applyClamp(プロパティ名, 最小値, 最大値);
+// ----------------------------------------------
+@function myClamp($min, $max, $min-view-port: 320, $max-view-port: 1200) {
+    $viewport-range: $max-view-port - $min-view-port; // ビューポートの範囲を変数に格納
+    $value-range: $max - $min; // 値の範囲を変数に格納
+    $variable-part: math.div($value-range, $viewport-range); // 変数の計算をmath.divで修正
+    $constant: math.div($max - $max-view-port * $variable-part, 16); // 定数の計算をmath.divで修正
+    $min-rem: math.div($min, 16) * 1rem; // 最小値をremに変換
+    $max-rem: math.div($max, 16) * 1rem; // 最大値をremに変換
+    $variable-rem: $constant * 1rem; // 変数のrem値
+    $variable-vw: 100 * $variable-part * 1vw; // ビューポートに基づく変数
+    @return clamp($min-rem, $variable-rem + $variable-vw, $max-rem);
+}
+
+@mixin applyClamp($property, $min, $max, $min-view-port: 320, $max-view-port: 1200) {
+    #{$property}: ($min) + px; // 古いバージョンのsafari対策
+    #{$property}: myClamp($min, $max, $min-view-port, $max-view-port);
+}
+
+// ----------------------------------------------
+// フレックスボックス
+// ----------------------------------------------
+@mixin flex($display: flex, $align-items: center, $justify-content: center) {
+    display: $display;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin centering-flex($coordinate: xy, $display: flex, $justify: null, $align: null) {
+    display: $display;
+    @if $coordinate==xy {
+        justify-content: center;
+        align-items: center;
+    }
+    @else if $coordinate==x {
+        justify-content: center;
+        @if $align !=null {
+            align-items: $align;
+        }
+    }
+    @else if $coordinate==y {
+        align-items: center;
+        @if $justify !=null {
+            justify-content: $justify;
+        }
+    }
+}
+
+// ----------------------------------------------
+// サイズ
+// ----------------------------------------------
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+// ----------------------------------------------
+// 逆八の字型のライン　＼　／
+// ----------------------------------------------
+// 使い方
+// 	@include config.voice-line(色, 基準サイズ,太さ,角度,間隔,マージン);
+// 
+// ----------------------------------------------
+@mixin voice-line($color: #000, $size: 35px, $thickness: 0.1rem, $angle: 55deg, $gap: 20px, $margin: 10px auto) {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $gap;
+    margin: $margin;
+    &::before,
+    &::after {
+        content: "";
+        display: inline-block;
+        background-color: $color;
+        width: $size;
+        height: $thickness;
+    }
+    &::before {
+        transform: rotate($angle);
+        transform-origin: center;
+    }
+    &::after {
+        transform: rotate(-$angle);
+        transform-origin: center;
+    }
+}
+
+// ----------------------------------------------
+// 文字の上に強調用のドット
+// ----------------------------------------------
+// 使い方
+// 	@include config.text-emphasis(); で適用
+//  スタイルを変更する場合 circleやdotなどのスタイルをオプションとして変更できます。
+//　h1 {@include text-emphasis(circle); }
+// ----------------------------------------------
+@mixin text-emphasis($style: filled) {
+    text-emphasis: $style;
+    -webkit-text-emphasis: $style;
+}

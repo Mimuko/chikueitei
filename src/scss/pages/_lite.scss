@@ -1,0 +1,671 @@
+@use "../config" as config;
+
+/* FV */
+.lite-bg {
+  background-image: url(../../img/lite/mv.png);
+  background-size: cover;
+  width: auto;
+  padding: 80px 20px;
+  @include config.mq(sp) {
+    padding: 40px 20px;
+  }
+  .lite-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lite-wrap-l {
+    max-width: 740px;
+    position: relative;
+    @include config.mq(sp) {
+      margin: 0 auto;
+    }
+    .lite-logo_top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include config.mq(sp) {
+        display: block;
+      }
+      .lite-logo_top_catch {
+        font-size: 30px;
+        font-weight: bold;
+        @include config.mq(sp) {
+          font-size: 20px;
+          margin-bottom: 0;
+        }
+        em {
+        padding-top: 0.3em;
+        background-position: top left -2px;
+        background-repeat: repeat-x;
+        background-size: 1em 0.3em;
+        background: top left/1em 0.5em repeat-x radial-gradient(circle,config.$color-yellow 0.12em,rgba(0,0,0,0) 0.12em)
+        }
+      }
+      .lite-logo_top_emblem {
+        display: flex;
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 124px;
+          height: 124px;
+          border-radius: 50%;
+          margin-left: 10px;
+          line-height: 1.2;
+          font-size: 18px;
+          text-align: center;
+          font-weight: bold;
+          background-color: config.$color-white;
+          @include config.mq(sp) {
+            position: absolute;
+            right: -4%;
+            z-index: 1;
+            margin-left: 0;
+            transform: scale(75%);
+            &:nth-of-type(1) {
+              top: 42%;
+            }
+            &:nth-of-type(2) {
+              top: 58%;
+            }
+          }
+          em {
+            font-size: 160%;
+            color: config.$color-yellow;
+          }
+        }
+      }
+    }
+    h1.fv_logo {
+      margin-bottom: 50px;
+    }
+    .lite-mv-sp {
+      display: none;
+      @include config.mq(min-pc) {
+        display: block;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .lite-wrap-r {
+    width: calc(100% - 780px);
+    margin-left: 40px;
+    @include config.mq(min-pc) {
+      display: none;
+    }
+  }
+}
+
+/* 課題提起 */
+.lite-problem_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include config.mq(tab) {
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+  }
+  li {
+    display: flex;
+    align-items: start;
+    flex-basis: 50%;
+    margin-bottom: 40px;
+    position: relative;
+    @include config.mq(tab) {
+      margin-bottom: 20px;
+    }
+    &::before, &::after { /* 吹き出しの装飾 */
+      display: block;
+      content: '';
+      border-radius: 50%;
+      border: 3px solid config.$color-black;
+      background-color: config.$color-white;
+      position: absolute;
+      @include config.mq(tab) {
+        border: 2px solid config.$color-black;
+      }
+    }
+    &::before {
+      width: 24px;
+      height: 24px;
+      @include config.mq(tab) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &::after {
+      width: 14px;
+      height: 14px;
+      @include config.mq(tab) {
+        width: 10px;
+        height: 10px;
+      }
+    }
+    &:nth-of-type(1) {
+      &::before {
+        bottom: -40px;
+        left: 280px;
+      }
+      &::after {
+        bottom: -60px;
+        left: 306px;
+      }
+    }
+    &:nth-of-type(2) {
+      &::before {
+        bottom: -40px;
+        right: 340px;
+      }
+      &::after {
+        bottom: -60px;
+        right: 366px;
+      }
+    }
+    &:nth-of-type(3) {
+      &::before {
+        bottom: 40px;
+        left: 260px;
+      }
+      &::after {
+        bottom: 40px;
+        left: 296px;
+      }
+    }
+    &:nth-of-type(4) {
+      &::before {
+        bottom: -10px;
+        right: 280px;
+      }
+      &::after {
+        bottom: -24px;
+        right: 310px;
+      }
+    }
+    @include config.mq(tab) {
+      &:nth-of-type(odd) {
+        &::before {
+          bottom: -28px;
+          left: 16px;
+        }
+        &::after {
+          bottom: -38px;
+          left: 36px;
+        }
+      }
+      &:nth-of-type(even) {
+        &::before {
+          bottom: -28px;
+          right: 16px;
+        }
+        &::after {
+          bottom: -38px;
+          right: 36px;
+        }
+      }
+    }
+    &:nth-of-type(even) {
+      justify-content: end;
+    }
+    div {
+      display: inline-block;
+      padding: 30px;
+      font-size: 20px;
+      border-radius: 20px;
+      border: 3px solid config.$color-black;
+      background-color: config.$color-white;
+      @include config.mq(tab) {
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 14px;
+        border: 2px solid config.$color-black;
+      }
+    }
+    em {
+      font-weight: bold;
+    }
+  }
+}
+.lite-problem_img {
+  max-width: 400px;
+  padding-right: 60px;
+  margin: -180px auto 0;
+  @include config.mq(tab) {
+    width: 70%;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+}
+
+/* 課題解決 */
+.inner-block.lite-solution {
+  max-width: 1320px;
+  @include config.mq(sp) {
+    margin-bottom: -55px;
+  }
+}
+.lite-solution_title {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size: 28px;
+  text-align: center;
+  font-weight: 900;
+  @include config.mq(sp) {
+    font-size: 18px;
+  }
+  span {
+    padding: 0 40px;
+    @include config.mq(sp) {
+      padding: 0 25px;
+    }
+  }
+  em {
+    font-size: 140%;
+    color: config.$color-orange;
+  }
+  &::before, &::after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 90px;
+    border-radius: 100px;
+    background-color: config.$color-navy;
+    @include config.mq(sp) {
+      width: 3px;
+      height: 100px;
+    }
+  }
+  &::before {
+    transform: rotate(-30deg);
+  }
+  &::after {
+    transform: rotate(30deg);
+  }
+}
+.lite-solution_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  .lite-solution_point {
+    width: 35%;
+    @include config.mq(sp) {
+      width: 100%;
+    }
+    dl {
+      margin-top: 60px;
+      @include config.mq(sp) {
+        margin-top: 40px;
+      }
+      dt {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        .lite-solution_point-eng {
+          padding: 2px;
+          line-height: 1;
+          font-size: 24px;
+          font-family: config.$font-oswald;
+          color: config.$color-yellow;
+          background-color: config.$color-white;
+          position: relative;
+          z-index: 1;
+        }
+        .lite-solution_point-number {
+          margin-left: -16px;
+          line-height: 1;
+          font-size: 70px;
+          font-family: config.$font-oswald;
+          color: config.$color-yellow;
+          position: relative;
+          z-index: 0;
+        }
+        .lite-solution_point-title {
+          margin-left: 20px;
+          line-height: 1.3;
+          font-size: 18px;
+          color: config.$color-navy;
+        }
+      }
+      dd {
+        margin: 20px 0 0;
+        @include config.mq(sp) {
+          font-size: 14px;
+        }
+        em {
+          font-weight: bold;
+          color: config.$color-orange;
+        }
+        .free_media {
+          display: block;
+          margin-top: 15px;
+          padding: 15px;
+          border-radius: 15px;
+          background-color: config.$color-light_gray;
+          span {
+            font-weight: bold;
+            color: config.$color-navy;
+          }
+        }
+      }
+    }
+  }
+  .lite-solution_img {
+    width: 20%;
+    margin: 0;
+    @include config.mq(sp) {
+      width: 100%;
+      margin: 20px 0 0;
+      text-align: center;
+      order: 3;
+      img {
+        width: 45%;
+      }
+    }
+  }
+}
+
+/* 地方媒体の一覧 */
+.media_map_title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 120%;
+  em {
+    color: config.$color-orange;
+  }
+}
+.media_map_img {
+  margin-bottom: 10px;
+}
+.media_map_notice {
+  font-size: 12px;
+  text-align: right;
+  margin: 0 0 60px;
+  @include config.mq(sp) {
+    margin: 0 0 40px;
+  }
+}
+
+/* 携わった業界の一例 */
+.lite-job_list_title {
+  font-size: 26px;
+  text-align: center;
+  @include config.mq(sp) {
+    font-size: 22px;
+  }
+}
+.lite-job_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 0 0;
+  li {
+    width: calc(100% / 6 - 10px);
+    margin-bottom: 15px;
+    @include config.mq(tab) {
+      width: calc(100% / 4 - 10px);
+    }
+    @include config.mq(sp) {
+      width: calc(100% / 3 - 10px);
+    }
+    figure {
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 130px;
+        height: 130px;
+        margin: 0 auto;
+        border-radius: 50%;
+        background-color: config.$color-white;
+        box-shadow: 0 4px 0 rgba(0,0,0,.16);
+        @include config.mq(sp) {
+          width: 100px;
+          height: 100px;
+        }
+        img {
+          width: 70px;
+          @include config.mq(sp) {
+            width: 50px;
+          }
+        }
+      }
+      figcaption {
+        width: 130px;
+        margin: 15px auto 0;
+        padding: 5px 0;
+        font-size: 12px;
+        color: config.$color-white;
+        background-color: config.$color-yellow;
+        border-radius: 100px;
+        font-weight: bold;
+        text-align: center;
+        @include config.mq(sp) {
+          width: 100px;
+          font-size: 9px;
+        }
+      }
+    }
+  }
+}
+.lite-job_list_notice {
+  text-align: center;
+  margin: 20px 0 0;
+}
+
+/* まるごと人事ライトの特徴 */
+.feature_graph_box {
+  padding: 40px;
+  border-radius: 30px;
+  border: 3px solid config.$color-yellow;
+  background-color: config.$color-white;
+  @include config.mq(sp) {
+    padding: 20px;
+  }
+  h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: config.$color-navy;
+    text-align: center;
+    @include config.mq(sp) {
+      font-size: 18px;
+    }
+    em {
+      color: config.$color-orange;
+    }
+  }
+  p.h3_bottom {
+    text-align: center;
+    line-height: 1.5;
+  }
+  figure {
+    margin: 0;
+    position: relative;
+    img {
+      display: block;
+      max-width: 600px;
+      margin: 40px auto;
+      @include config.mq(sp) {
+        margin: 20px auto;
+      }
+    }
+    figcaption {
+      width: 30%;
+      font-weight: bold;
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      @include config.mq(sp) {
+        width: auto;
+        position:static
+      }
+      em {
+        color: config.$color-orange;
+      }
+    }
+  }
+}
+.feature_example_list {
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 80px 0 0;
+  list-style: none;
+  @include config.mq(sp) {
+    margin: 30px 0 0;
+    display: block;
+  }
+  > li {
+    flex: 1;
+    padding: 45px 30px 30px;
+    border-radius: 30px;
+    border: 3px solid config.$color-yellow;
+    background-color: config.$color-white;
+    position: relative;
+    @include config.mq(sp) {
+      margin-top: 50px;
+    }
+    p.feature_example_list-example {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      font-weight: bold;
+      line-height: 1;
+      color: config.$color-yellow;
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      @include config.mq(sp) {
+        transform: translate(-50%, -1%) scale(1.1);
+      }
+      &::after {
+        content: '';
+        display: block;
+        width: 140%;
+        height: 4px;
+        background-color: config.$color-white;
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,calc(-50% + 4px));
+      }
+      .feature_example_list-example_text {
+        display: block;
+        font-size: 17px;
+        writing-mode: vertical-rl;
+        margin-right: 5px;
+        position: relative;
+        z-index: 1;
+      }
+      .feature_example_list-example_num {
+        display: block;
+        font-size: 60px;
+        font-family: config.$font-oswald;
+        position: relative;
+        z-index: 1;
+      }
+    }
+    h4.feature_example_list-title {
+      display: flex;
+      align-items: center;
+      img {
+        width: 58px;
+        margin-right: 12px;
+      }
+      span {
+        color: config.$color-navy;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.3;
+      }
+    }
+    ul.feature_example_list-checklist {
+      margin-top: 1.5em;
+      li {
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        margin-top: 0.5em;
+        font-size: 16px;
+        &::before {
+          content: '';
+          display: block;
+          width: 1.5em;
+          height: 1.5em;
+          margin-right: 0.5em;
+          background: transparent url(../img/common/checkmark/check_yellow01.svg) no-repeat center center;
+          background-size: 100% auto;
+        }
+      }
+    }
+  }
+}
+
+/* 問い合わせ後の流れ */
+.lite_flow_wrapper {
+  .lite_flow_inner {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 30px 0 60px;
+    @include config.mq(sp) {
+      display: block;
+    }
+    & >li {
+      width: 18%;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 20px;
+      border: 2px solid config.$color-black;
+      list-style-type: none;
+      @include config.mq(sp) {
+        width: auto;
+        margin-top: 20px;
+      }
+      &.arrow {
+        width: 0;
+        height: 0;
+        margin: auto 0;
+        padding: 0;
+        border-style:solid;
+        border-radius: 0;
+        border-width: 15px 0 15px 15px;
+        border-color: transparent transparent transparent config.$color-yellow;
+        @include config.mq(sp) {
+          margin: 20px auto 40px;
+          transform: rotate(90deg);
+        }
+      }
+      .lite_flow_number {
+        width: 2em;
+        height: 2em;
+        line-height: 2em;
+        margin: calc(-1em - 30px) auto 20px;
+        font-size: 28px;
+        font-weight: bold;
+        color: config.$color-white;
+        background-color: config.$color-yellow;
+        border-radius: 50%;
+        @include config.mq(sp) {
+          font-size: 24px;
+        }
+      }
+      .lite_flow_title {
+        font-size: 24px;
+        @include config.mq(sp) {
+          font-size: 20px;
+        }
+      }
+      .lite_flow_detail {
+        margin-top: 20px;
+        line-height: 1.5;
+      }
+    }
+  }
+}

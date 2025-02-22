@@ -1,0 +1,357 @@
+@use "../config" as config;
+
+.roumu_keiri_wrapper {
+  .mv {
+    text-align: left;
+    background: url(../img/roumu_keiri/mv.jpg) no-repeat right top;
+    background-size: cover;
+    .set {
+      text-align: left;
+      align-items: flex-end;
+      .h1_top_catch {
+        color: config.$color-yellow;
+        font-weight: bold;
+        font-size: 30px;
+        @include config.mq(sp) {
+          font-size: 20px;
+        }
+      }
+      h1 {
+        margin-top: 20px;
+      }
+      h1 + p {
+        margin: 20px 0 40px;
+        font-size: 18px;
+        @include config.mq(sp) {
+          font-size: 14px;
+        }
+      }
+      .btn_wrap {
+        display: flex;
+        justify-content: space-between;
+        @include config.mq(sp) {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .btn {
+          margin: 0;
+          width: 290px;
+          @include config.mq(sp) {
+            margin: 0 0 10px;
+          }
+        }
+      }
+      @include config.mq(sp) {
+        .mv_logo img {
+          width: 100%;
+        }
+      }
+      .cell02 {
+        position: relative;
+        @include config.mq(sp) {
+          width: 100%;
+          .img img {
+            width: 85%;
+          }
+        }
+        .satisfaction_emblem {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          justify-content: center;
+          position: absolute;
+          text-align: center;
+          font-weight: bold;
+          line-height: 1;
+          width: 110px;
+          height: 110px;
+          border: 4px solid config.$color-yellow;
+          border-radius: 50%;
+          background: linear-gradient(0deg, rgba(255,246,214,1) 0%, rgba(255,255,255,1) 66%, rgba(255,255,255,1) 100%);
+          box-shadow: 0 6px 0 rgba(config.$color-yellow, .2);
+          @include config.mq(sp) {
+            border: 3px solid config.$color-yellow;
+            box-shadow: 0 4px 0 rgba(config.$color-yellow, .2);
+          }
+          &.roumu {
+            bottom: 84px;
+            left: -30px;
+            @include config.mq(sp) {
+              bottom: 0;
+              left: auto;
+              right: 0;
+            }
+          }
+          &.keiri {
+            top: -60px;
+            left: -15px;
+            @include config.mq(sp) {
+              top: auto;	 
+              bottom: -30px;	 
+              left: auto;	 
+              right: 0
+            }
+          }
+          > span {
+            display: block;
+            margin-bottom: 5px;
+          }
+          > em {
+            display: block;
+            font-size: 34px;
+            color: config.$color_orange;
+            span {
+              font-size: 65%;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .partner_logo_roumu-keiri {
+    padding: 20px;
+    background-color: config.$color_white;
+    @include config.mq(sp) {
+      padding: 10px;
+    }
+    ul {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      @include config.mq(sp) {
+        flex-wrap: wrap;
+        li {
+          width: 32%;
+        }
+      }
+    }
+  }
+
+  .problem_area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include config.mq(sp) {
+      display: block;
+    }
+    .problem_box {
+      width: calc(48% - 60px);
+      padding: 30px;
+      border-radius: 20px;
+      background-color: config.$color_white;
+      margin-bottom: 4%;
+      @include config.mq(sp) {
+        width: auto;
+        margin-bottom: 20px;
+      }
+      h3 {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        color: config.$color_orange;
+        @include config.mq(sp) {
+          font-size: 20px;
+        }
+      }
+      figure {
+        width: 90px;
+        margin: 20px auto;
+      }
+      ul {
+        li {
+          margin-bottom: 10px;
+          position: relative;
+          font-weight: bold;
+          font-size: 20px;
+          text-indent: -2em;
+          margin-left: 2em;
+          line-height: 1.35;
+          @include config.mq(sp) {
+            font-size: 16px;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 1.5em;
+            height: 1.5em;
+            margin-right: 0.5em;
+            background: transparent url(../img/roumu_keiri/problem-list_icon.svg) no-repeat center center;
+            background-size: 100%;
+            position: relative;
+            top: 0.4em;
+          }
+        }
+      }
+    }
+  }
+
+  .about_block03 {
+    .cell02 {
+      h3 {
+        color: config.$color_orange;
+      }
+      p {
+        font-size: 18px;
+        @include config.mq(sp) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  ol.point_area {
+    margin: 0 0 60px;
+    padding: 0;
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      p.point_number {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        font-weight: bold;
+        font-family: config.$font-oswald;
+        text-align: center;
+        line-height: 1;
+        color: config.$color_white;
+        background-color: config.$color_orange;
+        position: relative;
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          right: -8px;
+          top: 50%;
+          transform: translateY(-50%);
+          width:0;
+          height:0;
+          border-style:solid;
+          border-width: 12px 0 12px 12px;
+          border-color: transparent transparent transparent config.$color_orange;
+        }
+        span {
+          display: block;
+          font-size: 14px;
+        }
+        em {
+          display: block;
+          font-size: 38px;
+        }
+      }
+      p.point_catch {
+        margin: 0 0 0 20px;
+        font-size: 28px;
+        font-weight: bold;
+        em {
+          color: config.$color_orange;
+        }
+        @include config.mq(sp) {
+          width: calc(100% - 90px);
+          font-size: 20px;
+          line-height: 1.35;
+        }
+      }
+    }
+  }
+
+  .service_area {
+    display: flex;
+    justify-content: space-between;
+    @include config.mq(sp) {
+      display: block;
+    }
+    .service_block {
+      width: 100%;
+      margin-right: 30px;
+      border-radius: 20px;
+      border: 2px solid config.$color-yellow;
+      @include config.mq(sp) {
+        margin-bottom: 20px;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+      &.regularly {
+        background: config.$color-white url(../img/roumu_keiri/service-regularly.svg) no-repeat bottom 30px right 30px;
+      }
+      &.each_time {
+        font-size: 120%;
+        background: config.$color-white url(../img/roumu_keiri/service-each_time.svg) no-repeat bottom 30px right 30px;
+      }
+      &.human_resources_information {
+        background: config.$color-white url(../img/roumu_keiri/service-human_resources_information.svg) no-repeat bottom 30px right 30px;
+      }
+      &.attendance {
+        background: config.$color-white url(../img/roumu_keiri/service-attendance.svg) no-repeat bottom 30px right 30px;
+      }
+      &.other {
+        background: config.$color-white url(../img/roumu_keiri/service-each_time.svg) no-repeat bottom 30px right 30px;
+      }
+      h3 {
+        font-weight: bold;
+        color: config.$color-white;
+        border-radius: 18px 18px 0 0;
+        background-color: config.$color-yellow;
+        text-align: center;
+        padding: 5px 0;
+        font-size: 22px;
+        @include config.mq(sp) {
+          font-size: 20px;
+        }
+      }
+      .service_box {
+        padding: 30px 20px 20px;
+        display: flex;
+        @include config.mq(sp) {
+          display: block;
+        }
+        .service_list {
+          margin: 0 15px;
+          font-weight: bold;
+          h4 {
+            color: config.$color-orange;
+            font-size: 20px;
+            @include config.mq(sp) {
+              font-size: 18px;
+            }
+          }
+          ul {
+            margin: 5px 0 10px;
+            li {
+              @include config.mq(sp) {
+                font-size: 16px;
+              }
+              &::before {
+                content: '・';
+                color: config.$color-orange;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ul.system_logo_area {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      width: calc(20% - 20px);
+      padding: 10px;
+      @include config.mq(sp) {
+        width: calc(33% - 10px);
+        padding: 5px;
+      }
+    }
+  }
+}

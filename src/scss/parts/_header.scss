@@ -1,0 +1,564 @@
+@use "../config" as config;
+
+#header{
+  position:fixed;
+  top:0;
+  left:0;
+  background:config.$color-white;
+  width:100%;
+  height:105px;
+  box-sizing:border-box;
+  font-weight: bold;
+  z-index:20;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.05);
+  @include config.mq(sp) {
+    height:60px;
+  }
+}
+
+#header .inner-block{
+  max-width:100%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  @include config.mq(sp) {
+    height: 100%;
+  }
+}
+
+.header{
+  overflow:unset;
+  .logo{
+    width: 186px;
+    padding-left:40px;
+    @include config.mq(sp) {
+      position:static;
+      padding:0 0 0 20px;
+      float:none;
+    }
+    img {
+      vertical-align: middle;
+      @include config.mq(sp) {
+        width:146px;
+      }
+    }
+  }
+  .navi_block{
+    margin-left:20px;
+    @include config.mq(sp) {  
+      display:none;
+    }
+    ul.navi {
+      display:inline-block;
+       > li {
+        display:inline-block;
+        box-sizing:border-box;
+        margin:0 25px;
+        position:relative;
+        span{
+          font-size:12px;
+        }
+        > a {
+          position:relative;
+          display:block;
+          font-weight: bold;
+          color: config.$color-black;
+          &::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 0%;
+            background: config.$color-yellow;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: .3s;
+          }
+          &::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            display: block;
+            background: config.$color-yellow;
+            position: absolute;
+            bottom: -3px;
+            left: 10%;
+            border-radius: 50%;
+            opacity: 0;
+            transition: .3s;
+          }
+          &:hover{
+            opacity:1;
+            &::after {
+              width: 100%;
+            }
+            &::before {
+              left: 100%;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.header .navi .child_list_set {
+  padding: 10px 0;
+  .other_service_list {
+    display: none;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(config.$color-black, .16);
+    background-color: config.$color-white;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 560px;
+    z-index: 1;
+    p.other_service_list--title {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .other_service_list--box {
+      display: flex;
+      justify-content: space-between;
+      dl.other_service_list--category {
+        margin: 0;
+        font-weight: bold;
+        dt {
+          margin: 10px 0 0;
+          font-weight: bold;
+          font-size: 18px;
+          color: config.$color-orange;
+        }
+        dd {
+          margin: 10px 0 0;
+          ul {
+            margin-top: 10px;
+            li {
+              margin-top: 10px;
+              font-size: 16px;
+              &::before {
+                content: '';
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border-top: 2px solid config.$color-yellow;
+                border-right: 2px solid config.$color-yellow;
+                transform: rotate(45deg);
+                margin-right: 10px;
+              }
+              a {
+                &:hover {
+                  color: config.$color-orange;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.header .navi .child_list_set:hover .other_service_list,
+.other_service_list:hover {
+  display: block;
+}
+
+.head_btn_set{
+  margin-left: auto;
+  display: flex;
+  @include config.mq(sp) {
+    float:none;
+    margin:20px 0 0;
+  }
+}
+
+@include config.mq(sp) {
+  .header .head_btn_set{
+    display:none;
+  }
+}
+
+.head_btn{
+  width:168px;
+  height:105px;
+  @include config.mq(sp) {
+    width:266px;
+    height:auto;
+    float:none;
+    margin:0 auto 10px;
+    display:block;
+    text-align:center;
+  }
+  a{
+    background:config.$color-black;
+    color: config.$color-white;
+    text-align:center;
+    padding:10px;
+    padding-top:65px;
+    display:block;
+    height:100%;
+    box-sizing:border-box;
+    position:relative;
+    @include config.mq(sp) {
+      border-radius: 10px;
+      padding:0;
+      height: 46px;
+      line-height: 46px;
+      display:inline-block;
+      width:100%;
+      font-weight:bold;
+    }
+  }
+}
+
+.head_btn.head_btn02 a{
+  background:config.$color-yellow;
+  color:config.$color-black;
+  margin-bottom: 20px;
+}
+
+.head_btn a:after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:25px;
+  margin:auto;
+  width:29px;
+  height:25px;
+  background-image:url(../img/common/icon01.svg?v2);
+  background-size:100% 100%;
+  @include config.mq(sp) {
+    left:20px;
+    right:auto;
+    top:0;
+    bottom:0;
+    width:29px;
+    height:25px;
+  }
+}
+
+.head_btn.head_btn02 a:after{
+  height:22px;
+  background-image:url(../img/common/icon02.svg?v2);
+  @include config.mq(sp) {
+    height:22px;
+    background-image:url(../img/common/icon02.svg);
+  }
+}
+
+@include config.mq(sp) {
+  .head_btn:last-child{
+    margin-bottom:0;
+  }
+}
+
+.menu{
+  display:none;
+  @include config.mq(sp) {
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:120;
+    display:block;
+  }
+}
+
+.pagetop{
+  bottom: 20px;
+  position: fixed;
+  right: 20px;
+  text-align: center;
+  z-index:80;
+  width:106px;
+  height:106px;
+  @include config.mq(sp) {
+    width:60px;
+    height:60px;
+  }
+}
+
+.pagetop a{
+  display:block;
+  height:100%;
+  background:url(../img/common/pagetop.png) no-repeat;
+  background-size:100%;
+}
+
+.menu_overlay {
+  display: none;
+  @include config.mq(sp) {
+    background: rgba(0, 0, 0, .25);
+    @include config.size(100%, 100%);
+    position:fixed;
+    z-index:2;
+    left:0;
+    top:0;
+  }
+
+}
+
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  &-scroll-area {
+      padding: 0 20px;
+      overflow-y: auto;
+      max-height: calc(100% - 240px );
+  }
+  &_wrap {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      background: config.$color-white;
+      position: fixed;
+      top: 60px;
+      left: 0px;
+      @include config.size(100%, 100%);
+      z-index: 100;
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      &.show {
+        max-height: 80vh;
+        opacity: 1;
+      }
+    .cta-btn {
+        max-width: 297px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        margin-inline: auto;
+        margin-block-end: 24px;
+        padding: 1rem;
+      &_item {
+          @include config.centering-flex(xy);
+          column-gap: 8px;
+          @include config.size(100%, 100%);
+          border-radius: 50px;
+          padding: 1rem 0;
+          font-size: 14px;
+          font-weight: bold;
+        &::before {
+            content:"";
+            @include config.size(20px, 17px);
+  
+        }
+      }
+      .black-btn {
+        color: config.$color-white;
+        font-size: 1rem;
+        background: config.$color-black;
+        &::before {
+          @include config.mq(sp) {
+            background: url(../img/common/icon01.svg?v2) no-repeat center / contain;
+          }
+        }
+      }
+      .yellow-btn {
+        color: config.$color-black;
+        background: config.$color-yellow;
+        &::before {
+          background: url(../img/common/icon02.svg?v2) no-repeat center / contain;
+        }
+      }
+    }
+    .cta_btn_inner>a {
+        border: none;
+        box-shadow: unset;
+        font-size: 14px;
+    }
+  }
+
+  &_item {
+    @include config.centering-flex(y);
+    column-gap: 8px;
+    margin-bottom: 0;
+
+    &::before {
+      content: "";
+      display: block;
+      @include config.size(8px, 8px);
+      border-radius: 50%;
+      background: config.$color-yellow;
+    }
+
+    &_link {
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: left;
+      display: block;
+      color: config.$color-black;
+      @include config.flex(flex, center, space-between);
+      width: 100%;
+
+      &::after {
+        content: '';
+        width: 7px;
+        height: 7px;
+        border: 0;
+        border-top: solid 2px config.$color-black;
+        border-right: solid 2px config.$color-black;
+        border-radius: 1px;
+        transform: rotate(45deg);
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
+.sp_ac {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    @include config.size(12px, 12px);
+    background: url(../img/common/qa01.svg) no-repeat center / contain;
+  }
+
+  &.open {
+    &::after {
+      background-image: url(../img/common/qa02.svg);
+    }
+  }
+}
+
+.s_nav {
+  max-height: 0;
+  overflow: hidden;
+  background: config.$color-highlight_yellow;
+  border-radius: 4px;
+  transition: max-height 0.3s ease-out;
+  padding: 16px;
+
+  &_ttl {
+    font-size: 16px;
+    color: config.$color-orange;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  &_section {
+    margin-block: 0;
+    &:not(:last-child) {
+      margin-block-end: 1rem;
+    }
+
+    .nav_item {
+      margin-left: 1rem;
+
+      &::before {
+        content: none;
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+.close-bottom {
+  @include config.centering-flex(xy);
+  @include config.size(100%, 56px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: config.$color-white;
+
+  &_btn {
+    @include config.centering-flex(xy);
+    column-gap: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+    @include config.size(100%, 100%);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    color: inherit;
+    &::before {
+      content: "";
+      display: block;
+      @include config.size(24px, 24px);
+      background: url(../img/common/icon_close.svg) no-repeat center / contain;
+    }
+  }
+}
+
+@include config.mq(sp) {
+  .menu-trigger,
+  .menu-trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+  }
+  .menu-trigger {
+    width: 22px;
+    height: 22px;
+    right: 15px;
+    top: 20px;
+    z-index:220;
+  }
+  .menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: config.$color-black;
+    border-radius: 2px;
+  }
+
+  .active.menu-trigger span{
+    background-color:config.$color-black;
+  }
+
+  .menu-trigger span:nth-of-type(1) {
+    top: 0;
+  }
+  .menu-trigger span:nth-of-type(2) {
+    top: 0;
+    bottom:0;
+    margin:auto;
+  }
+  .menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+  }
+
+  .menu-trigger.close span:nth-of-type(1) {
+    -webkit-transform: translateY(11px) rotate(-315deg);
+    transform: translateY(11px) rotate(-315deg);
+  }
+  .menu-trigger.close span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .menu-trigger.close span:nth-of-type(3) {
+    -webkit-transform: translateY(-9px) rotate(315deg);
+    transform: translateY(-9px) rotate(315deg);
+  }
+}
+
+// まるごと人事エージェント等に使用している、ロゴのみのヘッダー
+header.simple_format {
+  background-color: config.$color-white;
+  padding: 20px 0;
+  text-align: center;
+  img {
+    width: 160px;
+  }
+}

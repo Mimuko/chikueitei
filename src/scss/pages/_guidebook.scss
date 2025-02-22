@@ -1,0 +1,799 @@
+@use "../config" as config;
+
+.guidebook_wrapper {
+
+  p,
+  figure,
+  ol,
+  li,
+  dl,
+  dt,
+  dd {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 下部固定のDLボタン */
+  .apply-button {
+    position: fixed;
+    z-index: 1000;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translate(-50%, 20px);
+    pointer-events: none;
+    /* 隠れている間クリックできないように */
+    display: block;
+    width: calc(100% - 40px);
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 15px 0;
+    border-radius: 100px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.1;
+    color: config.$color-white;
+    @include config.applyClamp(font-size, 18, 20);
+    background: config.$color-orange_gradation;
+    box-shadow: config.$color-red_mid_shadow;
+
+    &::after {
+      @include config.balloon_tale_right(config.$color-white, 12px);
+      right: 28px;
+    }
+
+    &.js-show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+      pointer-events: auto;
+
+      &:hover {
+        transform: translate(-50%, -5px);
+      }
+    }
+  }
+
+  .js-trigger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: transparent;
+  }
+
+  .guidebook_mv_wrapper {
+    padding: 50px 20px;
+    background: transparent url(../img/guidebook/background.webp) no-repeat center right;
+    background-size: cover;
+
+    .guidebook_mv_inner {
+      display: flex;
+      gap: 80px;
+      max-width: 1000px;
+      margin: 0 auto;
+
+      @include config.mq(sp) {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .guidebook_mv_contents {
+        flex: 1;
+        position: relative;
+        z-index: 1;
+
+        p {
+          padding: 5px 0;
+          margin-bottom: 20px;
+          text-align: center;
+          font-weight: bold;
+          @include config.applyClamp(font-size, 12, 17);
+          border-radius: 100px;
+          background-color: config.$color-white;
+
+          em {
+            color: config.$color-yellow;
+          }
+        }
+
+        h1 {
+          margin-bottom: 20px;
+          text-align: center;
+          font-weight: 900;
+          line-height: 1.15;
+          @include config.applyClamp(font-size, 42, 62);
+
+          strong {
+            font-weight: 900;
+            @include config.applyClamp(font-size, 60, 86);
+            text-shadow: config.$color-red_mid_shadow;
+            background: config.$color-orange_gradation;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        .guidebook_mv_contents-image {
+          position: relative;
+          z-index: 1;
+
+          figure {
+            max-width: 300px;
+
+            @include config.mq(sp) {
+              width: 75%;
+            }
+          }
+
+          ul.guidebook_mv_contents-point {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            right: 136px;
+
+            @include config.mq(sp) {
+              top: 60px;
+              right: 100px;
+            }
+
+            li {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              width: 136px;
+              height: 136px;
+              color: config.$color-yellow;
+              text-align: center;
+              line-height: 1.25;
+              font-weight: 900;
+              border: 2px solid config.$color-yellow;
+              border-radius: 50%;
+              box-shadow: config.$color-red_large_shadow;
+              background: linear-gradient(0deg, config.$color-highlight_yellow 0%, config.$color-white 50%);
+
+              @include config.mq(sp) {
+                width: 110px;
+                height: 110px;
+              }
+
+              &:first-of-type {
+                margin-bottom: 20px;
+              }
+
+              &:nth-last-of-type(2) {
+                position: absolute;
+                top: 25%;
+                right: -136px;
+
+                @include config.mq(sp) {
+                  right: -106px;
+                }
+              }
+
+              .text_normal {
+                @include config.applyClamp(font-size, 18, 24);
+              }
+
+              .big_volume {
+                @include config.applyClamp(font-size, 12, 14);
+              }
+
+              em {
+                color: config.$color-orange;
+              }
+
+              .page_box {
+                em {
+                  @include config.applyClamp(font-size, 22, 30);
+                }
+
+                .page {
+                  font-size: 14px;
+                }
+              }
+
+              .font_montserrat {
+                font-weight: bold;
+              }
+
+              a {
+                display: block;
+                padding: 3px 18px;
+                margin-top: 5px;
+                border-radius: 100px;
+                font-weight: bold;
+                line-height: 1.1;
+                color: config.$color-white;
+                @include config.applyClamp(font-size, 8, 11);
+                background: linear-gradient(0deg, config.$color-orange 0%, #FFC589 100%);
+                box-shadow: 0 3px 9px rgba(config.$color-yellow, 25%);
+                transition: .25s;
+                position: relative;
+
+                &::after {
+                  @include config.balloon_tale_right(config.$color-white, 6px);
+                  right: 6px;
+                }
+
+                &:hover {
+                  transform: translateY(-2px);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .guidebook_mv_form {
+        flex: 1;
+
+        #form_easing {
+          transform: translateY(-120px);
+
+          @include config.mq(sp) {
+            transform: translateY(-80px);
+          }
+    
+        }
+
+        .hbspt-form {
+          margin-top: -15px;
+
+          input.hs-input[type="text"],
+          input.hs-input[type="email"],
+          input.hs-input[type="tel"] {
+            width: calc(100% - 30px) !important;
+            /* hubspot側のCSSリセット */
+            padding: 8px 15px;
+            border-radius: 100px;
+            border: none;
+            box-shadow: config.$color-red_mid_shadow;
+          }
+
+          .hs-form-required::after {
+            padding: .15rem .45rem;
+            border-radius: 4px;
+            background-color: config.$color-orange;
+          }
+
+          .hs-form-checkbox-display {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+
+            span {
+              font-size: 14px;
+            }
+          }
+
+          .hs-form-booleancheckbox-display {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+
+            .hs-form-required::after {
+              position: absolute;
+              transform: translateY(2px);
+            }
+          }
+
+          input.hs-input[type="checkbox"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 1.3rem;
+            height: 1.3rem;
+            margin-bottom: .3rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: .25s;
+            box-shadow: config.$color-red_mid_shadow;
+            background-color: config.$color-white;
+            position: relative;
+
+            &:checked {
+              background-color: config.$color-orange;
+
+              &::after {
+                content: '';
+                display: block;
+                width: .4rem;
+                height: .8rem;
+                border-right: 2px solid config.$color-white;
+                border-bottom: 2px solid config.$color-white;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 0;
+                left: .6rem;
+              }
+            }
+          }
+
+          .actions input.hs-button[type=submit] {
+            padding: 15px 0;
+            border-radius: 100px;
+            box-shadow: config.$color-red_mid_shadow;
+            background: config.$color-orange_gradation;
+            position: relative;
+
+            &:hover {
+              transform: translateY(-4px);
+            }
+          }
+        }
+      }
+
+      /* 完了画面のデザイン */
+      &.complete {
+        display: block;
+        text-align: center;
+
+        h1 {
+          margin-bottom: 30px;
+          @include config.applyClamp(font-size, 20, 30);
+          font-weight: 900;
+        }
+
+        figure {
+          max-width: 240px;
+          margin: 30px auto;
+        }
+
+        a.dl_btn {
+          display: block;
+          max-width: 500px;
+          margin: 0 auto;
+          padding: 24px 0;
+          border-radius: 100px;
+          font-weight: bold;
+          line-height: 1.1;
+          color: config.$color-white;
+          @include config.applyClamp(font-size, 18, 26);
+          background: config.$color-orange_gradation;
+          box-shadow: config.$color-red_mid_shadow;
+          transition: .25s;
+          position: relative;
+
+          &::after {
+            @include config.balloon_tale_right(config.$color-white, 12px);
+            right: 28px;
+          }
+
+          &:hover {
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+  }
+
+  /* 共通デザイン */
+  .guidebook_common_wrapper {
+    padding: 80px 0;
+
+    @include config.mq(sp) {
+      padding: 40px 20px;
+    }
+
+    &.bg_white {
+      background-color: config.$color-white;
+    }
+
+    &.bg_yellow {
+      background-color: config.$color-highlight_yellow;
+    }
+
+    .guidebook_common_inner {
+      max-width: 1000px;
+      margin: 0 auto;
+
+      h2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-weight: bold;
+
+        >span {
+          letter-spacing: .2rem;
+          color: config.$color-dark_gray;
+          font-family: config.$font-montserrat;
+          @include config.applyClamp(font-size, 12, 16);
+        }
+
+        em {
+          color: config.$color-orange;
+          @include config.applyClamp(font-size, 26, 32);
+
+          span {
+            font-size: 60%;
+          }
+        }
+      }
+
+      .h2_bottom {
+        margin-top: 10px;
+        text-align: center;
+        @include config.applyClamp(font-size, 14, 16);
+
+        em {
+          font-weight: bold;
+          color: config.$color-navy;
+        }
+      }
+    }
+  }
+
+  /* 立ち読み */
+  #browsing {
+    .browsing_list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+      margin-top: 40px;
+
+      @include config.mq(sp) {
+        gap: 20px;
+      }
+
+      li {
+        width: calc((100% - 40px * 2 - 2px) / 3);
+
+        @include config.mq(sp) {
+          width: calc((100% - 20px * 2 - 2px) / 3);
+        }
+
+        img {
+          border: 1px solid config.$color-gray;
+          box-shadow: config.$color-red_mid_shadow;
+        }
+      }
+    }
+  }
+
+  /* 掲載内容 */
+  #detail {
+    .detail_list {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+
+      @include config.mq(sp) {
+        flex-direction: column;
+      }
+
+      >li {
+        width: calc((100% - 120px) / 2);
+        padding: 20px;
+        background-color: config.$color-white;
+        box-shadow: config.$color-red_mid_shadow;
+        position: relative;
+
+        @include config.mq(sp) {
+          width: calc(100% - 40px);
+        }
+
+        &::after {
+          content: '';
+          width: 40px;
+          height: 50px;
+          background: transparent url(../img/guidebook/list_clip.webp) no-repeat center center;
+          background-size: contain;
+          position: absolute;
+          top: -10px;
+          left: 20px;
+          z-index: 2;
+        }
+
+        h3 {
+          display: flex;
+          justify-content: center;
+          @include config.applyClamp(font-size, 16, 20);
+          text-align: center;
+          color: config.$color-yellow;
+
+          span {
+            padding: 0 5px;
+            text-decoration: underline;
+            /* 下線 */
+            text-decoration-thickness: 0.5em;
+            /* 線の太さ */
+            text-decoration-color: rgba(config.$color-yellow, 0.2);
+            /* 線の色 */
+            text-underline-offset: -0.2em;
+            /* 線の位置。テキストに重なるようにやや上部にする */
+            text-decoration-skip-ink: none;
+            /* 下線と文字列が重なる部分でも下線が省略されない（線が途切れない） */
+          }
+        }
+
+        .detail_list_lineup {
+          margin-top: 20px;
+
+          >li {
+            width: calc(100% - 1rem);
+            display: inline-block;
+            text-indent: -1rem;
+            margin: 0 0 .25rem 1.5rem;
+
+            &::before {
+              display: inline-block;
+              content: '';
+              width: 8px;
+              height: 8px;
+              margin-right: .5rem;
+              border-radius: 50%;
+              background: config.$color-orange_gradation;
+            }
+
+            .detail_list_lineup-sublist {
+              li {
+                margin-left: 1rem;
+
+                &::before {
+                  content: '\2514';
+                  margin-right: .5rem;
+                  color: config.$color-yellow;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* 推薦者コメント */
+  #comment {
+    .comment_list {
+      li {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        @include config.mq(sp) {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      figure {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, .2);
+
+        @include config.mq(sp) {
+          width: 120px;
+          height: 120px;
+        }
+      }
+
+      .comment_balloon {
+        width: calc(100% - 280px);
+        padding: 30px;
+        border-radius: 20px;
+        background-color: config.$color-middle_gray;
+        position: relative;
+
+        @include config.mq(sp) {
+          width: auto;
+          margin-top: 35px;
+        }
+
+        &::before {
+          @include config.balloon_tale_left(config.$color-middle_gray, 20px);
+          top: 60px;
+
+          @include config.mq(sp) {
+            @include config.balloon_tale_top(config.$color-middle_gray, 16px);
+          }
+        }
+
+        h3 {
+          @include config.applyClamp(font-size, 16, 18);
+          font-weight: bold;
+          color: config.$color-navy;
+
+          em {
+            font-size: 120%;
+          }
+        }
+
+        .x_account {
+          @include config.applyClamp(font-size, 16, 18);
+
+          a {
+            color: config.$color-navy;
+          }
+
+          &::before {
+            content: '';
+            display: inline-block;
+            width: 1.35rem;
+            height: 1.35rem;
+            background: transparent url(../img/common/sns_icon_x.png) no-repeat center center;
+            background-size: 100%;
+            transform: translateY(4px);
+          }
+        }
+
+        .comment_text {
+          line-height: 1.4;
+          margin-top: 10px;
+          @include config.applyClamp(font-size, 14, 16);
+        }
+      }
+    }
+  }
+
+  /* 特別特典 */
+  #special_benefit {
+    ol.special_benefit_list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      margin-top: 40px;
+      list-style: none;
+      counter-reset: listnum;
+
+      /* カウンターをリセット */
+      li {
+        width: calc((100% - (120px * 2) - 2px) / 3);
+        padding: 10px 30px 20px;
+        text-align: center;
+        border-radius: 20px;
+        background-color: config.$color-white;
+        box-shadow: config.$color-red_mid_shadow;
+        position: relative;
+
+        @include config.mq(sp) {
+          width: calc(100% - 30px);
+          padding: 30px 15px 15px;
+        }
+
+        &::before {
+          width: 3rem;
+          height: 3rem;
+          line-height: 3rem;
+          text-align: center;
+          border-radius: 50%;
+          counter-increment: listnum;
+          /* counter-resetと同じ文字列 */
+          content: counter(listnum);
+          /* カウントした数に応じて番号を表示 */
+          @include config.applyClamp(font-size, 18, 28);
+          font-family: config.$font-montserrat;
+          font-weight: bold;
+          color: config.$color-yellow;
+          border: 2px solid config.$color-yellow;
+          background: linear-gradient(0deg, config.$color-highlight_yellow 0%, config.$color-white 50%);
+          position: absolute;
+          top: -20px;
+          left: -20px;
+
+          @include config.mq(sp) {
+            width: 2rem;
+            height: 2rem;
+            line-height: 2rem;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+
+        dl {
+          dt {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: config.$color-navy;
+            font-weight: bold;
+            @include config.applyClamp(font-size, 18, 22);
+            height: 4.5rem;
+            line-height: 1.15;
+
+            @include config.mq(sp) {
+              display: block;
+              height: auto;
+              margin-bottom: 10px;
+            }
+          }
+
+          dd {
+            font-size: 12px;
+            color: config.$color-white;
+            border-radius: 100px;
+
+            &.spreadsheet {
+              background-color: config.$color-yellow;
+            }
+
+            &.pdf {
+              background-color: config.$color-orange;
+            }
+          }
+        }
+
+        /* 特典の完了画面用 */
+        a {
+          display: block;
+
+          &:hover {
+            opacity: 0.65;
+          }
+        }
+      }
+    }
+  }
+
+  /* 著者情報 */
+  #author {
+    .author_box {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      margin-top: 40px;
+
+      @include config.mq(sp) {
+        flex-direction: column;
+      }
+
+      .author_box_left {
+        width: auto;
+        max-width: 380px;
+
+        figure {
+          overflow: hidden;
+          border-radius: 20px;
+        }
+
+        ul.sns_list {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          margin: 20px 20px 0;
+
+          li {
+            width: 40px;
+            padding: 10px;
+          }
+        }
+      }
+
+      .author_box_right {
+        h3 {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+          font-weight: bold;
+
+          .sub_text {
+            color: config.$color-yellow;
+            @include config.applyClamp(font-size, 16, 20);
+          }
+
+          .main_text {
+            @include config.applyClamp(font-size, 26, 32);
+
+            .main_text_eng {
+              font-family: config.$font-montserrat;
+              @include config.applyClamp(font-size, 16, 20);
+            }
+          }
+        }
+
+        p {
+          @include config.applyClamp(font-size, 14, 16);
+        }
+      }
+    }
+  }
+}

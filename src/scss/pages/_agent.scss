@@ -1,0 +1,142 @@
+@use "../config" as config;
+
+.agent_form_container {
+  max-width: 800px;
+  margin: 40px auto 0;
+  @include config.mq(sp) {
+    margin: 10px auto 0;
+  }
+  dt {
+    font-size: 20px;
+    margin: 0;
+    @include config.mq(sp) {
+      font-size: 16px;
+    }
+  }
+  dd {
+    margin: 0 0 20px;
+  }
+  .item_box {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    p {
+      font-weight: bold;
+      padding: 0;
+      margin: 0;
+      &[class^="is-"] {
+        margin-left: 0.5rem;
+        padding: 0.1rem 0.3rem;
+        font-size: 0.7rem;
+        color: config.$color-white;
+        @include config.mq(sp) {
+          font-size: 12px;
+        }
+      }
+      &.is-required {
+        background-color: config.$color-yellow;
+      }
+      &.is-optional {
+        background-color: config.$color-dark_gray;
+      }
+    }
+  }
+  input.form_contents,
+  select.form_contents {
+    padding: 10px;
+    border: 1px solid config.$color-middle_gray;
+    background-color: config.$color-white;
+    font-size: 16px;
+  }
+  input.form_contents {
+    width: calc(100% - 20px);
+  }
+  select.form_contents {
+    width: 100%;
+  }
+  input[name*="tel"] {
+    width:calc(100% - 20px);
+  }
+  input.w_small,
+  select.w_small {
+    width: 100px;
+    @include config.mq(sp) {
+      width: 50px;
+    }
+  }
+  .column02, .column03 {
+    display: flex;
+    justify-content: space-between;
+    @include config.mq(sp) {
+      display: block;
+    }
+  }
+  .column02 {
+    li {
+      width: 48%;
+      @include config.mq(sp) {
+        width: auto;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .column03 {
+    li {
+      width: 32%;
+      @include config.mq(sp) {
+        width: auto;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.agent_notice_text {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 18px;
+  @include config.mq(sp) {
+    font-size: 16px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.agent_form_button {
+  display: flex;
+  justify-content: center;
+  button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 15px 0;
+    margin: 20px 20px 0;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    border: none;
+    border-radius: 100px;
+    color: config.$color-white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .25s;
+    &[name="submitConfirm"] {
+      background-color: config.$color-yellow;
+    }
+    &[value="back"] {
+      background-color: config.$color-dark_gray;
+    }
+    &[value="send"] {
+      background-color: config.$color-orange;
+    }
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+.complete_message {
+  font-size: 20px;
+  padding: 40px 0;
+}

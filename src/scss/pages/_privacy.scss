@@ -1,0 +1,24 @@
+@use "../config" as config;
+
+.privacy_block01{
+  margin:0 40px 70px;
+  @include config.mq(sp) {
+    margin:0 0 50px;
+  }
+}
+
+.privacy_block01:last-child{
+  margin-bottom:0;
+}
+
+.p_t01{
+  font-weight: bold;
+  font-size:21px;
+  @include config.mq(sp) {
+    font-size:18px;
+  }
+}
+
+.p_t02{
+  font-weight: bold;
+}

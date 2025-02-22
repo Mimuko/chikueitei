@@ -1,0 +1,140 @@
+@use "../config" as config;
+
+/* ウェビナー導線追加 */
+.inner-block.top_block-news {
+  max-width: none;
+  padding: 0 80px;
+  @include config.mq(sp) {
+    padding: 0 20px;
+  }
+}
+
+.top_block-news_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include config.mq(sp) {
+    display: block;
+  }
+}
+
+.top_block-news_inner figure {
+  width: 55%;
+  margin: 0;
+  @include config.mq(sp) {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+}
+
+.top_block-news_inner figure img {
+  border: 1px solid #E0E0E0;
+}
+
+.top_block-news_text {
+  width: 40%;
+  @include config.mq(sp) {
+    width: 100%;
+  }
+}
+
+.top_block-news_text p.target_text {
+  display: inline-block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  font-weight: bold;
+  color: config.$color-yellow;
+  border: 1px solid config.$color-yellow;
+  border-radius: 100px;
+  @include config.mq(sp) {
+    padding: 5px 15px;
+    font-size: 11px;
+  }
+}
+
+.top_block-news_text h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.top_block-news_text p.date_text {
+  font-size: 18px;
+  margin: 10px 0 40px;
+  @include config.mq(sp) {
+    font-size: 14px;
+  }
+}
+
+/* ウェビナー詳細ページ 調整用スタイル */
+.webinar_top_area {
+  display: flex;
+  justify-content: space-between;
+  @include config.mq(sp) {
+    flex-wrap: wrap;
+    flex-direction:column-reverse;
+  }
+}
+.webinar_top_area-left {
+  width: 58%;
+  @include config.mq(sp) {
+    width: 100%;
+  }
+}
+.webinar_top_area-right {
+  width: 33%;
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid config.$color-yellow;
+  @include config.mq(sp) {
+    width: calc(100% - 40px);
+  }
+}
+.webinar_top_area-right.closed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 1px solid #ADADAD;
+  background-color: #EFEFEF;
+}
+.webinar_top_area-right_title {
+  font-size: 20px;
+  line-height: 1;
+}
+.speaker_area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  @include config.mq(sp) {
+    display: block;
+  }
+}
+.speaker_area-left {
+  width: 25%;
+  margin: 0;
+  @include config.mq(sp) {
+    width: 100%;
+  }
+}
+.speaker_area-right {
+  width: 70%;
+  @include config.mq(sp) {
+    width: 100%;
+  }
+}
+.speaker_area-right h4 {
+  margin: 0;
+  @include config.mq(sp) {
+    margin: 10px 0 0;
+    font-size: 18px;
+  }
+}
+.speaker_area-right p {
+  font-size: 14px;
+  line-height: 1.35;
+  @include config.mq(sp) {
+    line-height: 2;
+    font-size: 14px;
+  }
+}
