@@ -41,7 +41,7 @@ function watchFiles() {
     }));
 
     // PHPファイルの変更を監視し、変更があればリロードする
-    watch('src/index.php').on('change', function() {
+    watch('src/*.php').on('change', function() {
         browserSync.reload(); // PHPファイルが変更されたときにブラウザをリロード
     });
 }
