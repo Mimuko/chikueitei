@@ -157,12 +157,12 @@
             <div class="inner-block">
                 <div class="answer-flame main-box">
                     <div class="catch_subtxt">採用成功のカギは「採用のプロ視点」！</div>
-                    <h2 class="title"><span class="colortxt title_em-circle">採用のプロチーム</span>にWantedly運用をまるごとお任せ！</h2>
+                    <h2 class="title"><span class="colortxt title_em-circle">採用のプロチーム</span>にWantedly運用を<br class="sp">まるごとお任せ！</h2>
 
                     <div class="answer-solution_box">
                         <img class="answer-solution_img" src="<?php echo ($selectedPath); ?>/professional_img-min.webp" loading="lazy" width="652" height="325" alt="採用のプロチームによるWantedly運用代行のイメージ">
                         <div class="answer-solution_text">
-                            <p class="desc">マルゴトなら、人事経験豊富な採用のプロチームが人事の目線でWantedlyの運用をまるごと代行！累計600社のご支援経験＆自社での運用経験から、Wantedlyを活用した採用戦略のコツも熟知しています。採用のプロが、丁寧なヒアリングから課題を洗い出し、採用成功のために全力で伴走します！</p>
+                            <p class="desc">マルゴトなら、人事経験豊富な採用のプロチームが<br class="pc">人事の目線でWantedlyの運用をまるごと代行！<br>累計600社のご支援経験&amp;自社での運用経験から、<br class="pc">Wantedlyを活用した採用戦略のコツも熟知しています。<br>採用のプロが、丁寧なヒアリングから課題を洗い出し、<br class="pc">採用成功のために全力で伴走します！</p>
                         </div>
                     </div>
 
@@ -358,9 +358,8 @@
 
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~CTAのセクション~~~~~
-      <?php include("cta.php"); ?>
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        
+      <?php include("cta.php"); ?>        
 
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~成功事例のセクション~~~~~
@@ -550,10 +549,8 @@
 
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~CTAのセクション~~~~~
-      <?php include("cta.php"); ?>
-
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+      <?php include("cta.php"); ?>
     </section>
 </body>
 

@@ -41,7 +41,7 @@
         margin: 0;
     }
     .inner-block {
-        padding: 0 .5rem;
+        padding: 0 1rem;
         z-index: 5;
         @include c.mq(min-tab) {
             padding: 0;
@@ -294,7 +294,7 @@ heading
                 @include c.size(21px, 21px);
                 background: url(../img/drops-min.webp) no-repeat center / contain;
                 position: absolute;
-                right: 3rem;
+                right: 5rem;
                 top: 1rem;
                 @include c.mq(min-tab) {
                     @include c.size(43px, 42px);
@@ -330,6 +330,7 @@ heading
             @include c.flex;
             column-gap: 1rem;
             margin-block-end: 1rem;
+            padding-block-start: 1rem;
             @include c.mq(min-tab) {
                 column-gap: 2rem;
             }
@@ -337,7 +338,9 @@ heading
             &::after {
                 content: "";
                 @include c.size(25px, 30px);
-                background: url(../img/em-min.webp) no-repeat center / contain;
+                background: url(../img/em-min.webp) no-repeat center top / contain;
+                position: absolute;
+                top: 0;
                 @include c.mq(min-tab) {
                     @include c.size(30px, 41px);
                     margin-block-end: 2rem;
@@ -345,6 +348,10 @@ heading
             }
             &::before {
                 transform: scale(-1, 1);
+                left: 0;
+            }
+            &::after {
+                right: 0;
             }
         }
         .title {
@@ -823,7 +830,9 @@ main visual
         @include c.mq(min-tab) {
             content: "";
             @include c.size(100%, 100%);
-            background: url(../img/bg_trouble-min.webp) no-repeat top / cover;
+            max-width: 1366px;
+            margin: auto;
+            background: url(../img/bg_trouble-min.webp) no-repeat top / contain;
             position: absolute;
             z-index: 3;
         }
@@ -888,11 +897,12 @@ main visual
         @include c.mq(min-tab) {
             content: "";
             @include c.size(100%, 100%);
-            background: url(../img/bg_answer-min.webp) no-repeat top / contain;
+            max-width: 1366px;
+            margin: auto;
+            background: url(../img/bg_answer-min.webp) no-repeat top / 95%;
             position: absolute;
             z-index: 3;
             top: 14rem;
-            background-size: 90%;
         }
     }
     &.content {
@@ -912,9 +922,9 @@ main visual
     position: relative;
     padding: 3rem 1rem 2.8rem 1rem;
     @include c.mq(min-tab) {
-        max-width: 950px;
+        max-width: 848px;
         margin-inline: auto;
-        padding: 3rem;
+        padding: 3rem 3rem 3.125rem;
     }
     .catch_subtxt {
         position: absolute;
@@ -923,7 +933,7 @@ main visual
         transform: translateX(-50%);
         max-width: 90%;
         width: 100%;
-        font-size: 0.75rem;
+        font-size: 0.875rem;
         @include c.mq(min-tab) {
             font-size: 1.125rem;
             width: fit-content;
@@ -932,7 +942,8 @@ main visual
     .title {
         font-size: 1.5rem;
         @include c.mq(min-tab) {
-            font-size: 1.8rem;
+            font-size: 1.75rem;
+            letter-spacing: 0.07em;
         }
     }
 }
@@ -946,21 +957,24 @@ main visual
         margin: 2rem auto 0 auto;
         @include c.mq(min-tab) {
             flex-direction: row;
+            justify-content: space-between;
             margin-block-start: 1rem;
         }
     }
     &_img {
         @include c.mq(min-tab) {
-            width: 42%;
+            width: 100%;
+            max-width: 332px;
         }
     }
     &_text {
         @include c.mq(min-tab) {
-            width: 49%;
+            width: 100%;
+            max-width: 380px;
         }
         .desc {
-            font-weight: bold;
-            font-size: 1.08rem;
+            font-weight: 900;
+            font-size: 0.875rem;
             letter-spacing: 0.04rem;
         }
     }
