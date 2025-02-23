@@ -22,34 +22,35 @@
                         <p class="lead__text">月額制のサブスク型サービス</p>
                     </div>
                     <h1 class="main-visual__title">まるごと<span class="em">Wantedly運用代行</span></h1>
-                    <div class="achive">
-                        <dl class="achive-item">
-                            <dt class="achive-item__head"><span class="f-m">ご支援実績</span></dt>
-                            <dd class="achive-item__body"><span class="f-ll">604</span>社!</dd>
-                        </dl>
-                        <dl class="achive-item">
-                            <dt class="achive-item__head"><span class="f-ss">Wantedly<br>を活用した</span><span class="f-m">採用実績</span></dt>
-                            <dd class="achive-item__body"><span class="f-ll">1000</span>名<br><span class="f-m">以上!</span></dd>
-                        </dl>
-                        <dl class="achive-item">
-                            <dt class="achive-item__head"><span class="f-m">Wantedly<br>運用支援</span></dt>
-                            <dd class="achive-item__body"><span>認定企業</span></dd>
-                        </dl>
-                        <div class="achive__img">
-                            <img class="achive__img" src="<?php echo ($selectedPath); ?>/mv-wantedly-min.webp" alt="マルゴト株式会社はWantedlyパートナー認定企業です" loading="lazy" width="198" height="126">
-                        </div>
-                    </div>
+                        <ul class="point">
+                            <li class="point__item">豊富なノウハウと実績をもとに魅力が伝わるアプローチ方法をご提案！</li>
+                            <li class="point__item">オンラインで伴走しながら人事経験豊富なプロチームがサポートします！</li>
+                        </ul>
+                        <ul class="achive">
+                            <li class="achive-item">
+                                <img src="<?php echo ($selectedPath); ?>/mv-achive-item01.webp" alt="ご支援実績604社！" loading="lazy">
+                            </li>
+                            <li class="achive-item">
+                                <img src="<?php echo ($selectedPath); ?>/mv-achive-item02.webp" alt="Wantedlyを活用した採用実績 1000名以上！" loading="lazy">
+                            </li>
+                            <li class="achive-item">
+                                <img src="<?php echo ($selectedPath); ?>/mv-achive-item03.webp" alt="Wantedly運用支援認定企業" loading="lazy">
+                            </li>
+                            <li class="achive-item">
+                                <img src="<?php echo ($selectedPath); ?>/mv-achive-item04.webp" alt="マルゴト株式会社はWantedlyのパートナー認定企業です" loading="lazy">
+                            </li>
+                        </ul>
+                    
                 </div>
 
                 <div class="main-visual__illust">
                     <div class="speech">
                         <p class="speech__text">
-                            <span class="em">Wantedly</span>
-                            <span>の</span>運用、<br>
-                            <span class="f-yellow em">採用のプロ</span>
-                            <span>が</span>代行します！</p>
+                            <span class="f-l">Wantedly</span>
+                            の<span class="f-m">運用、</span><br>
+                            <span class="f-yellow f-l">採用のプロ</span>
+                            が<span class="f-m">代行します！</span></p>
                     </div>
-                    <img src="<?php echo ($selectedPath); ?>/mv-people-min.webp" alt="人物イラスト" width="951" height="769" loading="lazy">
                 </div>
                 <div class="wantedly-cta btn_wrap btn_wrap01">
                     <div class="box">

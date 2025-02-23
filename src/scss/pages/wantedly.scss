@@ -60,10 +60,20 @@
         }
     }
     .cta_btn_inner {
+        p {
+            line-height: 1;
+            top: -.5rem;
+        }
         a {
-            min-width: 313px;
+            max-width: 100%;
+            min-width: unset;
+            width: 100%;
             font-size: 1rem;
-            padding: 1rem 0 .75rem;
+            padding-block: 1rem;
+            margin-block-start: 2rem;
+            @include c.mq(min-tab) {
+                min-width: 313px;
+            }
         }
         &.black_btn {
             p {
@@ -102,6 +112,9 @@
                 }
             }
         }
+    }
+    .btn_wrap.btn_wrap01 .box+.box {
+        margin: 0;
     }
     /*~~黄色マーカー~~~*/
     .colormaker {
@@ -192,6 +205,7 @@
     .voice_line {
         @include c.voice-line($gap: 8px, $margin: 0);
         font-weight: bold;
+        font-size: 1rem;
         letter-spacing: 0.1em;
         font-weight: 900;
         @include c.mq(min-tab) {
@@ -227,10 +241,13 @@
         line-height: 1.3;
         font-weight: 900;
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
         letter-spacing: 0.06em;
+        @include c.mq(min-tab) {
+            top: 50%;
+        }
     }
 }
 
@@ -557,20 +574,43 @@ main visual
 
 .main-visual {
     @include c.flex;
+    flex-direction: column;
     position: relative;
+    font-family: c.$font-mplus;
+    padding: 1rem;
     @include c.mq(min-tab) {
         max-width: 1366px;
         margin: auto;
         padding-block: 2.5rem;
+        flex-direction: row;
+    }
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        @include c.size(100%, 100%);
+        position: absolute;
+        z-index: 5;
+        left: 0;
+    }
+    &::before {
+        top: -1rem;
+        background: url(../img/mv-sp_top.webp) no-repeat top / contain;
+        @include c.mq(min-tab) {
+            content: none;
+        }
     }
     &::after {
+        background: url(../img/mv-sp_bottom.webp) no-repeat bottom / contain;
+        bottom: -1rem;
         @include c.mq(min-tab) {
-            content: "";
-            position: absolute;
             @include c.size(100%, 100%);
-            background: url(../img/mv-bg-min.webp) no-repeat center / cover;
+            background: url(../img/mv-bg.webp) no-repeat center / cover;
             top: 50%;
             transform: translateY(-50%);
+        }
+        @media screen and (min-width: 1367px) {
+            background: url(../img/mv-bg--large.webp) no-repeat center / cover;
         }
     }
     &__wrap {
@@ -580,13 +620,20 @@ main visual
         }
     }
     &__title {
+        font-size: 1.375rem;
+        line-height: 1.3;
+        font-weight: 900;
+        display: flex;
+        flex-direction: column;
         @include c.mq(min-tab) {
+            flex-direction: row;
             font-size: 2rem;
         }
         .em {
-            font-size: 2rem;
+            font-size: 2.125rem;
+            letter-spacing: 0.05em;
             @include c.mq(min-tab) {
-                font-size: 3.5rem;
+                font-size: 3.125rem;
             }
         }
     }
@@ -594,58 +641,81 @@ main visual
         background: c.$color-white;
         @include c.flex;
         flex-direction: column;
-        font-family: c.$font-mplus;
-        border-radius: 30px;
         position: relative;
+        border-radius: 30px;
+        padding-inline: .5rem;
+        padding-block: 4rem 3rem;
         @include c.mq(min-tab) {
+            border-radius: 30px;
             display: grid;
             grid-template-columns: 1fr minmax(430px, 1fr);
             grid-template-rows: auto;
             column-gap: 1rem;
-            max-width: 1200px;
+            max-width: 1213px;
             width: 100%;
             margin: auto;
             padding: 3rem;
+        }
+        &__contents {
+            @include c.mq(min-tab) {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+                position: relative;
+            }
         }
     }
     &__illust {
         position: relative;
         z-index: 0;
-        grid-column: 2 / 3;
-        grid-row: 1 / 3;
+        @include c.mq(min-tab) {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+            height: 320px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            @include c.size(300px, 170px);
+            background: url(../img/mv-people--sp.webp) no-repeat center / contain;
+            @include c.mq(min-tab) {
+                position: absolute;
+                top: 0;
+                right: 0;
+                @include c.size(100%, 320px);
+                background: url(../img/mv-people-min.webp) no-repeat center / contain;
+            }
+        }
     }
     .wantedly-cta {
         width: 100%;
         position: relative;
         z-index: 5;
+        @include c.mq(min-tab) {
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+        }
     }
     .speech {
-        background: none;
+        @include c.size(234px, 93px);
         @include c.flex;
         position: relative;
         top: 3rem;
+        left: 0;
         z-index: 1;
+        background: url(../img/mv-speech-bubble-min.webp) no-repeat center / contain;
         @include c.mq(min-tab) {
-            top: 7rem;
-            height: 60px;
-        }
-        &::after {
-            content: "";
-            display: block;
-            @include c.size(100%, 140px);
-            background: url(../img/mv-speech-bubble-min.webp) no-repeat center / contain;
-            transform: scale(-1, 1) rotate(-9deg);
-            position: absolute;
-            z-index: -1;
+            top: 1rem;
+            @include c.size(480px, 120px);
         }
         &__text {
             font-size: 1.25rem;
             font-weight: bold;
             position: absolute;
-            transform: rotate(-2deg);
+            //transform: rotate(-2deg);
             @include c.mq(min-tab) {
-                left: 5rem;
+                left: 0;
                 top: auto;
+                text-align: center;
             }
             .em {
                 font-size: 1.5rem;
@@ -658,13 +728,18 @@ main visual
     background: c.$color-black;
     display: block;
     width: fit-content;
-    margin-block-end: .5rem;
+    padding-inline: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: auto;
     @include c.mq(min-tab) {
         max-width: 330px;
         width: 100%;
         margin-inline-start: auto;
+        right: 3rem;
     }
     &__text {
+        font-weight: 900;
         text-align: center;
         color: c.$color-white;
         letter-spacing: 0.07em;
@@ -677,10 +752,15 @@ main visual
         font-family: c.$font-noto;
         letter-spacing: 0.06em;
         @include c.flex(flex, center, flex-start);
-        column-gap: 8px;
-        font-size: 1rem;
-        font-weight: bold;
-        padding-inline-start: .5rem;
+        column-gap: 4px;
+        font-size: 0.5625rem;
+        font-weight: 900;
+        padding-left: 0;
+        @include c.mq(min-tab) {
+            font-size: 1rem;
+            padding-inline-start: .5rem;
+            column-gap: 8px;
+        }
         &:not(:last-of-type) {
             margin-block-end: .5rem;
         }
@@ -697,8 +777,8 @@ main visual
     @include c.flex(flex, stretch, flex-start);
     column-gap: .5rem;
     margin-block-end: 1.5rem;
+    padding-inline: 1rem;
     &-item {
-        background: url(../img/mv-decoration-min.webp) no-repeat top / contain;
         margin: 0;
         color: #605a4e;
         @include c.flex;
@@ -745,8 +825,8 @@ main visual
 }
 
 .wantedly-cta.btn_wrap {
-    @include c.flex;
-    flex-direction: column;
+    @include c.flex($align-items: unset);
+    flex-direction: column-reverse;
     row-gap: 8px;
     font-family: c.$font-noto;
     @include c.mq(min-tab) {
@@ -759,58 +839,92 @@ main visual
 }
 
 .main-visual__wrap--cta {
-    background: linear-gradient(155deg, #ffd93b 0%, #ffd93b 50%, #f9bb00 50%, #f9bb00 100%);
+    background: #ffd215;
+    padding-block: 1rem;
+    @include c.mq(min-tab) {
+        background: linear-gradient(155deg, #ffd93b 0%, #ffd93b 50%, #f9bb00 50%, #f9bb00 100%);
+        padding-block: 0;
+    }
     .main-visual {
-        max-width: 1366px;
+        padding: 0;
+        @media screen and (min-width: 1367px) {
+            max-width: unset;
+        }
         &::after {
-            background: url(../img/bg-cta.webp) no-repeat center / cover;
+            @include c.mq(min-tab) {
+                background: url(../img/mv-bg-cta.webp) no-repeat center / 100% 100%;
+            }
+            @media screen and (min-width: 1367px) {
+                background: url(../img/mv-bg-cta--large.webp) no-repeat center / cover;
+            }
         }
         &__inr {
+            border-radius: 0;
+            padding-inline: 1rem;
+            padding-block: 4rem 3rem;
             @include c.mq(min-tab) {
-                max-width: 1213px;
-                grid-auto-columns: auto auto;
-                grid-template-rows: auto auto;
-                align-items: baseline;
-                column-gap: 3rem;
+                padding-inline: 4rem;
+                padding-block: 5rem 3rem;
             }
             &__contents {
                 position: relative;
-                .lead {
-                    position: absolute;
-                    right: 0;
-                    top: auto;
-                }
             }
         }
         &__title {
             display: flex;
             flex-direction: column;
-            font-size: 1.75rem;
-        }
-        &__illust {
-            img {
-                height: 349px;
-                width: auto;
+            .em {
+                @include c.mq(min-tab) {
+                    font-size: 3.75rem;
+                }
             }
         }
     }
     .achive {
         margin-block-end: 0;
+        @include c.mq(min-tab) {
+            justify-content: center;
+        }
+    }
+    .point {
+        @include c.mq(min-tab) {
+            display: none;
+        }
     }
     .speech {
-        @include c.size(360px, 50px);
-        top: 5rem;
-        left: 3rem;
+        &::after {
+            transform: rotate(0);
+        }
         &__text {
             width: 100%;
+            top: 1.25rem;
             left: 0;
-            .em {
+            transform: rotate(0);
+            font-size: 0.625rem;
+            line-height: 1.2;
+            letter-spacing: 0.04em;
+            @include c.mq(min-tab) {
+                font-size: 0.8125rem;
+                top: 2rem;
+            }
+            .f-m {
+                font-size: 0.875rem;
+                @include c.mq(min-tab) {
+                    font-size: 1.0625rem;
+                }
+            }
+            .f-l {
                 font-size: 1.25rem;
+                @include c.mq(min-tab) {
+                    font-size: 1.5rem;
+                }
             }
         }
     }
     .cta_btn_inner.black_btn a {
-        max-width: 270px;
+        @include c.mq(min-tab) {
+            max-width: 270px;
+        }
     }
     .lead__text {
         font-size: 0.875rem;
@@ -1399,7 +1513,7 @@ main visual
             &::before {
                 right: 0;
                 top: -2rem;
-                @include c.size(40px, 50px);
+                @include c.size(31px, 43px);
                 background: url(../img/light-bulb-min.webp) no-repeat center / contain;
                 transform: scale(-1, 1);
                 @include c.mq(min-tab) {
