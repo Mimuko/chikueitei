@@ -699,7 +699,7 @@ main visual
 }
 .main-visual::after {
   background: url(../img/mv-sp_bottom.webp) no-repeat bottom/contain;
-  bottom: -1rem;
+  bottom: 0;
 }
 @media screen and (min-width: 840px) {
   .main-visual::after {
@@ -753,6 +753,7 @@ main visual
   border-radius: 30px;
   padding-inline: 0.5rem;
   padding-block: 4rem 3rem;
+  row-gap: 2rem;
 }
 @media screen and (min-width: 840px) {
   .main-visual__inr {
@@ -777,6 +778,8 @@ main visual
 .main-visual__illust {
   position: relative;
   z-index: 0;
+  width: 100%;
+  height: 235px;
 }
 @media screen and (min-width: 840px) {
   .main-visual__illust {
@@ -788,14 +791,19 @@ main visual
 .main-visual__illust::after {
   content: "";
   display: block;
-  width: 300px;
-  height: 170px;
-  background: url(../img/mv-people--sp.webp) no-repeat center/contain;
+  width: 100%;
+  height: 100%;
+  background: url(../img/mv-people--sp.webp) no-repeat bottom/contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 @media screen and (min-width: 840px) {
   .main-visual__illust::after {
-    position: absolute;
     top: 0;
+    left: auto;
     right: 0;
     width: 100%;
     height: 320px;
@@ -816,12 +824,11 @@ main visual
 .main-visual .speech {
   width: 234px;
   height: 93px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  top: 3rem;
+  top: 0;
   left: 0;
+  right: 0;
+  margin: auto;
   z-index: 1;
   background: url(../img/mv-speech-bubble-min.webp) no-repeat center/contain;
 }
@@ -833,19 +840,42 @@ main visual
   }
 }
 .main-visual .speech__text {
-  font-size: 1.25rem;
+  transform: rotate(-2deg);
   font-weight: bold;
   position: absolute;
+  left: 0.125rem;
+  font-size: 0.625rem;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  top: 1.125rem;
 }
 @media screen and (min-width: 840px) {
   .main-visual .speech__text {
+    font-size: 0.8125rem;
+    top: 2rem;
     left: 0;
     top: auto;
     text-align: center;
   }
 }
-.main-visual .speech__text .em {
-  font-size: 1.5rem;
+.main-visual .speech__text .f-m {
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 840px) {
+  .main-visual .speech__text .f-m {
+    font-size: 1.0625rem;
+  }
+}
+.main-visual .speech__text .f-l {
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 840px) {
+  .main-visual .speech__text .f-l {
+    font-size: 1.5rem;
+  }
+}
+.main-visual .cta_btn_inner a {
+  margin: 0;
 }
 
 .lead {
@@ -909,8 +939,12 @@ main visual
   align-items: stretch;
   justify-content: flex-start;
   column-gap: 0.5rem;
-  margin-block-end: 1.5rem;
   padding-inline: 1rem;
+}
+@media screen and (min-width: 840px) {
+  .achive {
+    margin-block-end: 1.5rem;
+  }
 }
 .achive-item {
   margin: 0;
@@ -925,32 +959,6 @@ main visual
   .achive-item {
     width: 118px;
   }
-}
-.achive-item__head, .achive-item__body {
-  margin: 0;
-  font-weight: bold;
-  text-align: center;
-  line-height: 1;
-}
-.achive-item__head {
-  font-size: 1rem;
-}
-.achive-item__body {
-  margin: 0;
-  font-size: 1rem;
-}
-.achive-item__body .f-ll {
-  font-size: 1.25rem;
-}
-.achive-item__body .f-l {
-  font-size: 1.125rem;
-}
-.achive-item .f-ss {
-  font-size: 0.625rem;
-  display: block;
-}
-.achive-item .f-m {
-  font-size: 0.75rem;
 }
 .achive__img {
   max-width: 20%;
@@ -969,8 +977,10 @@ main visual
   align-items: unset;
   justify-content: center;
   flex-direction: column-reverse;
-  row-gap: 8px;
+  row-gap: 1.5rem;
   font-family: "Noto Sans JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, sans-serif;
+  position: relative;
+  z-index: 10;
 }
 @media screen and (min-width: 840px) {
   .wantedly-cta.btn_wrap {
@@ -1054,31 +1064,6 @@ main visual
   top: 1.25rem;
   left: 0;
   transform: rotate(0);
-  font-size: 0.625rem;
-  line-height: 1.2;
-  letter-spacing: 0.04em;
-}
-@media screen and (min-width: 840px) {
-  .main-visual__wrap--cta .speech__text {
-    font-size: 0.8125rem;
-    top: 2rem;
-  }
-}
-.main-visual__wrap--cta .speech__text .f-m {
-  font-size: 0.875rem;
-}
-@media screen and (min-width: 840px) {
-  .main-visual__wrap--cta .speech__text .f-m {
-    font-size: 1.0625rem;
-  }
-}
-.main-visual__wrap--cta .speech__text .f-l {
-  font-size: 1.25rem;
-}
-@media screen and (min-width: 840px) {
-  .main-visual__wrap--cta .speech__text .f-l {
-    font-size: 1.5rem;
-  }
 }
 @media screen and (min-width: 840px) {
   .main-visual__wrap--cta .cta_btn_inner.black_btn a {

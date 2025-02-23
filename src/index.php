@@ -64,10 +64,10 @@
                         <div class="main-visual__illust">
                             <div class="speech">
                                 <p class="speech__text">
-                                    <span class="em">Wantedly</span>
-                                    <span>の</span>運用、<br>
-                                    <span class="f-yellow em">採用のプロ</span>
-                                    <span>が</span>代行します！</p>
+                                    <span class="f-l">Wantedly</span>
+                                    の<span class="f-m">運用、</span><br>
+                                    <span class="f-yellow f-l">採用のプロ</span>
+                                    が<span class="f-m">代行します！</span></p>
                             </div>
                         </div>
                         <div class="wantedly-cta btn_wrap btn_wrap01">

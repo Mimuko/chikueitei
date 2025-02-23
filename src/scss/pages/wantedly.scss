@@ -602,7 +602,7 @@ main visual
     }
     &::after {
         background: url(../img/mv-sp_bottom.webp) no-repeat bottom / contain;
-        bottom: -1rem;
+        bottom: 0;
         @include c.mq(min-tab) {
             @include c.size(100%, 100%);
             background: url(../img/mv-bg.webp) no-repeat center / cover;
@@ -645,6 +645,7 @@ main visual
         border-radius: 30px;
         padding-inline: .5rem;
         padding-block: 4rem 3rem;
+        row-gap: 2rem;
         @include c.mq(min-tab) {
             border-radius: 30px;
             display: grid;
@@ -667,6 +668,7 @@ main visual
     &__illust {
         position: relative;
         z-index: 0;
+        @include c.size(100%, 235px);
         @include c.mq(min-tab) {
             grid-column: 2 / 3;
             grid-row: 1 / 3;
@@ -675,11 +677,16 @@ main visual
         &::after {
             content: "";
             display: block;
-            @include c.size(300px, 170px);
-            background: url(../img/mv-people--sp.webp) no-repeat center / contain;
+            @include c.size(100%, 100%);
+            background: url(../img/mv-people--sp.webp) no-repeat bottom / contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
             @include c.mq(min-tab) {
-                position: absolute;
                 top: 0;
+                left: auto;
                 right: 0;
                 @include c.size(100%, 320px);
                 background: url(../img/mv-people-min.webp) no-repeat center / contain;
@@ -697,10 +704,11 @@ main visual
     }
     .speech {
         @include c.size(234px, 93px);
-        @include c.flex;
         position: relative;
-        top: 3rem;
+        top: 0;
         left: 0;
+        right: 0;
+        margin: auto;
         z-index: 1;
         background: url(../img/mv-speech-bubble-min.webp) no-repeat center / contain;
         @include c.mq(min-tab) {
@@ -708,19 +716,37 @@ main visual
             @include c.size(480px, 120px);
         }
         &__text {
-            font-size: 1.25rem;
+            transform: rotate(-2deg);
             font-weight: bold;
             position: absolute;
-            //transform: rotate(-2deg);
+            left: .125rem;
+            font-size: 0.625rem;
+            line-height: 1.2;
+            letter-spacing: 0.04em;
+            top: 1.125rem;
             @include c.mq(min-tab) {
+                font-size: 0.8125rem;
+                top: 2rem;
                 left: 0;
                 top: auto;
                 text-align: center;
             }
-            .em {
-                font-size: 1.5rem;
+            .f-m {
+                font-size: 0.875rem;
+                @include c.mq(min-tab) {
+                    font-size: 1.0625rem;
+                }
+            }
+            .f-l {
+                font-size: 1.25rem;
+                @include c.mq(min-tab) {
+                    font-size: 1.5rem;
+                }
             }
         }
+    }
+    .cta_btn_inner a {
+        margin: 0;
     }
 }
 
@@ -776,8 +802,10 @@ main visual
 .achive {
     @include c.flex(flex, stretch, flex-start);
     column-gap: .5rem;
-    margin-block-end: 1.5rem;
     padding-inline: 1rem;
+    @include c.mq(min-tab) {
+        margin-block-end: 1.5rem;
+    }
     &-item {
         margin: 0;
         color: #605a4e;
@@ -786,33 +814,6 @@ main visual
         row-gap: 3px;
         @include c.mq(min-tab) {
             width: 118px;
-        }
-        &__head,
-        &__body {
-            margin: 0;
-            font-weight: bold;
-            text-align: center;
-            line-height: 1;
-        }
-        &__head {
-            font-size: 1rem;
-        }
-        &__body {
-            margin: 0;
-            font-size: 1rem;
-            .f-ll {
-                font-size: 1.25rem;
-            }
-            .f-l {
-                font-size: 1.125rem;
-            }
-        }
-        .f-ss {
-            font-size: .625rem;
-            display: block;
-        }
-        .f-m {
-            font-size: .75rem;
         }
     }
     &__img {
@@ -827,8 +828,10 @@ main visual
 .wantedly-cta.btn_wrap {
     @include c.flex($align-items: unset);
     flex-direction: column-reverse;
-    row-gap: 8px;
+    row-gap: 1.5rem;
     font-family: c.$font-noto;
+    position: relative;
+    z-index: 10;
     @include c.mq(min-tab) {
         flex-direction: row;
         column-gap: 8px;
@@ -900,25 +903,6 @@ main visual
             top: 1.25rem;
             left: 0;
             transform: rotate(0);
-            font-size: 0.625rem;
-            line-height: 1.2;
-            letter-spacing: 0.04em;
-            @include c.mq(min-tab) {
-                font-size: 0.8125rem;
-                top: 2rem;
-            }
-            .f-m {
-                font-size: 0.875rem;
-                @include c.mq(min-tab) {
-                    font-size: 1.0625rem;
-                }
-            }
-            .f-l {
-                font-size: 1.25rem;
-                @include c.mq(min-tab) {
-                    font-size: 1.5rem;
-                }
-            }
         }
     }
     .cta_btn_inner.black_btn a {
