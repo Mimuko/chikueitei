@@ -211,7 +211,7 @@
             display: block;
             width: 100px;
             height: 100px;
-            background: url(../../img/arrow-min.webp) no-repeat center / contain;
+            background: url(../../img/wantedly/arrow-min.webp) no-repeat center / contain;
             margin: auto;
         }
     }
@@ -221,7 +221,7 @@
     display: block;
     @include c.size(100%, 130px);
     position: absolute;
-    background: url(../../img/speech-bubble.webp) no-repeat center / contain;
+    background: url(../../img/wantedly/speech-bubble.webp) no-repeat center / contain;
     @include c.mq(min-tab) {
         @include c.size(100%, 130px);
     }
@@ -328,7 +328,7 @@ heading
                 content: "";
                 display: block;
                 @include c.size(21px, 21px);
-                background: url(../../img/drops-min.webp) no-repeat center / contain;
+                background: url(../../img/wantedly/drops-min.webp) no-repeat center / contain;
                 position: absolute;
                 right: 5rem;
                 top: 1rem;
@@ -374,7 +374,7 @@ heading
             &::after {
                 content: "";
                 @include c.size(25px, 30px);
-                background: url(../../img/em-min.webp) no-repeat center top / contain;
+                background: url(../../img/wantedly/em-min.webp) no-repeat center top / contain;
                 position: absolute;
                 top: 0;
                 @include c.mq(min-tab) {
@@ -428,12 +428,12 @@ heading
         &::before {
             top: -3rem;
             left: -5rem;
-            background: url(../../img/q-yellow-min.webp) no-repeat center / contain;
+            background: url(../../img/wantedly/q-yellow-min.webp) no-repeat center / contain;
         }
         &::after {
             bottom: 0;
             right: -5rem;
-            background: url(../../img/q-orange-min.webp) no-repeat center / contain;
+            background: url(../../img/wantedly/q-orange-min.webp) no-repeat center / contain;
         }
         .catch_maintxt {
             margin-block-end: 1rem;
@@ -446,7 +446,7 @@ heading
                     content: "";
                     display: block;
                     @include c.size(63px, 79px);
-                    background: url(../../img/h-reason-img-min.webp) no-repeat top / contain;
+                    background: url(../../img/wantedly/h-reason-img-min.webp) no-repeat top / contain;
                     position: absolute;
                     bottom: 0;
                     left: 1rem;
@@ -487,13 +487,13 @@ heading
                 top: auto;
                 left: -12rem;
                 @include c.size(162px, 130px);
-                background: url(../../img/h-case-img01-min.webp) no-repeat center / contain;
+                background: url(../../img/wantedly/h-case-img01-min.webp) no-repeat center / contain;
             }
             &::after {
                 top: 5rem;
                 right: -5rem;
                 @include c.size(33px, 41px);
-                background: url(../../img/light-bulb-min.webp) no-repeat center / contain;
+                background: url(../../img/wantedly/light-bulb-min.webp) no-repeat center / contain;
             }
         }
         .bg-circle {
@@ -558,7 +558,7 @@ heading
                 content: "";
                 display: block;
                 @include c.size(84px, 91px);
-                background: url(../../img/h-schedule-min.webp) no-repeat left / contain;
+                background: url(../../img/wantedly/h-schedule-min.webp) no-repeat left / contain;
                 position: absolute;
                 left: 29rem;
                 top: auto;
@@ -626,25 +626,22 @@ main visual
         left: 0;
     }
     &::before {
-        top: -1rem;
-        background: url(../../img/mv-sp_top.webp) no-repeat top / contain;
+        top: 0;
+        background: url(../../img/wantedly/mv-sp_top.webp) no-repeat top / contain;
         @include c.mq(min-tab) {
             content: none;
         }
     }
     &::after {
-        background: url(../../img/mv-sp_bottom.webp) no-repeat bottom / contain;
+        background: url(../../img/wantedly/mv-sp_bottom.webp) no-repeat bottom / contain;
         bottom: 0;
         @include c.mq(min-tab) {
             @include c.size(100%, 100%);
-            background: url(../../img/mv-bg.webp) no-repeat center / cover;
+            background: url(../../img/wantedly/mv-bg.webp) no-repeat center / cover;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
-        // @media screen and (min-width: 1367px) {
-        //     background: url(../../img/mv-bg--large.webp) no-repeat center / auto;
-        // }
     }
     &__wrap {
         background: #ffd215;
@@ -713,7 +710,7 @@ main visual
             content: "";
             display: block;
             @include c.size(100%, 100%);
-            background: url(../../img/mv-people--sp.webp) no-repeat bottom / contain;
+            background: url(../../img/wantedly/mv-people--sp.webp) no-repeat bottom / contain;
             position: absolute;
             top: 0;
             left: 0;
@@ -724,7 +721,7 @@ main visual
                 left: auto;
                 right: 0;
                 @include c.size(100%, 320px);
-                background: url(../../img/mv-people-min.webp) no-repeat center / contain;
+                background: url(../../img/wantedly/mv-people-min.webp) no-repeat center / contain;
             }
         }
     }
@@ -745,7 +742,7 @@ main visual
         right: 0;
         margin: auto;
         z-index: 1;
-        background: url(../../img/mv-speech-bubble-min.webp) no-repeat center / contain;
+        background: url(../../img/wantedly/mv-speech-bubble-min.webp) no-repeat center / contain;
         @include c.mq(min-tab) {
             top: 1rem;
             @include c.size(480px, 120px);
@@ -888,12 +885,16 @@ main visual
             max-width: unset;
         }
         &::after {
+            bottom: -1rem;
             @include c.mq(min-tab) {
-                background: url(../../img/mv-bg-cta.webp) no-repeat center / 100% 100%;
+                background: url(../../img/wantedly/mv-bg-cta.webp) no-repeat center / 100% 100%;
             }
             @media screen and (min-width: 1367px) {
-                background: url(../../img/mv-bg-cta--large.webp) no-repeat center / cover;
+                background: url(../../img/wantedly/mv-bg-cta--large.webp) no-repeat center / cover;
             }
+        }
+        &::before {
+            top: -1rem;
         }
         &__inr {
             border-radius: 0;
@@ -932,9 +933,12 @@ main visual
         }
         &__text {
             width: 100%;
-            top: 2rem;
+            top: 1.5rem;
             left: 0;
             transform: rotate(0);
+            @include c.mq(min-tab) {
+                right: 2rem;
+            }
         }
     }
     .lead {
@@ -957,18 +961,15 @@ main visual
 
 .wantedly-content--troubles {
     @include c.mq(min-tab) {
-        background: url(../../img/bg-top-min.webp) no-repeat top / contain;
+        background: url(../../img/wantedly/bg-top-min.webp) no-repeat top / contain;
     }
     &::before {
         @include c.mq(min-tab) {
             content: "";
             display: block;
             @include c.size(100%, 100%);
-            background: url(../../img/bg_trouble-min.webp) no-repeat top / contain;
+            background: url(../../img/wantedly/bg_trouble-min.webp) no-repeat top / contain;
             position: absolute;
-            // left: 50%;
-            // transform: translateX(-50%);
-            // z-index: 3;
         }
     }
     .desc {
@@ -1032,7 +1033,7 @@ main visual
             content: "";
             display: block;
             @include c.size(100%, 100%);
-            background: url(../../img/bg_answer-min.webp) no-repeat center / 95%;
+            background: url(../../img/wantedly/bg_answer-min.webp) no-repeat center / 95%;
             position: absolute;
             top: 14rem;
             left: 0;
@@ -1381,7 +1382,7 @@ main visual
 
 .wantedly-content--case {
     counter-reset: number 0;
-    background: url(../../img/bg-circle-min.webp) no-repeat center / cover;
+    background: url(../../img/wantedly/bg-circle-min.webp) no-repeat center / cover;
     @include c.mq(min-tab) {
         background-size: contain;
     }
@@ -1496,7 +1497,7 @@ main visual
         &_after {
             border: 3px solid c.$color-black;
             border-radius: 1rem;
-            background: url(../../img/bg_case_item_body-min.webp) no-repeat center / cover;
+            background: url(../../img/wantedly/bg_case_item_body-min.webp) no-repeat center / cover;
             padding: 2rem 1rem;
             position: relative;
             @include c.mq(min-tab) {
@@ -1510,7 +1511,7 @@ main visual
                 content: "";
                 display: block;
                 @include c.size(55px, 76px);
-                background: url(../../img/case-before-min.webp) no-repeat center / contain;
+                background: url(../../img/wantedly/case-before-min.webp) no-repeat center / contain;
                 position: absolute;
                 right: -1rem;
                 bottom: -1rem;
@@ -1532,14 +1533,14 @@ main visual
                 right: 0;
                 top: -2rem;
                 @include c.size(31px, 43px);
-                background: url(../../img/light-bulb-min.webp) no-repeat center / contain;
+                background: url(../../img/wantedly/light-bulb-min.webp) no-repeat center / contain;
                 transform: scale(-1, 1);
                 @include c.mq(min-tab) {
                     right: -5px;
                 }
             }
             &::after {
-                background: url(../../img/case-after-min.webp) no-repeat center / contain;
+                background: url(../../img/wantedly/case-after-min.webp) no-repeat center / contain;
                 right: -1rem;
                 bottom: -1.5rem;
                 @include c.size(65px, 74px);
@@ -1601,7 +1602,7 @@ main visual
             content: "";
             display: block;
             @include c.size(100%, 100px);
-            background: url(../../img/bg-bottom-min.webp) no-repeat center / cover;
+            background: url(../../img/wantedly/bg-bottom-min.webp) no-repeat center / cover;
             @include c.mq(min-tab) {
                 height: 280px;
             }
@@ -1622,7 +1623,7 @@ main visual
             left: 0;
             right: 0;
             display: block;
-            background: url(../../img/bg-arrow-min.webp) no-repeat top / contain;
+            background: url(../../img/wantedly/bg-arrow-min.webp) no-repeat top / contain;
             max-width: 1366px;
             @include c.size(100%, 100%);
             margin: auto;
