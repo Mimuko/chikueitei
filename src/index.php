@@ -5,29 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    	<!-- fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/wantedly.css">
+    <link rel="stylesheet" href="css/pages/wantedly.css">
 
 </head>
 
 <?php
-    $localPath = "img";
-    $wpPath = "[tp_dir]/img/wantedly";
+$localPath = "img";
+$wpPath = "[tp_dir]/img/wantedly";
 
-    $choice = 0; // 0または1を選択
+$choice = 0; // 0または1を選択
 
-    // 0または1の場合の条件分岐
-    if ($choice === 0) {
-        $selectedPath = $localPath; // $localPathを選択
-    } elseif ($choice === 1) {
-        $selectedPath = $wpPath; // $wpPathを選択
-    } else {
-        $selectedPath = null; // それ以外の場合はnull
-    }
+// 0または1の場合の条件分岐
+if ($choice === 0) {
+    $selectedPath = $localPath; // $localPathを選択
+} elseif ($choice === 1) {
+    $selectedPath = $wpPath; // $wpPathを選択
+} else {
+    $selectedPath = null; // それ以外の場合はnull
+}
 ?>
 
 <body>
@@ -67,7 +67,8 @@
                                     <span class="f-l">Wantedly</span>
                                     の<span class="f-m">運用、</span><br>
                                     <span class="f-yellow f-l">採用のプロ</span>
-                                    が<span class="f-m">代行します！</span></p>
+                                    が<span class="f-m">代行します！</span>
+                                </p>
                             </div>
                         </div>
                         <div class="wantedly-cta btn_wrap btn_wrap01">
@@ -92,8 +93,40 @@
 
                 </div>
             </section>
+            <div class="scroll-infinity">
+                <ul class="scroll-infinity__list scroll-infinity__list--left">
+                    <li class="scroll-infinity__item">
+                        <img loading="lazy" src="https://placehold.jp/200x80.png" alt="" />
+                    </li>
+                    <li class="scroll-infinity__item">
+                        <img loading="lazy" src="https://placehold.jp/200x80.png" alt="" />
+                    </li>
+                    <li class="scroll-infinity__item">
+                        <img loading="lazy" src="https://placehold.jp/200x80.png" alt="" />
+                    </li>
+                    <li class="scroll-infinity__item">
+                        <img loading="lazy" src="https://placehold.jp/200x80.png" alt="" />
+                    </li>
+                </ul>
+                <ul class="scroll-infinity__list scroll-infinity__list--left">
+                    <li class="scroll-infinity__item">
+                        <img loading="lazy" src="https://placehold.jp/200x80.png" alt="" />
+                    </li>
+                    <li class="scroll-infinity__item">
+                        <img loading="lazy" src="https://placehold.jp/200x80.png" alt="" />
+                    </li>
+                    <li class="scroll-infinity__item">
+                        <img loading="lazy" src="https://placehold.jp/200x80.png" alt="" />
+                    </li>
+                    <li class="scroll-infinity__item">
+                        <img loading="lazy" src="https://placehold.jp/200x80.png" alt="" />
+                    </li>
+                </ul>
+            </div>
 
         </div>
+
+        
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~お悩みありませんかのセクション~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -107,29 +140,29 @@
             <div class="content-body content-body--troubles inner-block">
                 <div class="inner-block">
                     <div class="troubles_flame">
-                        <li class="main-box">
+                        <li class="main-box troubles_flame__item">
                             <p class="desc">Wantedlyの<span class="em">自社運用に限界</span>を感じている</p>
                             <img class="troubles_img" src="<?php echo ($selectedPath); ?>/trouble_img01-min.webp" loading="lazy" width="350" height="201" alt="">
                         </li>
 
-                        <div class="main-box">
+                        <div class="main-box troubles_flame__item">
                             <p class="desc">Wantedlyを活用した<br>採用戦略の<span class="em">ノウハウが足りない</span></p>
                             <img class="troubles_img" src="<?php echo ($selectedPath); ?>/trouble_img02-min.webp" loading="lazy" width="350" height="201" alt="">
                         </div>
                     </div>
 
                     <div class="troubles_flame">
-                        <div class="main-box">
+                        <div class="main-box troubles_flame__item">
                             <p class="desc">Wantedlyで<span class="em">エンジニア採用に苦戦</span>している</p>
                             <img class="troubles_img" src="<?php echo ($selectedPath); ?>/trouble_img03-min.webp" loading="lazy" width="350" height="201" alt="">
                         </div>
 
-                        <div class="main-box">
+                        <div class="main-box troubles_flame__item">
                             <p class="desc">Wantedlyで<span class="em">即戦力人材</span>を獲得したい</p>
                             <img class="troubles_img" src="<?php echo ($selectedPath); ?>/trouble_img04-min.webp" loading="lazy" width="350" height="201" alt="">
                         </div>
 
-                        <div class="main-box">
+                        <div class="main-box troubles_flame__item">
                             <p class="desc">Wantedlyで自社の<span class="em">カルチャーに合った人材</span>を採用したい</p>
                             <img class="troubles_img" src="<?php echo ($selectedPath); ?>/trouble_img05-min.webp" loading="lazy" width="350" height="201" alt="">
                         </div>
@@ -137,8 +170,6 @@
                 </div>
             </div>
         </section>
-
-
 
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~アンサーのセクション~~~~~
@@ -154,20 +185,15 @@
                 <div class="answer-flame main-box">
                     <div class="catch_subtxt">採用成功のカギは「採用のプロ視点」！</div>
                     <h2 class="title"><span class="colortxt title_em-circle">採用のプロチーム</span>にWantedly運用を<br class="sp">まるごとお任せ！</h2>
-
                     <div class="answer-solution_box">
                         <img class="answer-solution_img" src="<?php echo ($selectedPath); ?>/professional_img-min.webp" loading="lazy" width="652" height="325" alt="採用のプロチームによるWantedly運用代行のイメージ">
                         <div class="answer-solution_text">
                             <p class="desc">マルゴトなら、人事経験豊富な採用のプロチームが<br class="pc">人事の目線でWantedlyの運用をまるごと代行！<br>累計600社のご支援経験&amp;自社での運用経験から、<br class="pc">Wantedlyを活用した採用戦略のコツも熟知しています。<br>採用のプロが、丁寧なヒアリングから課題を洗い出し、<br class="pc">採用成功のために全力で伴走します！</p>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </section>
-
-
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~高品質な理由のセクション~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -178,7 +204,7 @@
                 </div>
                 <div class="content-head__inr">
                     <p class="catch_maintxt">reason</p>
-                    <h2 class="title"><span class="title_dott_mark">なぜ高品質なWantedly運用を行えるのか？</span></h2>
+                    <h2 class="title"><span class="title_dott_mark">なぜ高品質なWantedly運用を<br class="sp">行えるのか？</span></h2>
                 </div>
             </div>
             <div class="inner-block">
@@ -355,7 +381,7 @@
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~CTAのセクション~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-      <?php include("cta.php"); ?>
+        <?php include("cta.php"); ?>
 
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~成功事例のセクション~~~~~
@@ -480,11 +506,13 @@
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <section class=" content outer-block wantedly-content--flow">
             <div class="content-head content-head--flow">
-                <div class="speech">
-                    <p class="speech__text">最短10日で<br>ご支援開始できます！</p>
+                <div class="content-head__inr">
+                    <div class="speech">
+                        <p class="speech__text">最短10日で<br>ご支援開始できます！</p>
+                    </div>
+                    <p class="catch_maintxt">Schedule</p>
+                    <h2 class="title"><span class="title_dott_mark">導入の流れ</span></h2>
                 </div>
-                <p class="catch_maintxt">Schedule</p>
-                <h2 class="title"><span class="title_dott_mark">導入の流れ</span></h2>
             </div>
             <div class="bg-white">
                 <div class="arrow_icon inner-block">
@@ -497,7 +525,8 @@
 
                             <div class="flow-item_body">
                                 <p class="desc">オンラインで打ち合わせを行い、貴社の状況やニーズについて丁寧にヒアリングし、
-                                    <span class="colormaker">業界や職種に合わせた最適な運用方法を提案します。</span></p>
+                                    <span class="colormaker">業界や職種に合わせた最適な運用方法を提案します。</span>
+                                </p>
                             </div>
                         </li>
                         <li class="flow-item main-box">
@@ -546,7 +575,7 @@
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~CTAのセクション~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-      <?php include("cta.php"); ?>
+        <?php include("cta.php"); ?>
 
     </section>
 </body>

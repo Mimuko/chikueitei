@@ -2,23 +2,12 @@
 
 /* Animation */
 
-@keyframes background_move {
+@keyframes infinity-scroll-left {
     from {
-        background-position: 0 0;
+        transform: translateX(0);
     }
     to {
-        background-position: 0 -1334px;
-    }
-}
-
-@keyframes mv_illust_fadein {
-    from {
-        opacity: 0;
-        transform: translateY(3rem);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+        transform: translateX(-100%);
     }
 }
 
@@ -31,11 +20,13 @@
     box-sizing: border-box;
 }
 
-.wantedly_wrapper {
-    background-color: c.$color-highlight_yellow2;
-    /*~~~~~~~~~~~~~~~~
+
+/*~~~~~~~~~~~~~~~~
   common components
 ~~~~~~~~~~~~~~~~~~*/
+
+.wantedly_wrapper {
+    background-color: c.$color-highlight_yellow2;
     .content {
         padding: 0;
         margin: 0;
@@ -220,7 +211,7 @@
             display: block;
             width: 100px;
             height: 100px;
-            background: url(../img/arrow-min.webp) no-repeat center / contain;
+            background: url(../../img/arrow-min.webp) no-repeat center / contain;
             margin: auto;
         }
     }
@@ -230,7 +221,7 @@
     display: block;
     @include c.size(100%, 130px);
     position: absolute;
-    background: url(../img/speech-bubble.webp) no-repeat center / contain;
+    background: url(../../img/speech-bubble.webp) no-repeat center / contain;
     @include c.mq(min-tab) {
         @include c.size(100%, 130px);
     }
@@ -254,10 +245,13 @@
 .bg-white {
     background: c.$color-white;
     &:has(.main-visual__wrap) {
-        padding-block-end: 5rem;
+        padding-block-end: 0;
         @include c.mq(min-tab) {
-            padding-block-end: 10rem;
+            padding-block-end: 5rem;
         }
+    }
+    &:has(.voice_line) {
+        padding-block-end: 1rem;
     }
 }
 
@@ -289,6 +283,31 @@
 }
 
 
+/*--------------------------------
+	scroll
+--------------------------------*/
+
+.scroll-infinity {
+    display: flex;
+    overflow: hidden;
+    &__list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        animation: infinity-scroll-left 10s infinite linear 0.5s both;
+    }
+    &__item {
+        width: calc(100vw / 3);
+        @include c.mq(min-tab) {
+            width: calc(100vw / 4);
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
 /* ~~~~~~~~~~~~~~~~
 heading
 ~~~~~~~~~~~~~~~~~~*/
@@ -309,7 +328,7 @@ heading
                 content: "";
                 display: block;
                 @include c.size(21px, 21px);
-                background: url(../img/drops-min.webp) no-repeat center / contain;
+                background: url(../../img/drops-min.webp) no-repeat center / contain;
                 position: absolute;
                 right: 5rem;
                 top: 1rem;
@@ -355,7 +374,7 @@ heading
             &::after {
                 content: "";
                 @include c.size(25px, 30px);
-                background: url(../img/em-min.webp) no-repeat center top / contain;
+                background: url(../../img/em-min.webp) no-repeat center top / contain;
                 position: absolute;
                 top: 0;
                 @include c.mq(min-tab) {
@@ -409,12 +428,12 @@ heading
         &::before {
             top: -3rem;
             left: -5rem;
-            background: url(../img/q-yellow-min.webp) no-repeat center / contain;
+            background: url(../../img/q-yellow-min.webp) no-repeat center / contain;
         }
         &::after {
             bottom: 0;
             right: -5rem;
-            background: url(../img/q-orange-min.webp) no-repeat center / contain;
+            background: url(../../img/q-orange-min.webp) no-repeat center / contain;
         }
         .catch_maintxt {
             margin-block-end: 1rem;
@@ -427,7 +446,7 @@ heading
                     content: "";
                     display: block;
                     @include c.size(63px, 79px);
-                    background: url(../img/h-reason-img-min.webp) no-repeat top / contain;
+                    background: url(../../img/h-reason-img-min.webp) no-repeat top / contain;
                     position: absolute;
                     bottom: 0;
                     left: 1rem;
@@ -468,13 +487,13 @@ heading
                 top: auto;
                 left: -12rem;
                 @include c.size(162px, 130px);
-                background: url(../img/h-case-img01-min.webp) no-repeat center / contain;
+                background: url(../../img/h-case-img01-min.webp) no-repeat center / contain;
             }
             &::after {
                 top: 5rem;
                 right: -5rem;
                 @include c.size(33px, 41px);
-                background: url(../img/light-bulb-min.webp) no-repeat center / contain;
+                background: url(../../img/light-bulb-min.webp) no-repeat center / contain;
             }
         }
         .bg-circle {
@@ -531,7 +550,6 @@ heading
         }
     }
     &--flow {
-        position: relative;
         background: c.$color-white;
         padding-block-end: 2rem;
         &::before {
@@ -540,10 +558,17 @@ heading
                 content: "";
                 display: block;
                 @include c.size(84px, 91px);
-                background: url(../img/h-schedule-min.webp) no-repeat left / contain;
+                background: url(../../img/h-schedule-min.webp) no-repeat left / contain;
                 position: absolute;
                 left: 29rem;
                 top: auto;
+            }
+        }
+        .content-head__inr {
+            position: relative;
+            @include c.mq(min-tab) {
+                max-width: 1000px;
+                margin: auto;
             }
         }
         .speech {
@@ -551,8 +576,12 @@ heading
             top: -7rem;
             @include c.mq(min-tab) {
                 right: 14rem;
-                bottom: 5rem;
+                top: auto;
+                bottom: 3rem;
                 transform: rotate(15deg);
+            }
+            @media screen and (min-width: 1366px) {
+                right: 1rem;
             }
         }
         .title {
@@ -584,6 +613,9 @@ main visual
         padding-block: 2.5rem;
         flex-direction: row;
     }
+    @media screen and (min-width: 1367px) {
+        max-width: unset;
+    }
     &::before,
     &::after {
         content: "";
@@ -595,23 +627,24 @@ main visual
     }
     &::before {
         top: -1rem;
-        background: url(../img/mv-sp_top.webp) no-repeat top / contain;
+        background: url(../../img/mv-sp_top.webp) no-repeat top / contain;
         @include c.mq(min-tab) {
             content: none;
         }
     }
     &::after {
-        background: url(../img/mv-sp_bottom.webp) no-repeat bottom / contain;
+        background: url(../../img/mv-sp_bottom.webp) no-repeat bottom / contain;
         bottom: 0;
         @include c.mq(min-tab) {
             @include c.size(100%, 100%);
-            background: url(../img/mv-bg.webp) no-repeat center / cover;
+            background: url(../../img/mv-bg.webp) no-repeat center / cover;
             top: 50%;
-            transform: translateY(-50%);
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
-        @media screen and (min-width: 1367px) {
-            background: url(../img/mv-bg--large.webp) no-repeat center / cover;
-        }
+        // @media screen and (min-width: 1367px) {
+        //     background: url(../../img/mv-bg--large.webp) no-repeat center / auto;
+        // }
     }
     &__wrap {
         background: #ffd215;
@@ -627,6 +660,7 @@ main visual
         flex-direction: column;
         @include c.mq(min-tab) {
             flex-direction: row;
+            align-items: baseline;
             font-size: 2rem;
         }
         .em {
@@ -652,16 +686,17 @@ main visual
             grid-template-columns: 1fr minmax(430px, 1fr);
             grid-template-rows: auto;
             column-gap: 1rem;
-            max-width: 1213px;
+            max-width: 1273px;
             width: 100%;
             margin: auto;
-            padding: 3rem;
+            padding: 5.6875rem 3.0625rem 3.75rem 3.75rem;
         }
         &__contents {
             @include c.mq(min-tab) {
                 grid-column: 1 / 2;
                 grid-row: 1 / 2;
                 position: relative;
+                justify-self: center;
             }
         }
     }
@@ -678,7 +713,7 @@ main visual
             content: "";
             display: block;
             @include c.size(100%, 100%);
-            background: url(../img/mv-people--sp.webp) no-repeat bottom / contain;
+            background: url(../../img/mv-people--sp.webp) no-repeat bottom / contain;
             position: absolute;
             top: 0;
             left: 0;
@@ -689,7 +724,7 @@ main visual
                 left: auto;
                 right: 0;
                 @include c.size(100%, 320px);
-                background: url(../img/mv-people-min.webp) no-repeat center / contain;
+                background: url(../../img/mv-people-min.webp) no-repeat center / contain;
             }
         }
     }
@@ -710,7 +745,7 @@ main visual
         right: 0;
         margin: auto;
         z-index: 1;
-        background: url(../img/mv-speech-bubble-min.webp) no-repeat center / contain;
+        background: url(../../img/mv-speech-bubble-min.webp) no-repeat center / contain;
         @include c.mq(min-tab) {
             top: 1rem;
             @include c.size(480px, 120px);
@@ -728,7 +763,6 @@ main visual
                 font-size: 0.8125rem;
                 top: 2rem;
                 left: 0;
-                top: auto;
                 text-align: center;
             }
             .f-m {
@@ -762,7 +796,7 @@ main visual
         max-width: 330px;
         width: 100%;
         margin-inline-start: auto;
-        right: 3rem;
+        position: static;
     }
     &__text {
         font-weight: 900;
@@ -803,9 +837,6 @@ main visual
     @include c.flex(flex, stretch, flex-start);
     column-gap: .5rem;
     padding-inline: 1rem;
-    @include c.mq(min-tab) {
-        margin-block-end: 1.5rem;
-    }
     &-item {
         margin: 0;
         color: #605a4e;
@@ -850,15 +881,18 @@ main visual
     }
     .main-visual {
         padding: 0;
+        @include c.mq(min-tab) {
+            padding-block: 2rem;
+        }
         @media screen and (min-width: 1367px) {
             max-width: unset;
         }
         &::after {
             @include c.mq(min-tab) {
-                background: url(../img/mv-bg-cta.webp) no-repeat center / 100% 100%;
+                background: url(../../img/mv-bg-cta.webp) no-repeat center / 100% 100%;
             }
             @media screen and (min-width: 1367px) {
-                background: url(../img/mv-bg-cta--large.webp) no-repeat center / cover;
+                background: url(../../img/mv-bg-cta--large.webp) no-repeat center / cover;
             }
         }
         &__inr {
@@ -868,9 +902,7 @@ main visual
             @include c.mq(min-tab) {
                 padding-inline: 4rem;
                 padding-block: 5rem 3rem;
-            }
-            &__contents {
-                position: relative;
+                border-radius: 30px;
             }
         }
         &__title {
@@ -900,18 +932,21 @@ main visual
         }
         &__text {
             width: 100%;
-            top: 1.25rem;
+            top: 2rem;
             left: 0;
             transform: rotate(0);
+        }
+    }
+    .lead {
+        position: absolute;
+        &__text {
+            font-size: 0.875rem;
         }
     }
     .cta_btn_inner.black_btn a {
         @include c.mq(min-tab) {
             max-width: 270px;
         }
-    }
-    .lead__text {
-        font-size: 0.875rem;
     }
 }
 
@@ -922,27 +957,18 @@ main visual
 
 .wantedly-content--troubles {
     @include c.mq(min-tab) {
-        background: url(../img/bg-top-min.webp) no-repeat top / contain;
+        background: url(../../img/bg-top-min.webp) no-repeat top / contain;
     }
     &::before {
         @include c.mq(min-tab) {
             content: "";
+            display: block;
             @include c.size(100%, 100%);
-            max-width: 1366px;
-            margin: auto;
-            background: url(../img/bg_trouble-min.webp) no-repeat top / contain;
+            background: url(../../img/bg_trouble-min.webp) no-repeat top / contain;
             position: absolute;
-            z-index: 3;
-        }
-    }
-    .main-box {
-        padding: 1rem;
-        background-color: c.$color-white;
-        @include c.centering-flex(xy);
-        flex-direction: column;
-        width: 100%;
-        @include c.mq(min-tab) {
-            width: 305px;
+            // left: 50%;
+            // transform: translateX(-50%);
+            // z-index: 3;
         }
     }
     .desc {
@@ -974,6 +1000,16 @@ main visual
         max-width: 950px;
         margin: auto;
     }
+    &__item {
+        padding: 1rem;
+        background-color: c.$color-white;
+        @include c.centering-flex(xy);
+        flex-direction: column;
+        width: 100%;
+        @include c.mq(min-tab) {
+            width: 305px;
+        }
+    }
     &:first-of-type {
         justify-content: center;
         column-gap: 1rem;
@@ -994,13 +1030,13 @@ main visual
     &::before {
         @include c.mq(min-tab) {
             content: "";
+            display: block;
             @include c.size(100%, 100%);
-            max-width: 1366px;
-            margin: auto;
-            background: url(../img/bg_answer-min.webp) no-repeat top / 95%;
+            background: url(../../img/bg_answer-min.webp) no-repeat center / 95%;
             position: absolute;
-            z-index: 3;
             top: 14rem;
+            left: 0;
+            right: 0;
         }
     }
     &.content {
@@ -1231,7 +1267,6 @@ main visual
         @include c.flex;
         column-gap: 8px;
         margin-block-end: .5rem;
-        font-size: 0.875rem;
         padding: 4px 8px;
         background: c.$color-black;
         color: c.$color-white;
@@ -1240,9 +1275,6 @@ main visual
         text-align: center;
         font-weight: bold;
         min-height: 45px;
-        @include c.mq(min-tab) {
-            font-size: 0.875rem;
-        }
         &::before {
             counter-increment: number 1;
             content: counter(number);
@@ -1256,6 +1288,7 @@ main visual
             top: auto;
             font-size: .75rem;
             @include c.mq(min-tab) {
+                font-size: 1rem;
                 @include c.size(22px, 22px);
             }
         }
@@ -1306,7 +1339,7 @@ main visual
                 background-color: c.$color-yellow;
                 border-radius: 50%;
                 @include c.mq(min-tab) {
-                    top: 10px;
+                    top: 5px;
                 }
             }
         }
@@ -1348,7 +1381,7 @@ main visual
 
 .wantedly-content--case {
     counter-reset: number 0;
-    background: url(../img/bg-circle-min.webp) no-repeat center / cover;
+    background: url(../../img/bg-circle-min.webp) no-repeat center / cover;
     @include c.mq(min-tab) {
         background-size: contain;
     }
@@ -1385,6 +1418,7 @@ main visual
         flex-direction: column;
         row-gap: 1rem;
         @include c.mq(min-tab) {
+            align-items: center;
             flex-direction: row;
             column-gap: 1rem;
         }
@@ -1462,7 +1496,7 @@ main visual
         &_after {
             border: 3px solid c.$color-black;
             border-radius: 1rem;
-            background: url(../img/bg_case_item_body-min.webp) no-repeat center / cover;
+            background: url(../../img/bg_case_item_body-min.webp) no-repeat center / cover;
             padding: 2rem 1rem;
             position: relative;
             @include c.mq(min-tab) {
@@ -1476,7 +1510,7 @@ main visual
                 content: "";
                 display: block;
                 @include c.size(55px, 76px);
-                background: url(../img/case-before-min.webp) no-repeat center / contain;
+                background: url(../../img/case-before-min.webp) no-repeat center / contain;
                 position: absolute;
                 right: -1rem;
                 bottom: -1rem;
@@ -1498,14 +1532,14 @@ main visual
                 right: 0;
                 top: -2rem;
                 @include c.size(31px, 43px);
-                background: url(../img/light-bulb-min.webp) no-repeat center / contain;
+                background: url(../../img/light-bulb-min.webp) no-repeat center / contain;
                 transform: scale(-1, 1);
                 @include c.mq(min-tab) {
                     right: -5px;
                 }
             }
             &::after {
-                background: url(../img/case-after-min.webp) no-repeat center / contain;
+                background: url(../../img/case-after-min.webp) no-repeat center / contain;
                 right: -1rem;
                 bottom: -1.5rem;
                 @include c.size(65px, 74px);
@@ -1560,13 +1594,16 @@ main visual
     position: relative;
     &.content {
         padding-block-start: 2rem;
+        @include c.mq(min-tab) {
+            padding-block-start: 0;
+        }
         &::before {
             content: "";
             display: block;
             @include c.size(100%, 100px);
-            background: url(../img/bg-bottom-min.webp) no-repeat top / cover;
+            background: url(../../img/bg-bottom-min.webp) no-repeat center / cover;
             @include c.mq(min-tab) {
-                height: 404px;
+                height: 280px;
             }
         }
     }
@@ -1581,11 +1618,11 @@ main visual
         @include c.mq(min-tab) {
             content: "";
             position: absolute;
-            top: 22rem;
+            top: 15rem;
             left: 0;
             right: 0;
             display: block;
-            background: url(../img/bg-arrow-min.webp) no-repeat top / contain;
+            background: url(../../img/bg-arrow-min.webp) no-repeat top / contain;
             max-width: 1366px;
             @include c.size(100%, 100%);
             margin: auto;
