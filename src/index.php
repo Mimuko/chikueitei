@@ -90,10 +90,9 @@ if ($choice === 0) {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
-            <div class="scroll-infinity">
+            <!-- <div class="scroll-infinity">
                 <ul class="scroll-infinity__list scroll-infinity__list--left">
                     <li class="scroll-infinity__item">
                         <img loading="lazy" src="https://placehold.jp/200x80.png" alt="" />
@@ -122,7 +121,7 @@ if ($choice === 0) {
                         <img loading="lazy" src="https://placehold.jp/200x80.png" alt="" />
                     </li>
                 </ul>
-            </div>
+            </div> -->
 
         </div>
 
